@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+. *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
+. *Sélectionnez un volume* : sélectionnez le volume sur lequel vos fichiers de source de données résident et sélectionnez *Suivant*.
++
+Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory, notamment le domaine, l'adresse IP, le nom d'utilisateur et le mot de passe.
+
+. *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
+. *Définir les paramètres ai* : dans la section *Chunk definition*, définissez la façon dont le service Amazon Bedrock divise le contenu de la source de données en blocs lorsque la base de connaissances à laquelle il appartient est interrogée. Pour le moment, vous ne pouvez choisir que des phrases.
+. Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver la sélection :
++
+** *Activé* : les utilisateurs du chatbot qui accèdent à cette base de connaissances n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
+** *Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.
+
+
+. Sélectionnez *Ajouter* pour ajouter cette source de données à votre base de connaissances.
+

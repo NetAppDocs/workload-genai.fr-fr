@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: whats-next.html 
+keywords: what you can do, knowledge base 
+summary: 'Maintenant que vous avez créé une base de connaissances à l"aide des données de votre entreprise et que vous l"avez déployée pour vos utilisateurs, vous pouvez gérer la base de connaissances, les sources de données et l"infrastructure RAG, y compris les systèmes de fichiers FSX pour ONTAP.' 
+---
+= Que pouvez-vous faire ensuite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Maintenant que vous avez créé une base de connaissances à l'aide des données de votre entreprise et que vous l'avez déployée pour vos utilisateurs, vous pouvez gérer la base de connaissances, les sources de données et l'infrastructure RAG, y compris les systèmes de fichiers FSX pour ONTAP.
+
+Voici quelques-unes des tâches que vous pouvez effectuer pour gérer les composants de votre base de connaissances :
+
+* Mettez à jour le contenu de vos sources de données, ou ajoutez de nouvelles sources de données, et synchronisez ces modifications avec votre base de connaissances et votre chatbot.
+* Gérez les paramètres de la source de données, notamment la stratégie de suppression et la reconnaissance des autorisations (pour l'accès aux fichiers SMB).
+* Gérez les paramètres de votre base de connaissances, notamment le modèle de chat et les amorces de discussion.
+* Annulez la publication d'une base de connaissances ou republiez-la après avoir effectué des modifications.
+* Sauvegardez et protégez les données importantes sur votre système de fichiers FSX pour ONTAP pour vous assurer que vos données de la base de connaissances et d'autres composants d'infrastructure sont toujours disponibles.
+
+
+Pour plus d'informations sur la gestion de votre système de fichiers FSX pour ONTAP, consultez le https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Documentation de Workload Factory pour Amazon FSX pour NetApp ONTAP"^] pour consulter les fonctionnalités de sauvegarde et de protection que vous pouvez utiliser.

@@ -1,0 +1,165 @@
+---
+sidebar: sidebar 
+permalink: manage-knowledgebase.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: 'Après avoir créé une base de connaissances, vous pouvez afficher les détails de la base de connaissances, modifier la base de connaissances, intégrer d"autres sources de données ou supprimer la base de connaissances.' 
+---
+= Gérer les bases de connaissances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Après avoir créé une base de connaissances, vous pouvez afficher les détails de la base de connaissances, modifier la base de connaissances, intégrer d'autres sources de données ou supprimer la base de connaissances.
+
+
+
+== Afficher des informations sur une base de connaissances
+
+Vous pouvez afficher des informations sur les paramètres d'une base de connaissances et sur la source de données intégrée.
+
+.Étapes
+. Dans le menu de navigation, sélectionnez *ai*.
+. Sélectionnez la base de connaissances que vous souhaitez afficher.
++
+Si elle est définie, les amorces de conversation actuellement utilisées s'affichent dans le volet de droite.
+
+. Pour afficher les détails de la base de connaissances, sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
+
++
+Le menu *actions* vous permet de gérer la base de connaissances si vous souhaitez apporter des modifications.
+
+
+
+
+
+== Modifier une base de connaissances
+
+Vous pouvez mettre à jour une base de connaissances en modifiant certains paramètres ou ajouter ou supprimer des sources de données.
+
+Chaque fois que vous ajoutez, modifiez ou supprimez des sources de données de la base de connaissances, vous devez synchroniser la source de données afin qu'elle soit réindexée dans la base de connaissances. La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de votre volume FSX pour ONTAP qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez mettre à jour.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
+
+. Sélectionnez le menu *actions* et sélectionnez *Modifier la base de connaissances*.
+. Sur la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, sa description, son modèle d'intégration, son modèle de discussion et si les amorces de conversation sont créées automatiquement ou manuellement.
++
+Si vous utilisez le mode Manuel pour les amorces de conversation, vous pouvez également modifier les amorces de conversation ici.
+
+. Sélectionnez *Enregistrer* après avoir effectué vos modifications.
+
+
+
+
+== Ajouter des sources de données supplémentaires à une base de connaissances
+
+Vous pouvez intégrer d'autres sources de données dans votre base de connaissances pour les remplir avec des données d'organisation supplémentaires.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances dans laquelle vous souhaitez ajouter la source de données.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *Ajouter une source de données*.
+. *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
+. *Sélectionnez un volume* : sélectionnez le volume sur lequel vos fichiers de source de données résident et sélectionnez *Suivant*.
++
+Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory, notamment le domaine, l'adresse IP, le nom d'utilisateur et le mot de passe.
+
+. *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
+. *Définir les paramètres ai* : dans la section *Chunk definition*, définissez la façon dont le service Amazon Bedrock divise le contenu de la source de données en blocs lorsque la base de connaissances à laquelle il appartient est interrogée. Pour le moment, vous ne pouvez choisir que des phrases.
+. Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver la sélection :
++
+** *Activé* : les utilisateurs du chatbot qui accèdent à cette base de connaissances n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
+** *Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.
+
+
+. Sélectionnez *Ajouter* pour ajouter cette source de données à votre base de connaissances.
+
+
+.Résultat
+La source de données est intégrée à votre base de connaissances.
+
+
+
+== Synchronisez vos sources de données avec la base de connaissances
+
+Les sources de données sont synchronisées automatiquement une fois par jour avec la base de connaissances. Les modifications apportées aux sources de données sont donc répercutées dans le chatbot. Si vous modifiez l'une de vos sources de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez effectuer une synchronisation à la demande.
+
+La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de vos sources de données qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez synchroniser.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
+. Sélectionnez le menu *actions* et sélectionnez *Rechercher maintenant*.
++
+Vous verrez un message indiquant que vos sources de données sont en cours d'analyse et un message final lorsque l'analyse est terminée.
+
+
+
+.Résultat
+La base de connaissances est synchronisée avec les sources de données jointes et tout chatbot actif commencera à utiliser les informations les plus récentes provenant de vos sources de données.
+
+
+
+== Évaluez les modèles de chat avant de créer une base de connaissances
+
+Vous pouvez évaluer les modèles de chat de base disponibles avant de créer une base de connaissances afin de déterminer le modèle le mieux adapté à votre implémentation. Étant donné que la prise en charge des modèles varie selon les régions AWS, reportez-vous à la section https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Cette page de documentation AWS"^] pour vérifier les modèles que vous pouvez utiliser dans les régions où vous prévoyez de déployer votre base de connaissances.
+
+
+NOTE: Cette fonctionnalité n'est disponible que lorsqu'aucune base de connaissances n'a été créée -- lorsqu'aucune base de connaissances n'existe dans la page d'inventaire des bases de connaissances.
+
+.Étapes
+. Sur la page d'inventaire des bases de connaissances, vous verrez l'option de sélectionner le modèle de chat sur le côté droit de la page pour le Chatbot.
+. Sélectionnez le modèle de chat dans la liste et entrez un ensemble de questions dans la zone d'invite pour voir comment le chatbot répond.
+. Essayez plusieurs modèles pour identifier le modèle le mieux adapté à votre implémentation.
+
+
+.Résultat
+Utilisez ce modèle de chat lorsque vous créez votre base de connaissances.
+
+
+
+== Annulez la publication de votre base de connaissances
+
+Après avoir publié votre base de connaissances afin qu'elle puisse être intégrée à une application chatbot, vous pouvez annuler la publication si vous souhaitez désactiver l'application chatbot pour l'accès à la base de connaissances.
+
+L'annulation de la publication de la base de connaissances empêche toute application de chat de fonctionner. Le point de terminaison unique de l'API auquel la base de connaissances était accessible est désactivé.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez annuler la publication.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration et la liste de toutes les sources de données intégrées.
+
+. Sélectionnez le menu *actions* et sélectionnez *Annuler la publication*.
+
+
+.Résultat
+La base de connaissances est désactivée et n'est plus accessible par une application chatbot.
+
+
+
+== Supprimer une base de connaissances
+
+Si vous n'avez plus besoin d'une base de connaissances, vous pouvez la supprimer. Lorsque vous supprimez la base de connaissances, celle-ci est supprimée de Workload Factory et toutes les applications ou chatbots qui utilisent la base de connaissances cessent de fonctionner. Cette action n'est pas réversible.
+
+Lorsque vous supprimez une base de connaissances, vous devez également effectuer les actions suivantes pour supprimer entièrement toutes les ressources associées à la base de connaissances :
+
+* Dissociez la base de connaissances de tous les agents avec lesquels elle est associée.
+* Les données sous-jacentes qui ont été indexées à partir de votre base de connaissances restent dans le magasin vectoriel que vous avez configuré et peuvent toujours être récupérées. Pour supprimer les données, vous devez également supprimer l'index vectoriel contenant les codes de données.
+
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez supprimer.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
+. Sélectionnez le menu *actions* et sélectionnez *Supprimer la base de connaissances*.
+. Dans la boîte de dialogue Supprimer la base de connaissances, confirmez que vous souhaitez la supprimer et sélectionnez *Supprimer*.
+
+
+.Résultat
+La base de connaissances est supprimée de Workload Factory.

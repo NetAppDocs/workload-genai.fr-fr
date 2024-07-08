@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: activate-authentication.html 
+keywords: ai, chatbot, publishing, knowledge base 
+summary: 'Activez l"authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d"accès soient requises lors de l"intégration de la base de connaissances à une application chatbot.' 
+---
+= Activer l'authentification externe pour une base de connaissances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'utilisation des terminaux API pour intégrer une base de connaissances à une application chatbot.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez publier.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
+. Sélectionnez le menu *actions* et sélectionnez *gérer les paramètres d'authentification*.
+. Configurer l'authentification :
++
+.. Sélectionnez *Activer les paramètres d'authentification*.
+.. Fournissez les informations requises :
++
+*** Algorithmes
+*** Public
+*** Émetteur
+*** URI JWKS
+
+
+
+
++
+Vous devez obtenir les valeurs de ces champs auprès de votre fournisseur d'authentification.
+
+. Sélectionnez *Enregistrer*.
+
+
+.Résultat
+Vous disposez désormais d'une base de connaissances publiée et du point de terminaison unique que vous pouvez utiliser pour intégrer la base de connaissances à une application chatbot.

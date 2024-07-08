@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: identify-data-sources.html 
+keywords: data sources, chatbot, documents, knowledge base 
+summary: 'Identifiez ou créez les documents (sources de données) qui résident dans votre système de fichiers FSX pour ONTAP que vous intégrerez dans votre base de connaissances. Ces sources de données permettent à la base de connaissances de fournir des réponses précises et personnalisées aux questions des utilisateurs en fonction des données pertinentes pour votre entreprise.' 
+---
+= Identifiez les sources de données à intégrer dans votre base de connaissances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Identifiez ou créez les documents (sources de données) qui résident dans votre système de fichiers FSX pour ONTAP que vous intégrerez dans votre base de connaissances. Ces sources de données permettent à la base de connaissances de fournir des réponses précises et personnalisées aux questions des utilisateurs en fonction des données pertinentes pour votre entreprise.
+
+
+
+== Nombre maximum de sources de données
+
+Le nombre maximum de sources de données prises en charge est de 10.
+
+
+
+== Emplacement des sources de données
+
+Les sources de données peuvent être stockées dans un seul volume, ou dans un dossier au sein d'un volume, sur un partage SMB ou une exportation NFS sur un système de fichiers Amazon FSX pour NetApp ONTAP. Vous ne pouvez pas sélectionner des documents individuels au sein d'un volume ou d'un dossier. Par conséquent, vous devez vous assurer que chaque volume ou dossier contenant des sources de données ne contient pas de documents externes qui ne doivent pas être intégrés à votre base de connaissances.
+
+Vous pouvez ajouter plusieurs sources de données dans chaque base de connaissances, mais elles doivent résider sur des systèmes de fichiers FSX pour ONTAP accessibles depuis votre compte AWS.
+
+La taille de fichier maximale pour chaque source de données est de 50 Mo.
+
+
+
+== Protocoles pris en charge
+
+La base de connaissances prend en charge les données de volumes qui utilisent des protocoles NFS ou SMB/CIFS. Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory afin que la base de connaissances puisse accéder aux fichiers de ces volumes. Ceci inclut le domaine Active Directory, l'adresse IP, le nom d'utilisateur et le mot de passe.
+
+Lorsque vous stockez votre source de données sur un partage (fichier ou répertoire) accessible via SMB, les données sont uniquement accessibles aux utilisateurs ou groupes de chatbot qui disposent des autorisations d'accès à ce partage. Lorsque cette « fonctionnalité de reconnaissance des autorisations » est activée, le système d'IA compare le courrier électronique de l'utilisateur dans auth0 aux utilisateurs autorisés à afficher ou utiliser les fichiers sur le partage SMB. Le chatbot fournira des réponses en fonction des autorisations utilisateur pour les fichiers intégrés.
+
+Par exemple, si vous avez intégré 10 fichiers (sources de données) dans votre base de connaissances et que 2 fichiers sont des fichiers de ressources humaines qui contiennent des informations restreintes, seuls les utilisateurs de chatbot qui sont authentifiés pour accéder à ces 2 fichiers recevront des réponses du chatbot qui incluent des données de ces fichiers.
+
+
+
+== Formats de fichiers de source de données pris en charge
+
+Les formats de fichier de source de données suivants sont actuellement pris en charge.
+
+[cols="2*"]
+|===
+| Format de fichier | Extension 
+
+
+| Texte brut | .txt 
+
+
+| Document portable | .pdf 
+
+
+| Microsoft Word | .docx 
+
+
+| Fichier de valeurs séparées par des virgules | .csv 
+|===

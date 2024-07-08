@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: create-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: 'Une fois que vous avez déployé l"infrastructure d"IA et identifié les sources de données à intégrer dans votre base de connaissances à partir de vos datastores FSX pour ONTAP, vous êtes prêt à créer la base de connaissances à l"aide de Workload Factory. Dans le cadre de cette étape, vous définissez également les caractéristiques de l"IA et créez des amorces de discussion.' 
+---
+= Créer une base de connaissances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une fois que vous avez déployé l'infrastructure d'IA et identifié les sources de données à intégrer dans votre base de connaissances à partir de vos datastores FSX pour ONTAP, vous êtes prêt à créer la base de connaissances à l'aide de Workload Factory. Dans le cadre de cette étape, vous définirez également les caractéristiques de l'IA et vous pourrez amorces de discussion.
+
+Une base de connaissances peut être utilisée sans intégrer les sources de données de votre organisation. Dans ce cas, une application intégrée à la base de connaissances ne fournira que des résultats provenant d'informations accessibles au public sur Internet. Il s'agit d'une intégration de _mode public_.
+
+Dans la plupart des cas, vous voudrez intégrer les sources de données de votre organisation dans la base de connaissances. Il s'agit d'une intégration _Enterprise mode_ car elle fournit des connaissances de votre entreprise.
+
+
+
+== Créer et configurer la base de connaissances
+
+La base de connaissances définit des caractéristiques telles que les modèles d'IA de Bedrock et le format d'intégration que vous souhaitez utiliser pour créer votre base de connaissances.
+
+.Étapes
+. Connectez-vous à Workload Factory.
+. Dans la mosaïque workloads d'IA, sélectionnez *Créer un Chatbot*.
+. Dans l'onglet bases de connaissances, sélectionnez *Ajouter une base de connaissances*.
+. Dans la page définir la base de connaissances, configurez les paramètres de la base de connaissances :
++
+.. *Nom* : saisissez le nom que vous souhaitez utiliser pour la base de connaissances.
+.. *Description* : saisissez une description détaillée de la base de connaissances.
+.. *Modèle d'intégration*: Le modèle d'intégration définit la façon dont vos données seront converties en embeddings vectoriels pour la base de connaissances. Workload Factory prend en charge les modèles suivants :
++
+*** Codes Titan G1 - texte
+*** Texte d'intégration Titan v2
+*** Embedding multimodal G1 Titan
++
+Notez que vous devez avoir déjà activé le modèle d'incorporation à partir d'Amazon Bedrock.
+
++
+https://aws.amazon.com/bedrock/titan/["En savoir plus sur Amazon Titan"^]
+
+
+
+.. *Modèle Chat*: Choisissez parmi les modèles Claude Chat qui sont intégrés dans Amazon Bedrock. Notez que vous devez avoir déjà activé le modèle de chat à partir d'Amazon Bedrock.
++
+Découvrez les modèles disponibles pour vous aider à faire votre choix : https://aws.amazon.com/bedrock/claude/["Claude d'anthropic dans le sol d'Amazon"^]
+
+.. *Amorces de conversation* : indiquez si vous souhaitez fournir jusqu'à quatre invites de démarrage de conversation qui s'affichent aux utilisateurs qui interagissent avec un chatbot utilisant cette base de connaissances. Nous vous recommandons d'activer ce paramètre.
++
+Si vous activez les amorces de conversation, le mode automatique est sélectionné par défaut. Le « mode manuel » ne peut être activé qu'après avoir ajouté des sources de données à votre base de connaissances. link:manage-knowledgebase.html["Apprenez à modifier les paramètres de la base de connaissances"].
+
+
+
+. Sélectionnez *Créer la base de connaissances* pour ajouter la base de connaissances à GenAI.
+. Dans la page suivante de l'assistant, vous avez la possibilité d'ajouter une source de données à votre nouvelle base de connaissances ou de terminer le processus ici sans ajouter de source de données. Nous vous recommandons de sélectionner *Ajouter une source de données* et d'ajouter une ou plusieurs sources de données maintenant.
+
+
+
+
+== Ajoutez des sources de données à la base de connaissances
+
+Vous pouvez ajouter une ou plusieurs sources de données pour remplir la base de connaissances avec les données de votre organisation.
+
+.Description de la tâche
+Le nombre maximum de sources de données prises en charge est de 10.
+
+.Étapes
+. Après avoir sélectionné *Ajouter une source de données*, la page *Sélectionner un système de fichiers* s'affiche.
+. *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
+. *Sélectionnez un volume* : sélectionnez le volume sur lequel vos fichiers de source de données résident et sélectionnez *Suivant*.
++
+Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory, notamment le domaine, l'adresse IP, le nom d'utilisateur et le mot de passe.
+
+. *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
+. *Définir les paramètres ai* : dans la section *Chunk definition*, définissez la façon dont le service Amazon Bedrock divise le contenu de la source de données en blocs lorsque la base de connaissances à laquelle il appartient est interrogée. Pour le moment, vous ne pouvez choisir que des phrases.
+. Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver la sélection :
++
+** *Activé* : les utilisateurs du chatbot qui accèdent à cette base de connaissances n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
+** *Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.
+
+
+. Sélectionnez *Ajouter* pour ajouter cette source de données à votre base de connaissances.
+
+
+.Résultat
+La source de données commence à être intégrée à votre base de connaissances. L'état passe de « intégration » à « intégrée » lorsque la source de données est complètement intégrée.
+
+Après avoir ajouté une seule source de données à la base de connaissances, vous pouvez la tester localement dans la fenêtre du simulateur Chatbot et apporter les modifications requises avant de mettre le chatbot à la disposition de vos utilisateurs. Vous pouvez également suivre les mêmes étapes pour ajouter des sources de données supplémentaires à la base de connaissances.

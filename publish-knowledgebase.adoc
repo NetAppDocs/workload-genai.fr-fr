@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: publish-knowledgebase.html 
+keywords: ai, chatbot, publishing, knowledge base 
+summary: 'Une fois votre base de connaissances créée et testée localement, vous pouvez publier la base de connaissances afin qu"elle puisse être intégrée à l"application chatbot qui permettra aux utilisateurs d"interroger la base de connaissances.' 
+---
+= Publier une base de connaissances et afficher le point final unique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une fois votre base de connaissances créée et testée localement, vous pouvez publier la base de connaissances afin qu'elle puisse être intégrée à une application chatbot qui permettra aux utilisateurs d'interroger la base de connaissances.
+
+.Description de la tâche
+La publication de la base de connaissances vous permet de l'utiliser dans des applications de chat. L'action de publication déclenche l'API Workload Factory pour générer et publier des noeuds finaux uniques. Après la publication, la base de connaissances devient accessible pour les applications de chat et les terminaux de l'API sont prêts pour l'intégration.
+
+Chaque base de connaissances que vous publiez possède des points finaux uniques.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez publier.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration et la liste de toutes les sources de données intégrées.
+
+. Sélectionnez le menu *actions* et sélectionnez *publier*.
++
+Workload Factory publie la base de connaissances. Sur la page de détails de la base de connaissances, le statut passe de *non publié* à *publié.*
+
++
+Vous pouvez maintenant obtenir des détails sur le point de terminaison unique de la base de connaissances.
+
+. En regard de l'état publié, sélectionnez *Afficher*.
++
+Détails sur la façon d'accéder à la base de connaissances à l'aide de l'API Workload Factory s'affiche.
+
+. Dans la boîte de dialogue *Afficher infos publiées*, copiez les noeuds finaux API que vous pouvez utiliser pour intégrer la base de connaissances à une application.
++
+Pour en savoir plus sur les noeuds finaux API, accédez au https://console.workloads.netapp.com/api-doc["Documentation de l'API"^] et sélectionnez *ai > externe*.
+
++
+Avant de pouvoir utiliser ces noeuds finaux, vous devez obtenir un jeton d'utilisateur auprès de votre fournisseur d'authentification.
+
+
+
+.Résultat
+Vous disposez désormais d'une base de connaissances publiée et du point de terminaison unique que vous pouvez utiliser pour intégrer la base de connaissances à une application chatbot.

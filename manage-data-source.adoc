@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: manage-data-source.html 
+keywords: ai, chatbot, creating, knowledge base, data source 
+summary: 'Après avoir créé une base de connaissances à l"aide de sources de données sur votre système de fichiers FSX pour ONTAP, vous pouvez afficher les détails de la source de données, mettre à jour ou modifier le contenu de la source de données, modifier les paramètres de la source de données ou supprimer la source de données.' 
+---
+= Gérer les sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Après avoir créé une base de connaissances à l'aide de sources de données sur votre système de fichiers FSX pour ONTAP, vous pouvez afficher les détails de la source de données, mettre à jour ou modifier le contenu de la source de données, modifier les paramètres de la source de données ou supprimer la source de données.
+
+
+
+== Afficher des informations sur une source de données
+
+Vous pouvez afficher des informations sur le contenu d'une source de données et afficher son état d'incorporation dans la base de connaissances. Comme une source de données fait partie d'une base de connaissances, vous devez d'abord ouvrir la base de connaissances avant de pouvoir afficher les détails de la source de données.
+
+.Étapes
+. Dans le menu de navigation, sélectionnez *ai*.
+. Sélectionnez la base de connaissances où réside la source de données, puis image:icon-action.png["le bouton d'option"] sélectionnez *gérer la base de connaissances*.
++
+La partie inférieure de la page répertorie les sources de données qui font partie de cette base de connaissances.
+
+. Développez chaque ligne en sélectionnant image:button-down-caret.png["le bouton flèche vers le bas"] pour afficher des informations détaillées sur chaque source de données, telles que le système de fichiers FSX pour ONTAP, le volume et le chemin d'accès à la source de données.
++
+Il répertorie également les informations d'intégration et indique si cette source de données est actuellement intégrée dans la base de connaissances.
+
+
+
+
+
+== Modifier les paramètres de la source de données
+
+Vous pouvez modifier les informations relatives à une source de données que vous avez intégrées dans une base de connaissances. La plupart des informations sont corrigées après avoir ajouté une source de données à une base de connaissances, mais vous pouvez modifier la définition de la suppression et la prise de conscience des autorisations (lorsque vous utilisez le protocole SMB sur le volume de la source de données).
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances où réside la source de données, puis image:icon-action.png["le bouton d'option"] sélectionnez et sélectionnez *gérer la base de connaissances*.
++
+La partie inférieure de la page répertorie les sources de données qui font partie de cette base de connaissances.
+
+. Dans la ligne de la source de données que vous souhaitez modifier, sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *Modifier la source de données*.
+. Dans la page Modifier la source de données, sélectionnez image:button-down-caret.png["le bouton flèche vers le bas"] pour développer la ligne pour la définition de bloc.
+. Mettez à jour les paramètres de la stratégie de Chunking et de la taille des blocs, ainsi que la prise de conscience des autorisations (pour les volumes SMB) et sélectionnez *Save*.
+
+
+.Résultat
+Les paramètres de la source de données sont mis à jour et le système ai synchronise la source de données afin qu'elle soit réindexée à la base de connaissances.
+
+
+
+== Mettre à jour le contenu d'une source de données existante
+
+Vous pouvez modifier le contenu d'une source de données à tout moment pour ajouter ou mettre à jour vos données organisationnelles. Si cette source de données est activement utilisée dans une base de connaissances, vous devez synchroniser la source de données afin qu'elle soit réindexée dans la base de connaissances. La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de votre volume FSX pour ONTAP qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
+
+Les sources de données sont synchronisées automatiquement une fois par jour avec la base de connaissances. Les modifications apportées aux sources de données sont donc répercutées dans le chatbot. Si vous apportez des modifications à une source de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez link:manage-knowledgebase.html#synchronize-your-data-sources-with-the-knowledge-base["effectuez une synchronisation à la demande"].
+
+
+
+== Supprimer une source de données
+
+Si vous n'avez plus besoin d'une source de données pour faire partie de votre base de connaissances, vous pouvez la supprimer.
+
+.Étapes
+. Dans la page d'inventaire de la base de connaissances, sélectionnez la base de connaissances où réside la source de données, puis image:icon-action.png["le bouton d'option"] sélectionnez et sélectionnez *gérer la base de connaissances*.
++
+La partie inférieure de la page répertorie les sources de données qui font partie de cette base de connaissances.
+
+. Sur la ligne de la source de données à supprimer, sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *Supprimer la source de données*.
+. Dans la boîte de dialogue Supprimer la source de données, confirmez que vous souhaitez la supprimer et sélectionnez *confirmer*.
+
+
+.Résultat
+La source de données est supprimée de la base de connaissances et le système ai supprime de la base de connaissances les informations indexées sur cette source de données. Les informations issues de cette source de données ne seront plus disponibles pour les chatbots qui utilisent la base de connaissances.

@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: genai-engine-instance.html 
+keywords: genai engine, instance, ec2, role, iam role, permissions, security group, inbound, outbound, private endpoints 
+summary: 'Lorsque vous déployez l"infrastructure GenAI, Workload Factory crée une instance EC2 pour le moteur GenAI. Il crée également un rôle IAM, un groupe de sécurité et des terminaux privés pour cette instance. Pour en savoir plus sur les composants créés par Workload Factory dans votre environnement AWS,' 
+---
+= Composants du moteur NetApp GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Lorsque vous déployez l'infrastructure GenAI, Workload Factory crée une instance EC2 pour le moteur GenAI. Il crée également un rôle IAM, un groupe de sécurité et des terminaux privés pour cette instance. Pour en savoir plus sur les composants créés par Workload Factory dans votre environnement AWS,
+
+Type d'instance EC2:: m5.large
+Rôle IAM:: L'instance du moteur GenAI a besoin d'autorisations pour envoyer des segments de données au modèle d'intégration sur Amazon Bedrock et pour communiquer avec le système interne du service NetApp ai. Le rôle IAM comprend les autorisations suivantes :
++
+--
+[source, json]
+----
+"ssm:Describe*",
+"ssm:Get*",
+"ssm:List*",
+"ssm:PutInventory",
+"ssm:PutComplianceItems",
+"ssm:PutConfigurePackageResult",
+"ssm:SendCommand",
+"ssm:UpdateAssociationStatus",
+"ssm:UpdateInstanceAssociationStatus",
+"ssm:UpdateInstanceInformation",
+"ssmmessages:*",
+"ec2messages:GetMessages"
+----
+--
+Groupe de sécurité:: Les règles sortantes sont ouvertes à tout le trafic, tandis que les règles entrantes sont complètement fermées.
+Terminaux privés:: Si le VPC cible ne les possède pas déjà, Workload Factory crée des terminaux privés pour l'instance EC2 du moteur GenAI afin qu'il puisse communiquer avec les services AWS suivants :
++
+--
+* Sol d'Amazon
+* Amazon EC2
+* Amazon Elastic Container Registry (ECR)
+* Amazon S3
+* AWS Systems Manager (SSM)
+
+
+--
+

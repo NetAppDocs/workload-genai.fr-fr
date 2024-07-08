@@ -1,0 +1,33 @@
+---
+indexpage:
+  title: Documentation Workload Factory pour GenAI
+  summary: Intégrez les données de vos systèmes de fichiers FSX pour ONTAP à vos plateformes
+    MLOps et à vos modèles de base GenAI pour créer des chatbots fonctionnelles à
+    l'aide des données d'entreprise.
+  keywords: AI, GenAI, ML, Chatbot, FSx, FSx for ONTAP, knowledge base
+  lead: Intégrez les données de vos systèmes de fichiers FSX pour ONTAP à vos plateformes
+    MLOps et à vos modèles de base GenAI pour créer des chatbots fonctionnelles à
+    l'aide des données d'entreprise.
+  tiles:
+  - title: Commencez
+    links:
+    - title: Découvrez Workload Factory pour GenAI
+      url: ai-workloads-overview.html
+    - title: Démarrage rapide
+      url: quick-start.html
+    - title: Exigences GenAI
+      url: requirements.html
+    - title: Déployez l'infrastructure de la base de connaissances
+      url: deploy-infrastructure.html
+  - title: Créez une base de connaissances
+    links:
+    - title: Créer une base de connaissances
+      url: create-knowledgebase.html
+    - title: Testez une base de connaissances
+      url: test-knowledgebase.html
+    - title: Publier une base de connaissances
+      url: publish-knowledgebase.html
+  - title: Administrer GenAI
+    links:
+    - title: Gérer l'infrastructure de la base de connaissances
+      url: manage-infrastructure.html

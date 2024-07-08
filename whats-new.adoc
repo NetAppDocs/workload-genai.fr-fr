@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+summary: Découvrez les nouveautés de la fonctionnalité ai workloads de Workload Factory. 
+---
+= Quoi de neuf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez les nouveautés de Generative ai workloads Capability of Workload Factory.
+
+
+
+== 7 juillet 2024
+
+
+
+=== Version initiale de Workload Factory pour GenAI
+
+La version initiale permet de développer une base de connaissances personnalisée en intégrant les données de votre entreprise. La base de connaissances est accessible par une application de chatbot pour vos utilisateurs. Cette fonctionnalité garantit des réponses précises et pertinentes aux questions spécifiques à l'entreprise, améliorant ainsi la satisfaction et la productivité de tous vos utilisateurs.

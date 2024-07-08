@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: manage-infrastructure.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: 'Vous pouvez afficher les détails sur votre infrastructure RAG GenAI déployée ou supprimer l"infrastructure de chatbot si vous n"en avez plus besoin.' 
+---
+= Gérer l'infrastructure GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez afficher les détails sur votre infrastructure RAG GenAI déployée ou supprimer l'infrastructure de chatbot si vous n'en avez plus besoin.
+
+
+
+== Afficher des informations sur l'infrastructure
+
+Vous pouvez afficher des informations sur l'infrastructure du chatbot
+
+.Étapes
+. Dans le menu de navigation, sélectionnez *ai*.
+. Sélectionnez l'onglet *Infrastructure*.
+. Afficher des informations sur l'infrastructure, qui incluent des détails sur les composants suivants :
++
+** Paramètres AWS
+** Le système de fichiers FSX pour ONTAP
+** Le moteur ai
+** La base de données vectorielle
+
+
+
+
+
+
+== Déposer l'infrastructure
+
+Si vous n'avez plus besoin de l'infrastructure de chatbot que vous avez déployée pour un ou plusieurs chatbots, vous pouvez la supprimer de Workload Factory.
+
+
+NOTE: Tous les chatbots déployés sur cette infrastructure seront désactivés et tous les historiques de discussion seront supprimés.
+
+Cette opération supprime uniquement les liens vers l'infrastructure d'IA de Workload Factory--elle ne supprime pas tous les composants d'AWS. Vous devrez supprimer manuellement les composants d'infrastructure suivants d'AWS :
+
+* L'instance de VM
+* Terminaux privés
+* Volume du système de fichiers FSX pour ONTAP qui contient les bases de données d'IA
+* Le rôle IAM
+* La politique
+* Le groupe de sécurité
+
+
+.Étapes
+. Dans le menu de navigation, sélectionnez *ai*.
+. Sélectionnez l'onglet *Infrastructure*.
+. image:icon-action.png["le bouton d'option"]Sélectionnez et sélectionnez *Supprimer l'infrastructure chatbot*.
+. Confirmez que vous souhaitez supprimer l'infrastructure et sélectionnez *Supprimer*.
+
+
+.Résultat
+Les composants de l'infrastructure du chatbot sont supprimés de Workload Factory.

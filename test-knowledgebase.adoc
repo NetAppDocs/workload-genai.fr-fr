@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: test-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: 'Une fois la base de connaissances créée, vous pourrez la tester localement à l"aide du simulateur de chatbot et apporter les modifications requises avant de mettre la base de connaissances à la disposition de vos utilisateurs via une application de chatbot.' 
+---
+= Testez une base de connaissances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une fois la base de connaissances créée, vous pourrez la tester localement à l'aide du simulateur de chatbot et apporter les modifications requises avant de mettre la base de connaissances à la disposition de vos utilisateurs via une application de chatbot.
+
+.Description de la tâche
+Vous testez votre base de connaissances pour vous assurer qu'elle fonctionne comme vous l'attendez, et vous pouvez personnaliser les amorces de conversation que vous voulez être disponible par défaut pour les utilisateurs chatbot de cette base de connaissances. Le simulateur de chatbot s'exécute sur toutes les sources de données qui ont été intégrées dans la base de connaissances.
+
+Vous pouvez tester une base de connaissances en discutant avec vos sources de données intégrées dans le simulateur de chatbot. Notez qu'aucune interaction ou information n'est capturée dans la base de données vectorielle GenAI lors du test local de la base de connaissances.
+
+Vous effectuerez la plupart de vos tests dans Workload Factory avant de déployer la base de connaissances dans une application pour vos utilisateurs. Si vous avez besoin d'apporter des modifications à votre source de données ou à l'opération chatbot, vous devez le faire maintenant avant de publier votre base de connaissances.
+
+Voici quelques-unes des tâches que vous voudrez effectuer pour tester votre chatbot :
+
+* Saisissez un grand nombre de questions pertinentes pour votre entreprise afin de vous assurer que les réponses sont conformes aux attentes.
+* Personnalisez les amorces de conversation que vous souhaitez rendre disponibles par défaut pour vos utilisateurs dans l'application chatbot.
+* Assurez-vous que le contenu attribué qui est fourni en bas des réponses du chatbot contient les références correctes.
+
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez tester.
++
+Le simulateur de chatbot s'affiche dans le volet droit. Si elles sont définies, les amorces de conversation existantes s'affichent également.
+
+. Dans le champ de saisie chatbot, saisissez une invite ou une question, puis sélectionnez image:button-run.png["le bouton run"] pour voir comment votre chatbot répond avec vos connaissances organisationnelles.
+. Si vous devez mettre à jour l'une de vos sources de données afin que votre base de connaissances fournisse des réponses plus ciblées, effectuez ces modifications maintenant, puis testez à nouveau la base de connaissances.
+
