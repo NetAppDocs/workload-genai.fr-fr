@@ -538,4 +538,9 @@
   <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">Activez l'authentification</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Connaissances et support</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">L'utilisation de la fonctionnalité GenAI de Workload Factory est gratuit.</block>
+  <block id="a46c34e822b00eb49125943300225ec1" category="summary">Une fois que vous avez créé votre base de connaissances et testé votre chatbot, vous êtes prêt à configurer l'application qui permettra à vos utilisateurs d'interroger le chatbot.</block>
+  <block id="4c096c170a3ae328a9df5fb19871a9a7" category="doc">Créez une application optimisée par une base de connaissances FSX pour ONTAP</block>
+  <block id="3034501b6830f6e24b0e219fa3565ffb" category="inline-link">Découvrez comment créer une application d'IA basée sur RAG sur FSX pour ONTAP</block>
+  <block id="cddb505028d2d2c7026aad1d17c19a05" category="paragraph"><block ref="cddb505028d2d2c7026aad1d17c19a05" category="inline-link-rx"></block></block>
+  <block id="53b343f4a880bcff3b258324a35744ff" category="sidebar">Créez une application d'IA RAG</block>
 </blocks>

@@ -41,6 +41,8 @@ sidebar:
         url: "/activate-authentication.html"
       - title: Publier une base de connaissances
         url: "/publish-knowledgebase.html"
+      - title: Créez une application d'IA RAG
+        url: "/create-application.html"
       - title: Que pouvez-vous faire ensuite
         url: "/whats-next.html"
     - title: Gérer les sources de données
