@@ -33,7 +33,7 @@ Vous pouvez maintenant obtenir des détails sur le point de terminaison unique d
 
 . En regard de l'état publié, sélectionnez *Afficher*.
 +
-Détails sur la façon d'accéder à la base de connaissances à l'aide de l'API Workload Factory s'affiche.
+Des détails sur l'accès à la base de connaissances à l'aide de l'API Workload Factory s'affichent.
 
 . Dans la boîte de dialogue *Afficher infos publiées*, copiez les noeuds finaux API que vous pouvez utiliser pour intégrer la base de connaissances à une application.
 +

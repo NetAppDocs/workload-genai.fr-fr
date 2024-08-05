@@ -388,7 +388,6 @@
   <block id="19761722f9e779bd2a70fef96c24a1bc" category="paragraph">Workload Factory publie la base de connaissances. Sur la page de détails de la base de connaissances, le statut passe de *non publié* à *publié.*</block>
   <block id="5e92f6a356303934a45930f0e541c6b1" category="paragraph">Vous pouvez maintenant obtenir des détails sur le point de terminaison unique de la base de connaissances.</block>
   <block id="004faa273ca0b2383f0f12b8850c493b" category="list-text">En regard de l'état publié, sélectionnez *Afficher*.</block>
-  <block id="d1f4efe2fd3a800f4b008e172439fe85" category="paragraph">Détails sur la façon d'accéder à la base de connaissances à l'aide de l'API Workload Factory s'affiche.</block>
   <block id="9de2775e528dfff9dd9666885c222272" category="list-text">Dans la boîte de dialogue *Afficher infos publiées*, copiez les noeuds finaux API que vous pouvez utiliser pour intégrer la base de connaissances à une application.</block>
   <block id="7495d9f71402d3b1d20f08bd19ac6562" category="inline-link">Documentation de l'API</block>
   <block id="2cb94eb0648b9f93f300ea0aff833f95" category="paragraph">Pour en savoir plus sur les noeuds finaux API, accédez au<block ref="c0a9aa55ed57e2e15b2d20baa6a6e023" category="inline-link-rx"></block> et sélectionnez *ai &gt; externe*.</block>
@@ -398,7 +397,6 @@
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Une seule</block>
   <block id="e16edd708081c06a9c8bdef1486a94b4" category="inline-link-macro">Configurez votre environnement pour répondre aux exigences GenAI</block>
   <block id="0b0e916064e065ab12e1db6735832ef0" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="d4a51aa0811f51e3206f49b62f46f1ef" category="inline-link-macro-rx"></block></block>
-  <block id="926f216b1b078ff9ce47e61e22932514" category="paragraph">Vous aurez besoin d'identifiants AWS pour déployer l'infrastructure AWS, d'un système de fichiers FSX for ONTAP déployé et découvert, de la liste des sources de données que vous souhaitez intégrer dans votre base de connaissances, de l'accès au service d'IA Amazon Bedrock et bien plus encore.</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Deux</block>
   <block id="36ec882c51ea2d7689f78bed44b7fdaa" category="inline-link-macro">Identifiez le système de fichiers FSX pour ONTAP qui contient les sources de données</block>
   <block id="cc9cd1c7d0a54d3fe49ca467804963fb" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="7206191241f03719b7415c03564b4c6e" category="inline-link-macro-rx"></block></block>
@@ -539,8 +537,17 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Connaissances et support</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">L'utilisation de la fonctionnalité GenAI de Workload Factory est gratuit.</block>
   <block id="a46c34e822b00eb49125943300225ec1" category="summary">Une fois que vous avez créé votre base de connaissances et testé votre chatbot, vous êtes prêt à configurer l'application qui permettra à vos utilisateurs d'interroger le chatbot.</block>
-  <block id="4c096c170a3ae328a9df5fb19871a9a7" category="doc">Créez une application optimisée par une base de connaissances FSX pour ONTAP</block>
   <block id="3034501b6830f6e24b0e219fa3565ffb" category="inline-link">Découvrez comment créer une application d'IA basée sur RAG sur FSX pour ONTAP</block>
   <block id="cddb505028d2d2c7026aad1d17c19a05" category="paragraph"><block ref="cddb505028d2d2c7026aad1d17c19a05" category="inline-link-rx"></block></block>
   <block id="53b343f4a880bcff3b258324a35744ff" category="sidebar">Créez une application d'IA RAG</block>
+  <block id="da1fd32e4f4851fbf4922d1c55e8fcc0" category="list-text">Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances pour laquelle vous souhaitez activer l'authentification.</block>
+  <block id="d71d72ee7bc5c79bade09f02715592c3" category="paragraph">L'authentification pour la base de connaissances est désormais active et vous pouvez utiliser des terminaux d'API pour interagir avec la base de connaissances et intégrer la base de connaissances à une application chatbot.</block>
+  <block id="c83d7c23906c063b64dd22d30483cb24" category="list-text">Amazon Bedrock est configuré pour envoyer des journaux à Amazon CloudWatch, en utilisant un groupe de journaux avec le préfixe<block ref="26245dda4fa653114e9a41956171489d" prefix=" " category="inline-code"></block>.</block>
+  <block id="6fbe5ae14d71eb3abafcfce8f7fe977a" category="inline-link">ID de compte BlueXP</block>
+  <block id="af270465b477b731bafe1e4859956cc4" category="list-text">Le moteur GenAI est configuré pour envoyer des journaux aux journaux Amazon CloudWatch, en utilisant un groupe de journaux portant le nom<block ref="267ed14c989ee7da1da6b5683a1ba205" prefix=" " category="inline-code"></block>, où<block ref="44014fe9a7dd0d34b59279b9206b84b3" prefix=" " category="inline-code"></block> est le<block ref="bffdd6286177ca86f99ccefe410268a2" category="inline-link-rx"></block> pour l'utilisateur actuel.</block>
+  <block id="b3ec171bb9a8cc7c009e2caf4d945535" category="paragraph">Des détails sur l'accès à la base de connaissances à l'aide de l'API Workload Factory s'affichent.</block>
+  <block id="f48c3e82e3f3b9cc782fe1277e362ec5" category="paragraph">Vous aurez besoin d'identifiants AWS pour déployer l'infrastructure AWS, d'un système de fichiers FSX for ONTAP déployé et découvert, de la liste des sources de données que vous souhaitez intégrer dans votre base de connaissances, de l'accès au service d'IA Amazon Bedrock et bien plus encore.</block>
+  <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 août 2024</block>
+  <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Intégration des journaux Amazon CloudWatch</block>
+  <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">Les workloads d'IA génératifs sont désormais intégrés aux journaux Amazon CloudWatch, ce qui vous permet de surveiller les fichiers journaux des workloads d'IA génératifs.</block>
 </blocks>

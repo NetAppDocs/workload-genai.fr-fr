@@ -15,6 +15,16 @@ Découvrez les nouveautés de Generative ai workloads Capability of Workload Fac
 
 
 
+== 4 août 2024
+
+
+
+=== Intégration des journaux Amazon CloudWatch
+
+Les workloads d'IA génératifs sont désormais intégrés aux journaux Amazon CloudWatch, ce qui vous permet de surveiller les fichiers journaux des workloads d'IA génératifs.
+
+
+
 == 7 juillet 2024
 
 

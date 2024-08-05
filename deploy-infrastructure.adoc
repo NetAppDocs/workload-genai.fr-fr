@@ -90,4 +90,6 @@ Au cours du processus de déploiement, les éléments suivants sont configurés 
 * Le rôle IAM, le profil d'instance et le groupe de sécurité sont créés.
 * Le volume de la base de données du moteur GenAI (LanceDB) est créé sur le système de fichiers FSX pour ONTAP.
 * L'instance de machine virtuelle du moteur GenAI est déployée.
+* Amazon Bedrock est configuré pour envoyer des journaux à Amazon CloudWatch, en utilisant un groupe de journaux avec le préfixe `/aws/bedrock/`.
+* Le moteur GenAI est configuré pour envoyer des journaux aux journaux Amazon CloudWatch, en utilisant un groupe de journaux portant le nom `/netapp/wlmai/<tenancyAccountId>/randomId`, où `<tenancyAccountID>` est le https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["ID de compte BlueXP"^] pour l'utilisateur actuel.
 
