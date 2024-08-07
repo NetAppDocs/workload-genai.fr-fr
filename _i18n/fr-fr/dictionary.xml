@@ -12,7 +12,6 @@
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Sélectionnez *Ajouter* pour ajouter cette source de données à votre base de connaissances.</block>
   <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'intégration de la base de connaissances à une application chatbot.</block>
   <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">Activer l'authentification externe pour une base de connaissances</block>
-  <block id="f739f01e878ac777330d67ca4158aece" category="paragraph">Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'utilisation des terminaux API pour intégrer une base de connaissances à une application chatbot.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
   <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez publier.</block>
   <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">le bouton d'option</block>
@@ -20,12 +19,6 @@
   <block id="717cb2ec03a878d541d7d67390c70a02" category="list-text">Sélectionnez le menu *actions* et sélectionnez *gérer les paramètres d'authentification*.</block>
   <block id="01345ed4b5ff7f7a1a05a52074ad1caf" category="list-text">Configurer l'authentification :</block>
   <block id="d408b7a47989c152a2aa2d90a6528cd8" category="list-text">Sélectionnez *Activer les paramètres d'authentification*.</block>
-  <block id="06b97c41aa527667da7e7e745c867d3c" category="list-text">Fournissez les informations requises :</block>
-  <block id="f67d4abfe5d3ad3bdc35adca8802160f" category="list-text">Algorithmes</block>
-  <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="list-text">Public</block>
-  <block id="51360304ea03557e79bdf5ff9cd2e234" category="list-text">Émetteur</block>
-  <block id="9ebac1089717ab190990b2b9a0fd554c" category="list-text">URI JWKS</block>
-  <block id="9df3162c758e92127fd15a555cd18f04" category="paragraph">Vous devez obtenir les valeurs de ces champs auprès de votre fournisseur d'authentification.</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Sélectionnez *Enregistrer*.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Résultat</block>
   <block id="5d8cae383bd52502a39a1612796fb31f" category="paragraph">Vous disposez désormais d'une base de connaissances publiée et du point de terminaison unique que vous pouvez utiliser pour intégrer la base de connaissances à une application chatbot.</block>
@@ -550,4 +543,13 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 août 2024</block>
   <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Intégration des journaux Amazon CloudWatch</block>
   <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">Les workloads d'IA génératifs sont désormais intégrés aux journaux Amazon CloudWatch, ce qui vous permet de surveiller les fichiers journaux des workloads d'IA génératifs.</block>
+  <block id="c34bf4f0a7173f53dc110e7f41c2e0d0" category="paragraph">Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'utilisation des terminaux API pour intégrer une base de connaissances à une application chatbot. Lorsque vous activez l'authentification, vous générez un jeton web JSON à utiliser pour les demandes d'API à une base de connaissances à partir de clients chatbot.</block>
+  <block id="d4cc00616339f0819c8ca53d7850ca2c" category="list-text">Fournissez les informations requises. Des exemples sont fournis, mais vous devez obtenir les valeurs de ces champs auprès de votre fournisseur d'authentification :</block>
+  <block id="8fbebd38c35cb217ad6437410297b5e7" category="list-text">*Algorithmes* : l'algorithme de signature utilisé par votre fournisseur d'authentification.</block>
+  <block id="59575929b41aa989abd4d539bc31b47a" category="list-text">*Public* (facultatif) : chaîne contenant le destinataire prévu du jeton d'authentification (parfois une URL).</block>
+  <block id="8815fb464bfa6c8533fc5ae4e04b9c5a" category="list-text">*Émetteur* : chaîne qui identifie le fournisseur ayant émis le jeton.</block>
+  <block id="9f921e08c2635ce0ca6d5507cf90b6d2" category="paragraph">Par exemple, Amazon Cognito utilise des chaînes d'émetteur au format suivant :</block>
+  <block id="69a143a2f8c7c42f85ef0de9978c131d" category="paragraph">Où<block ref="d1dc4390a2dfb7cdc1a097e10b04acdf" prefix=" " category="inline-code"></block> est la région AWS contenant le pool d'utilisateurs et<block ref="d47ea98789cbedeffd13a02b7b550538" prefix=" " category="inline-code"></block> votre ID de pool d'utilisateurs. Vous pouvez récupérer votre ID de pool d'utilisateurs à l'aide de la commande suivante :</block>
+  <block id="563ae45eabbbd334a2af58d93ded707c" category="list-text">*JWKS URI* : chaîne URI qui fournit les clés publiques nécessaires pour vérifier les signatures de ce token.</block>
+  <block id="2caafa02c784bfe569590254865dd928" category="paragraph">Par exemple, Amazon Cognito utilise des chaînes URI JWKS au format suivant :</block>
 </blocks>
