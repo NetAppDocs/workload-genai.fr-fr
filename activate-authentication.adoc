@@ -11,7 +11,7 @@ summary: 'Activez l"authentification pour une base de connaissances afin que la 
 
 
 [role="lead"]
-Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'utilisation des terminaux API pour intégrer une base de connaissances à une application chatbot. Lorsque vous activez l'authentification, vous générez un jeton web JSON à utiliser pour les demandes d'API à une base de connaissances à partir de clients chatbot.
+Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'utilisation des terminaux API pour intégrer une base de connaissances à une application chatbot. Lorsque vous activez l'authentification, vous configurez les paramètres d'un jeton Web JSON qui sera utilisé pour les demandes d'API à une base de connaissances à partir de clients chatbot.
 
 .Étapes
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances pour laquelle vous souhaitez activer l'authentification.
@@ -23,7 +23,7 @@ Activez l'authentification pour une base de connaissances afin que la validation
 .. Fournissez les informations requises. Des exemples sont fournis, mais vous devez obtenir les valeurs de ces champs auprès de votre fournisseur d'authentification :
 +
 *** *Algorithmes* : l'algorithme de signature utilisé par votre fournisseur d'authentification.
-*** *Public* (facultatif) : chaîne contenant le destinataire prévu du jeton d'authentification (parfois une URL).
+*** *Public* (Facultatif) : chaîne contenant le destinataire du jeton (parfois une URL).
 *** *Émetteur* : chaîne qui identifie le fournisseur ayant émis le jeton.
 +
 Par exemple, Amazon Cognito utilise des chaînes d'émetteur au format suivant :
