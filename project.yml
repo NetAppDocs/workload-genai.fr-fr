@@ -29,6 +29,8 @@ sidebar:
       url: "/identify-data-sources.html"
     - title: Déployez l'infrastructure de la base de connaissances
       url: "/deploy-infrastructure.html"
+    - title: Utilisez l'exemple externe d'application chatbot
+      url: "/example-chatbot-application.html"
   - title: Utilisez GenAI pour créer des bases de connaissances
     entries:
     - title: Créez une base de connaissances
