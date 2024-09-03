@@ -35,7 +35,7 @@ Il répertorie également les informations d'intégration et indique si cette so
 
 == Modifier les paramètres de la source de données
 
-Vous pouvez modifier les informations relatives à une source de données que vous avez intégrées dans une base de connaissances. La plupart des informations sont corrigées après avoir ajouté une source de données à une base de connaissances, mais vous pouvez modifier la définition de la suppression et la prise de conscience des autorisations (lorsque vous utilisez le protocole SMB sur le volume de la source de données).
+Vous pouvez modifier les informations relatives à une source de données que vous avez intégrées dans une base de connaissances. La plupart des informations sont corrigées après l'ajout d'une source de données à une base de connaissances, mais vous pouvez modifier la définition et la configuration de la suppression et la prise en compte des autorisations (lorsque vous utilisez le protocole SMB sur le volume de la source de données).
 
 .Étapes
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances où réside la source de données, puis image:icon-action.png["le bouton d'option"] sélectionnez et sélectionnez *gérer la base de connaissances*.
@@ -44,7 +44,7 @@ La partie inférieure de la page répertorie les sources de données qui font pa
 
 . Dans la ligne de la source de données que vous souhaitez modifier, sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *Modifier la source de données*.
 . Dans la page Modifier la source de données, sélectionnez image:button-down-caret.png["le bouton flèche vers le bas"] pour développer la ligne pour la définition de bloc.
-. Mettez à jour les paramètres de la stratégie de Chunking et de la taille des blocs, ainsi que la prise de conscience des autorisations (pour les volumes SMB) et sélectionnez *Save*.
+. Mettez à jour les paramètres de la stratégie et de la configuration de chunking, ainsi que la prise en compte des autorisations (pour les volumes SMB) et sélectionnez *Enregistrer*.
 
 
 .Résultat

@@ -15,6 +15,22 @@ Découvrez les nouveautés de Generative ai workloads Capability of Workload Fac
 
 
 
+== 1er septembre 2024
+
+
+
+=== Stratégies de chaquage supplémentaires
+
+Les workloads d'IA génératifs prennent désormais en charge le traitement en plusieurs phrases et le processus de suppression basé sur les chevauchements pour les sources de données.
+
+
+
+=== Volume dédié pour chaque base de connaissances
+
+Les workloads d'IA génératifs créent désormais un volume Amazon FSX pour NetApp ONTAP dédié à chaque nouvelle base de connaissances, en activant des règles Snapshot individuelles pour chaque base de connaissances et en améliorant la protection contre les défaillances et les empoisonnements de données.
+
+
+
 == 4 août 2024
 
 
@@ -22,6 +38,12 @@ Découvrez les nouveautés de Generative ai workloads Capability of Workload Fac
 === Intégration des journaux Amazon CloudWatch
 
 Les workloads d'IA génératifs sont désormais intégrés aux journaux Amazon CloudWatch, ce qui vous permet de surveiller les fichiers journaux des workloads d'IA génératifs.
+
+
+
+=== Exemple d'application chatbot
+
+L'exemple d'application NetApp Workload Factory GenAI vous permet de tester l'authentification et l'extraction à partir de votre base de connaissances NetApp Workload Factory publiée en interagissant directement avec elle dans une application web de chatbot.
 
 
 

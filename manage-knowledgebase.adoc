@@ -49,7 +49,7 @@ Chaque fois que vous ajoutez, modifiez ou supprimez des sources de données de l
 Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
 
 . Sélectionnez le menu *actions* et sélectionnez *Modifier la base de connaissances*.
-. Sur la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, sa description, son modèle d'intégration, son modèle de discussion et si les amorces de conversation sont créées automatiquement ou manuellement.
+. Sur la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, sa description, le modèle d'intégration, le modèle de discussion, si les amorces de conversation sont créées automatiquement ou manuellement et la stratégie d'instantané utilisée pour le volume contenant la base de connaissances.
 +
 Si vous utilisez le mode Manuel pour les amorces de conversation, vous pouvez également modifier les amorces de conversation ici.
 
@@ -71,7 +71,16 @@ Vous pouvez intégrer d'autres sources de données dans votre base de connaissan
 Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory, notamment le domaine, l'adresse IP, le nom d'utilisateur et le mot de passe.
 
 . *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
-. *Définir les paramètres ai* : dans la section *Chunk definition*, définissez la façon dont le service Amazon Bedrock divise le contenu de la source de données en blocs lorsque la base de connaissances à laquelle il appartient est interrogée. Pour le moment, vous ne pouvez choisir que des phrases.
+. *Définir les paramètres ai* : dans la section *Stratégie de Chunking*, définissez la façon dont le moteur GenAI divise le contenu de la source de données en blocs lorsque la source de données est intégrée à une base de connaissances. Vous pouvez choisir l'une des stratégies suivantes :
++
+** *Chunking à plusieurs phrases* : organise les informations de votre source de données en blocs définis par des phrases. Vous pouvez choisir combien de phrases composent chaque morceau (jusqu'à 100).
+** *Chunking basé sur le chevauchement* : organise les informations de votre source de données en blocs définis par des caractères qui peuvent chevaucher des blocs voisins. Vous pouvez choisir la taille de chaque bloc en caractères et la quantité de chaque bloc qui chevauche les blocs adjacents. Vous pouvez configurer une taille de bloc comprise entre 50 et 3000 caractères et un pourcentage de chevauchement compris entre 1 et 99 %.
++
+
+NOTE: Le choix d'un pourcentage de chevauchement élevé peut considérablement augmenter les besoins de stockage avec seulement de légères améliorations de la précision de récupération.
+
+
+
 . Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver la sélection :
 +
 ** *Activé* : les utilisateurs du chatbot qui accèdent à cette base de connaissances n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
@@ -146,13 +155,9 @@ La base de connaissances est désactivée et n'est plus accessible par une appli
 
 == Supprimer une base de connaissances
 
-Si vous n'avez plus besoin d'une base de connaissances, vous pouvez la supprimer. Lorsque vous supprimez la base de connaissances, celle-ci est supprimée de Workload Factory et toutes les applications ou chatbots qui utilisent la base de connaissances cessent de fonctionner. Cette action n'est pas réversible.
+Si vous n'avez plus besoin d'une base de connaissances, vous pouvez la supprimer. Lorsque vous supprimez une base de connaissances, elle est supprimée de Workload Factory et le volume qui contient la base de connaissances est supprimé. Les applications ou chatbots qui utilisent la base de connaissances cesseront de fonctionner. La suppression d'une base de connaissances n'est pas réversible.
 
-Lorsque vous supprimez une base de connaissances, vous devez également effectuer les actions suivantes pour supprimer entièrement toutes les ressources associées à la base de connaissances :
-
-* Dissociez la base de connaissances de tous les agents avec lesquels elle est associée.
-* Les données sous-jacentes qui ont été indexées à partir de votre base de connaissances restent dans le magasin vectoriel que vous avez configuré et peuvent toujours être récupérées. Pour supprimer les données, vous devez également supprimer l'index vectoriel contenant les codes de données.
-
+Lorsque vous supprimez une base de connaissances, vous devez également dissocier la base de connaissances de tous les agents auxquels elle est associée afin de supprimer entièrement toutes les ressources associées à la base de connaissances.
 
 .Étapes
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez supprimer.
@@ -162,4 +167,4 @@ Lorsque vous supprimez une base de connaissances, vous devez également effectue
 
 
 .Résultat
-La base de connaissances est supprimée de Workload Factory.
+La base de connaissances est supprimée de Workload Factory et son volume associé est supprimé.

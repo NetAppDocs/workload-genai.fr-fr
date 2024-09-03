@@ -69,16 +69,14 @@ Le déploiement GenAI doit se trouver dans une région AWS sur laquelle le syst�
 
 
 . Complétez les éléments de la section *Paramètres de l'infrastructure* :
+
+
+. *Tags* : saisissez toutes les paires clé/valeur de balise que vous souhaitez appliquer à toutes les ressources AWS qui font partie de ce déploiement.
+. *Paire de clés* : sélectionnez une paire de clés qui vous permet de vous connecter en toute sécurité à l'instance du moteur NetApp GenAI.
 +
-.. *FSX pour système de fichiers ONTAP* : sélectionnez le système de fichiers FSX pour ONTAP et la machine virtuelle de stockage sur laquelle les volumes de base de données de l'instance GenAI seront déployés, puis indiquez le nom que vous souhaitez utiliser pour le volume.
-+
-Selon que Workload Factory possède ou non les informations d'identification du système de fichiers FSX for ONTAP, vous devrez peut-être saisir le nom d'utilisateur et le mot de passe.
-
-.. *Tags* : saisissez toutes les paires clé/valeur de balise que vous souhaitez appliquer à toutes les ressources AWS qui font partie de ce déploiement.
-.. *Paire de clés* : sélectionnez une paire de clés qui vous permet de vous connecter en toute sécurité à l'instance du moteur NetApp GenAI.
+.. Sélectionnez *déployer* pour commencer le déploiement.
 
 
-. Sélectionnez *déployer* pour commencer le déploiement.
 
 
 .Résultat
@@ -88,7 +86,6 @@ Au cours du processus de déploiement, les éléments suivants sont configurés 
 
 * Le réseau est configuré avec les terminaux privés.
 * Le rôle IAM, le profil d'instance et le groupe de sécurité sont créés.
-* Le volume de la base de données du moteur GenAI (LanceDB) est créé sur le système de fichiers FSX pour ONTAP.
 * L'instance de machine virtuelle du moteur GenAI est déployée.
 * Amazon Bedrock est configuré pour envoyer des journaux à Amazon CloudWatch, en utilisant un groupe de journaux avec le préfixe `/aws/bedrock/`.
 * Le moteur GenAI est configuré pour envoyer des journaux aux journaux Amazon CloudWatch, en utilisant un groupe de journaux portant le nom `/netapp/wlmai/<tenancyAccountId>/randomId`, où `<tenancyAccountID>` est le https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["ID de compte BlueXP"^] pour l'utilisateur actuel.

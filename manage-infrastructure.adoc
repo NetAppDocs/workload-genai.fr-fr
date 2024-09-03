@@ -25,7 +25,7 @@ Vous pouvez afficher des informations sur l'infrastructure du chatbot
 . Afficher des informations sur l'infrastructure, qui incluent des détails sur les composants suivants :
 +
 ** Paramètres AWS
-** Le système de fichiers FSX pour ONTAP
+** Paramètres de l'infrastructure
 ** Le moteur ai
 ** La base de données vectorielle
 
