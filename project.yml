@@ -63,6 +63,8 @@ sidebar:
     entries:
     - title: S'inscrire pour obtenir de l'aide
       url: "/support-registration.html"
+    - title: Dépannage
+      url: "/troubleshooting.html"
     - title: Obtenez de l'aide
       url: "/get-help.html"
   - title: Mentions légales
