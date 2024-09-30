@@ -599,7 +599,6 @@
   <block id="9cbd2c5c5175ed32f13a8e1e7a8198dd" category="list-text">Dans la<block ref="078831e29f354e83fac6da3db6ed6b7b" prefix=" " category="inline-code"></block> section, modifiez le chemin d'accès du périphérique sur le nouveau chemin d'accès du volume. Par exemple :</block>
   <block id="e9813bd2289d9835204f02be0a5d2df6" category="cell">Le volume root a été supprimé.</block>
   <block id="358ede72c2c3d3e77baf3ed35b4039f6" category="cell">Créez un volume avec un nom et un chemin, puis redémarrez l'instance Docker back-end à partir d'Amazon EC2.</block>
-  <block id="430ea429b454fdc4ea2eb6c6b9cdbd77" category="doc">Prendre un instantané de et restaurer un volume de la base de connaissances</block>
   <block id="1ae13d57da1c55ee537cb9dc63916d03" category="paragraph">Vous pouvez désormais protéger les données de vos workloads d'IA générative en utilisant une copie instantanée d'une base de connaissances. Vous pouvez ainsi protéger vos données contre les pertes accidentelles ou tester les modifications apportées aux paramètres de la base de connaissances. Vous pouvez à tout moment restaurer la version précédente du volume de la base de connaissances.</block>
   <block id="073751c61467c5e36c6cc197d92a75c4" category="section-title">Mettre en pause les analyses planifiées</block>
   <block id="6c31cb11ffc4d11a5aed0e968bb5f8c9" category="paragraph">Vous pouvez maintenant interrompre les analyses de sources de données planifiées. Par défaut, les workloads d'IA génératifs analysent chaque source de données tous les jours afin d'ingérer de nouvelles données dans chaque base de connaissances. Si vous ne souhaitez pas que les dernières modifications soient ingérées (pendant le test ou lors de la restauration d'un instantané, par exemple), vous pouvez interrompre les analyses programmées et les reprendre à tout moment.</block>
@@ -644,4 +643,5 @@
   <block id="340b5c4d996cad6cf6d27d13faf94e89" category="paragraph"><block ref="340b5c4d996cad6cf6d27d13faf94e89" category="inline-link-rx"></block></block>
   <block id="f951fa0f2608d186cd1f0bd8889ac232" category="paragraph"><block ref="f951fa0f2608d186cd1f0bd8889ac232" category="inline-link-rx"></block></block>
   <block id="8afd34c2a29e7b6286f3ed0bf9e20c22" category="paragraph"><block ref="8afd34c2a29e7b6286f3ed0bf9e20c22" category="inline-link-rx"></block></block>
+  <block id="4936442e55cb8f837f9616ca6aaf1e92" category="doc">Prise en charge des snapshots et des restaurations pour les volumes de la base de connaissances</block>
 </blocks>
