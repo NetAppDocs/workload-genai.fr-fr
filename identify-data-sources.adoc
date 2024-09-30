@@ -23,7 +23,9 @@ Le nombre maximum de sources de données prises en charge est de 10.
 
 == Emplacement des sources de données
 
-Les sources de données peuvent être stockées dans un seul volume, ou dans un dossier au sein d'un volume, sur un partage SMB ou une exportation NFS sur un système de fichiers Amazon FSX pour NetApp ONTAP. Vous ne pouvez pas sélectionner des documents individuels au sein d'un volume ou d'un dossier. Par conséquent, vous devez vous assurer que chaque volume ou dossier contenant des sources de données ne contient pas de documents externes qui ne doivent pas être intégrés à votre base de connaissances.
+Les sources de données peuvent être stockées dans un seul volume, ou dans un dossier au sein d'un volume, sur un partage SMB ou une exportation NFS sur un système de fichiers Amazon FSX pour NetApp ONTAP. Les sources de données peuvent également être stockées dans des volumes Amazon FSX pour NetApp ONTAP dans une relation de protection des données NetApp SnapMirror.
+
+Vous ne pouvez pas sélectionner des documents individuels au sein d'un volume ou d'un dossier. Par conséquent, vous devez vous assurer que chaque volume ou dossier contenant des sources de données ne contient pas de documents externes qui ne doivent pas être intégrés à votre base de connaissances.
 
 Vous pouvez ajouter plusieurs sources de données dans chaque base de connaissances, mais elles doivent résider sur des systèmes de fichiers FSX pour ONTAP accessibles depuis votre compte AWS.
 
@@ -50,14 +52,17 @@ Les formats de fichier de source de données suivants sont actuellement pris en 
 | Format de fichier | Extension 
 
 
+| Fichier de valeurs séparées par des virgules | .csv 
+
+
+| Démarque | .md 
+
+
+| Microsoft Word | .doc ou .docx 
+
+
 | Texte brut | .txt 
 
 
-| Document portable | .pdf 
-
-
-| Microsoft Word | .docx 
-
-
-| Fichier de valeurs séparées par des virgules | .csv 
+| Format de document portable | .pdf 
 |===

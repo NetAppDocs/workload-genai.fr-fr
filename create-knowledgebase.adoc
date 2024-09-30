@@ -53,7 +53,7 @@ Découvrez les modèles disponibles pour vous aider à faire votre choix : https
 Si vous activez les amorces de conversation, le mode automatique est sélectionné par défaut. Le « mode manuel » ne peut être activé qu'après avoir ajouté des sources de données à votre base de connaissances. link:manage-knowledgebase.html["Apprenez à modifier les paramètres de la base de connaissances"].
 
 .. *FSX for ONTAP file system* : lorsque vous définissez une nouvelle base de connaissances, Workload Factory crée un nouveau volume Amazon FSX for NetApp ONTAP pour le stocker. Choisissez un nom de système de fichiers et un SVM existants (également appelés VM de stockage) dans lesquels le nouveau volume sera créé.
-.. *Snapshot policy* : choisissez une règle de snapshot dans la liste des stratégies existantes définies dans l'inventaire de stockage Workload Factory.
+.. *Snapshot policy* : choisissez une règle de snapshot dans la liste des stratégies existantes définies dans l'inventaire de stockage Workload Factory. Les instantanés récurrents de la base de connaissances seront automatiquement créés à une fréquence basée sur la stratégie de snapshots que vous sélectionnez.
 +
 Si la règle de snapshot dont vous avez besoin n'existe pas, vous pouvez https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["création d'une règle de snapshots"] la faire sur la machine virtuelle de stockage qui contient le volume.
 
@@ -61,7 +61,10 @@ Si la règle de snapshot dont vous avez besoin n'existe pas, vous pouvez https:/
 
 . Sélectionnez *Créer la base de connaissances* pour ajouter la base de connaissances à GenAI.
 +
-Dans la page suivante de l'assistant, vous avez la possibilité d'ajouter une source de données à votre nouvelle base de connaissances ou de terminer le processus ici sans ajouter de source de données. Nous vous recommandons de sélectionner *Ajouter une source de données* et d'ajouter une ou plusieurs sources de données maintenant.
+Un indicateur de progression s'affiche pendant la création de la base de connaissances.
+
++
+Une fois la base de connaissances créée, vous avez la possibilité d'ajouter une source de données à votre nouvelle base de connaissances ou de mettre fin au processus sans ajouter de source de données. Nous vous recommandons de sélectionner *Ajouter une source de données* et d'ajouter une ou plusieurs sources de données maintenant.
 
 
 
@@ -104,4 +107,4 @@ NOTE: Le choix d'un pourcentage de chevauchement élevé peut considérablement 
 .Résultat
 La source de données commence à être intégrée à votre base de connaissances. L'état passe de « intégration » à « intégrée » lorsque la source de données est complètement intégrée.
 
-Après avoir ajouté une seule source de données à la base de connaissances, vous pouvez la tester localement dans la fenêtre du simulateur Chatbot et apporter les modifications requises avant de mettre le chatbot à la disposition de vos utilisateurs. Vous pouvez également suivre les mêmes étapes pour ajouter des sources de données supplémentaires à la base de connaissances.
+Après avoir ajouté une seule source de données à la base de connaissances, vous pouvez la tester localement dans la fenêtre du simulateur de chatbot et apporter les modifications requises avant de rendre le chatbot disponible pour vos utilisateurs. Vous pouvez également suivre les mêmes étapes pour ajouter des sources de données supplémentaires à la base de connaissances.

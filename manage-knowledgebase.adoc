@@ -58,6 +58,64 @@ Si vous utilisez le mode Manuel pour les amorces de conversation, vous pouvez é
 
 
 
+== Protégez une base de connaissances avec des instantanés
+
+Vous pouvez protéger les données de votre base de connaissances en prenant et en restaurant des instantanés des volumes de votre base de connaissances. Vous pouvez à tout moment restaurer à partir d'un instantané pour revenir à la version précédente de la base de connaissances.
+
+Les copies Snapshot peuvent être plus rapides et plus efficaces en termes de stockage que les sauvegardes et vous permettent de protéger chaque base de connaissances à l'aide d'une règle de protection différente. Voici quelques-uns des scénarios dans lesquels les snapshots peuvent être utiles :
+
+* Perte ou corruption accidentelle des données
+* Récupération à partir de données incorrectes ingérées dans la base de connaissances
+* Test de différentes sources de données ou stratégies de suppression, et rétablissement rapide une fois les tests terminés
+
+
+
+
+=== Prenez un instantané d'un volume de la base de connaissances
+
+Vous pouvez enregistrer l'état d'une base de connaissances en prenant un instantané manuel du volume de la base de connaissances.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez protéger.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
+
+. Sélectionnez le menu *actions* et sélectionnez *instantané > Créer un nouvel instantané*.
++
+Un instantané de la base de connaissances est créé.
+
+
+
+
+
+=== Restaurer un snapshot d'un volume de la base de connaissances
+
+Vous pouvez à tout moment restaurer un snapshot manuel ou planifié d'un volume de la base de connaissances.
+
+
+NOTE: Vous ne pouvez pas restaurer un snapshot à l'aide de l'interface utilisateur des workloads Generative ai si la base de données stockée sur le volume est corrompue ou supprimée. Pour contourner ce problème, vous pouvez restaurer le snapshot à l'aide de https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["INTERFACE DE LIGNE DE COMMANDES DE ONTAP"^] sur le cluster ONTAP où le volume est hébergé.
+
+.Étapes
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez restaurer.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
+
+. Sélectionnez le menu *actions* et sélectionnez *instantané > Restaurer instantané*.
++
+La boîte de dialogue de sélection d'instantané s'affiche, dans laquelle vous pouvez afficher la liste des instantanés créés pour cette base de connaissances.
+
+. (Facultatif) désélectionnez l'option *suspendre l'exécution et les analyses programmées après la restauration de l'instantané* si vous souhaitez que les analyses de source de données planifiées et en cours d'exécution continuent après la restauration de l'instantané.
++
+Cette option est activée par défaut pour garantir qu'une analyse ne se produit pas lorsque la base de connaissances est en état partiellement restauré ou qu'une analyse ne met pas à jour une base de connaissances récemment restaurée avec des données plus anciennes.
+
+. Sélectionnez l'instantané à restaurer dans la liste.
+. Sélectionnez *Restaurer*.
+
+
+
+
 == Ajouter des sources de données supplémentaires à une base de connaissances
 
 Vous pouvez intégrer d'autres sources de données dans votre base de connaissances pour les remplir avec des données d'organisation supplémentaires.
@@ -95,9 +153,9 @@ La source de données est intégrée à votre base de connaissances.
 
 
 
-== Synchronisez vos sources de données avec la base de connaissances
+== Synchronisez vos sources de données avec une base de connaissances
 
-Les sources de données sont synchronisées automatiquement une fois par jour avec la base de connaissances. Les modifications apportées aux sources de données sont donc répercutées dans le chatbot. Si vous modifiez l'une de vos sources de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez effectuer une synchronisation à la demande.
+Les sources de données sont automatiquement synchronisées avec la base de connaissances associée une fois par jour, de sorte que les modifications éventuelles des sources de données soient répercutées dans le chatbot. Si vous modifiez l'une de vos sources de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez effectuer une synchronisation à la demande.
 
 La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de vos sources de données qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
 
