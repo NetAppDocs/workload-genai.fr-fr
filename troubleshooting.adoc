@@ -7,7 +7,7 @@ summary: 'Avant d"ouvrir un dossier de demande de support auprès du support tec
 = Dépannage
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

@@ -33,32 +33,30 @@ sidebar:
       url: "/deploy-infrastructure.html"
     - title: Utilisez l'exemple externe d'application chatbot
       url: "/example-chatbot-application.html"
-  - title: Utilisez GenAI pour créer des bases de connaissances
+    - title: Composants du moteur NetApp GenAI
+      url: "/genai-engine-instance.html"
+  - title: Utiliser GenAI pour construire des bases de connaissances
     entries:
-    - title: Créez une base de connaissances
-      entries:
-      - title: Créer une base de connaissances
-        url: "/create-knowledgebase.html"
-      - title: Testez une base de connaissances
-        url: "/test-knowledgebase.html"
-      - title: Activez l'authentification
-        url: "/activate-authentication.html"
-      - title: Publier une base de connaissances
-        url: "/publish-knowledgebase.html"
-      - title: Créez une application d'IA RAG
-        url: "/create-application.html"
-      - title: Que pouvez-vous faire ensuite
-        url: "/whats-next.html"
-    - title: Gérer les sources de données
-      url: "/manage-data-source.html"
-    - title: Gérer les bases de connaissances
-      url: "/manage-knowledgebase.html"
+    - title: Créer une base de connaissances
+      url: "/create-knowledgebase.html"
+    - title: Testez une base de connaissances
+      url: "/test-knowledgebase.html"
+    - title: Activez l'authentification
+      url: "/activate-authentication.html"
+    - title: Publier une base de connaissances
+      url: "/publish-knowledgebase.html"
+    - title: Créez une application d'IA RAG
+      url: "/create-application.html"
+    - title: Que pouvez-vous faire ensuite
+      url: "/whats-next.html"
   - title: Administrer GenAI
     entries:
     - title: Gérer l'infrastructure GenAI
       url: "/manage-infrastructure.html"
-    - title: Composants du moteur NetApp GenAI
-      url: "/genai-engine-instance.html"
+    - title: Gérer les bases de connaissances
+      url: "/manage-knowledgebase.html"
+    - title: Gérer les sources de données
+      url: "/manage-data-source.html"
   - title: Connaissances et support
     entries:
     - title: S'inscrire pour obtenir de l'aide

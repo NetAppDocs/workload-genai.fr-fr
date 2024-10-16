@@ -56,7 +56,7 @@ Les paramètres de la source de données sont mis à jour et le système ai sync
 
 Vous pouvez modifier le contenu d'une source de données à tout moment pour ajouter ou mettre à jour vos données organisationnelles. Si cette source de données est activement utilisée dans une base de connaissances, vous devez synchroniser la source de données afin qu'elle soit réindexée dans la base de connaissances. La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de votre volume FSX pour ONTAP qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
 
-Les sources de données sont synchronisées automatiquement une fois par jour avec la base de connaissances. Les modifications apportées aux sources de données sont donc répercutées dans le chatbot. Si vous apportez des modifications à une source de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez link:manage-knowledgebase.html#synchronize-your-data-sources-with-the-knowledge-base["effectuez une synchronisation à la demande"].
+Les sources de données sont synchronisées automatiquement une fois par jour avec la base de connaissances. Les modifications apportées aux sources de données sont donc répercutées dans le chatbot. Si vous apportez des modifications à une source de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez link:manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["effectuez une synchronisation à la demande"].
 
 
 

@@ -275,7 +275,6 @@
   <block id="f0c862596fc0a1dd30faa6b630a0d09b" category="section-title">Mettre à jour le contenu d'une source de données existante</block>
   <block id="d811eb8aad6aebc071695232fb58c5a5" category="paragraph">Vous pouvez modifier le contenu d'une source de données à tout moment pour ajouter ou mettre à jour vos données organisationnelles. Si cette source de données est activement utilisée dans une base de connaissances, vous devez synchroniser la source de données afin qu'elle soit réindexée dans la base de connaissances. La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de votre volume FSX pour ONTAP qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.</block>
   <block id="24f189799b33f2d3f465d0658dcc69e1" category="inline-link-macro">effectuez une synchronisation à la demande</block>
-  <block id="424609f726117c0fe50e1034bb197bf7" category="paragraph">Les sources de données sont synchronisées automatiquement une fois par jour avec la base de connaissances. Les modifications apportées aux sources de données sont donc répercutées dans le chatbot. Si vous apportez des modifications à une source de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez <block ref="67b891ffaab1342f4fb267d7cc798f81" category="inline-link-macro-rx"></block>.</block>
   <block id="35198182831e3f9922e23822e3f2e2eb" category="section-title">Supprimer une source de données</block>
   <block id="19045c987301cc2ddb28f24761554946" category="paragraph">Si vous n'avez plus besoin d'une source de données pour faire partie de votre base de connaissances, vous pouvez la supprimer.</block>
   <block id="7c25f02bbc30d711041ddd1cc4235dc3" category="list-text">Dans la page d'inventaire de la base de connaissances, sélectionnez la base de connaissances où réside la source de données, puis <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> sélectionnez et sélectionnez *gérer la base de connaissances*.</block>
@@ -501,7 +500,6 @@
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notes de mise à jour</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Quoi de neuf</block>
   <block id="acbf2b120f060c765cc5fbfef7779840" category="sidebar">Identifiez les sources de données de votre base de connaissances</block>
-  <block id="2e800147de9688c09f27dae52c542680" category="sidebar">Utilisez GenAI pour créer des bases de connaissances</block>
   <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">Activez l'authentification</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Connaissances et support</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">L'utilisation de la fonctionnalité GenAI de Workload Factory est gratuit.</block>
@@ -644,4 +642,6 @@
   <block id="f951fa0f2608d186cd1f0bd8889ac232" category="paragraph"><block ref="f951fa0f2608d186cd1f0bd8889ac232" category="inline-link-rx"></block></block>
   <block id="8afd34c2a29e7b6286f3ed0bf9e20c22" category="paragraph"><block ref="8afd34c2a29e7b6286f3ed0bf9e20c22" category="inline-link-rx"></block></block>
   <block id="4936442e55cb8f837f9616ca6aaf1e92" category="doc">Prise en charge des snapshots et des restaurations pour les volumes de la base de connaissances</block>
+  <block id="ef3d62d3a83e208fec16cf94a1c9ef8b" category="paragraph">Les sources de données sont synchronisées automatiquement une fois par jour avec la base de connaissances. Les modifications apportées aux sources de données sont donc répercutées dans le chatbot. Si vous apportez des modifications à une source de données et que vous souhaitez synchroniser les données immédiatement, vous pouvez <block ref="a5f82761b74f2896160929ccd4ead00e" category="inline-link-macro-rx"></block>.</block>
+  <block id="3bd082f2a7c2961a682116b6ed9f43fc" category="sidebar">Utiliser GenAI pour construire des bases de connaissances</block>
 </blocks>
