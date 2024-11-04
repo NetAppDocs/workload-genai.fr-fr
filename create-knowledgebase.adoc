@@ -13,9 +13,22 @@ summary: 'Une fois que vous avez déployé l"infrastructure d"IA et identifié l
 [role="lead"]
 Une fois que vous avez déployé l'infrastructure d'IA et identifié les sources de données à intégrer dans votre base de connaissances à partir de vos datastores FSX pour ONTAP, vous êtes prêt à créer la base de connaissances à l'aide de Workload Factory. Dans le cadre de cette étape, vous définirez également les caractéristiques de l'IA et vous pourrez amorces de discussion.
 
-Une base de connaissances peut être utilisée sans intégrer les sources de données de votre organisation. Dans ce cas, une application intégrée à la base de connaissances ne fournira que des résultats provenant d'informations accessibles au public sur Internet. Il s'agit d'une intégration de _mode public_.
+.Description de la tâche
+Les bases de connaissances ont deux modalités d'intégration de données : _mode public_ et _mode entreprise_.
 
-Dans la plupart des cas, vous voudrez intégrer les sources de données de votre organisation dans la base de connaissances. Il s'agit d'une intégration _Enterprise mode_ car elle fournit des connaissances de votre entreprise.
+Mode public:: Une base de connaissances peut être utilisée sans intégrer les sources de données de votre organisation. Dans ce cas, une application intégrée à la base de connaissances ne fournira que des résultats provenant d'informations accessibles au public sur Internet. Il s'agit d'une intégration de _mode public_.
+Mode entreprise:: Dans la plupart des cas, vous voudrez intégrer les sources de données de votre organisation dans la base de connaissances. Il s'agit d'une intégration _Enterprise mode_ car elle fournit des connaissances de votre entreprise.
++
+--
+Les sources de données de votre entreprise peuvent contenir des informations d'identité privées (IIP). Pour sauvegarder ces informations sensibles, vous pouvez activer _data guardrails_ lors de la création et de la configuration de bases de connaissances. Les rails de données, optimisés par la classification BlueXP , identifient et masquent les PII, ce qui les rend inaccessibles et irrécupérables.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Découvrez la classification BlueXP"^].
+
+
+NOTE: Les rails de protection des données peuvent être activés ou désactivés à tout moment. Si vous changez de système d'activation des données, Workload Factory analyse l'ensemble de la base de connaissances à partir de zéro, ce qui entraîne un coût.
+
+--
+
 
 
 
@@ -47,6 +60,21 @@ https://aws.amazon.com/bedrock/titan/["En savoir plus sur Amazon Titan"^]
 .. *Modèle Chat*: Choisissez parmi les modèles Claude Chat qui sont intégrés dans Amazon Bedrock. Notez que vous devez avoir déjà activé le modèle de chat à partir d'Amazon Bedrock.
 +
 Découvrez les modèles disponibles pour vous aider à faire votre choix : https://aws.amazon.com/bedrock/claude/["Claude d'anthropic dans le sol d'Amazon"^]
+
+.. *Data guardrails*: Choisissez si vous voulez activer ou désactiver les Data guardrails. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Découvrez les Data rambardes optimisées par la classification BlueXP "^].
++
+Les conditions préalables suivantes doivent être remplies pour activer les rails de données.
+
++
+*** Un compte de service est requis pour communiquer avec la classification BlueXP . Vous devez avoir le rôle _Organization admin_ sur votre compte de location BlueXP  pour la création du compte de service. Un membre ayant le rôle d'administrateur d'organisation peut effectuer toutes les actions dans BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Découvrez comment ajouter un rôle à un membre dans BlueXP "^]
+*** Vous devez effectuer les opérations suivantes comme décrit dans link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentation sur les classifications BlueXP"^]:
++
+.... Créer un connecteur BlueXP
+.... Assurez-vous que votre environnement peut répondre aux conditions préalables
+.... Déployez la classification BlueXP
+
+
+
 
 .. *Amorces de conversation* : indiquez si vous souhaitez fournir jusqu'à quatre invites de démarrage de conversation qui s'affichent aux utilisateurs qui interagissent avec un chatbot utilisant cette base de connaissances. Nous vous recommandons d'activer ce paramètre.
 +
