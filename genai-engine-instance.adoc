@@ -42,6 +42,8 @@ Terminaux privés:: Si le VPC cible ne les possède pas déjà, Workload Factory
 * Amazon Elastic Container Registry (ECR)
 * Amazon S3
 * AWS Systems Manager (SSM)
+* Amazon FSX pour NetApp ONTAP
+* Amazon CloudWatch
 
 
 --

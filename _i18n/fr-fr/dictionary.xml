@@ -667,4 +667,8 @@
   <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">Sur la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, la description, le modèle d'intégration, le modèle de chat, l'activation des rails de données, choisir si les amorces de conversation sont créées automatiquement ou manuellement, ainsi que la stratégie d'instantané utilisée pour le volume contenant la base de connaissances.</block>
   <block id="fde00ba8f64d2c57d64a163698fd6f03" category="admonition">Chaque analyse de la base de connaissances, qui inclut l'intégration, coûts. Si des rails de protection des données sont activés après la création d'une base de connaissances, celle-ci est analysée à nouveau et entraîne des coûts.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 novembre 2024</block>
+  <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">Console BlueXP</block>
+  <block id="402ae08ce46f82670c0313312e504ad7" category="list-text">Le moteur ai doit avoir accès au <block ref="046fd603b18837f482287e5ec741e5ed" category="inline-link-macro-rx"></block></block>
+  <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX pour NetApp ONTAP</block>
+  <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
 </blocks>

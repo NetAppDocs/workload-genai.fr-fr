@@ -67,6 +67,7 @@ Les conditions préalables suivantes doivent être remplies pour activer les rai
 
 +
 *** Un compte de service est requis pour communiquer avec la classification BlueXP . Vous devez avoir le rôle _Organization admin_ sur votre compte de location BlueXP  pour la création du compte de service. Un membre ayant le rôle d'administrateur d'organisation peut effectuer toutes les actions dans BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Découvrez comment ajouter un rôle à un membre dans BlueXP "^]
+*** Le moteur ai doit avoir accès au link:https://console.bluexp.netapp.com/["Console BlueXP"^]
 *** Vous devez effectuer les opérations suivantes comme décrit dans link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentation sur les classifications BlueXP"^]:
 +
 .... Créer un connecteur BlueXP
