@@ -14,11 +14,12 @@ summary: 'Une fois votre base de connaissances créée et testée localement, vo
 Une fois votre base de connaissances créée et testée localement, vous pouvez publier la base de connaissances afin qu'elle puisse être intégrée à une application chatbot qui permettra aux utilisateurs d'interroger la base de connaissances.
 
 .Description de la tâche
-La publication de la base de connaissances vous permet de l'utiliser dans des applications de chat. L'action de publication déclenche l'API Workload Factory pour générer et publier des noeuds finaux uniques. Après la publication, la base de connaissances devient accessible pour les applications de chat et les terminaux de l'API sont prêts pour l'intégration.
+La publication de la base de connaissances vous permet de l'utiliser dans des applications de chat. L'action de publication déclenche l'API d'usine du workload pour générer et publier des terminaux uniques. Après la publication, la base de connaissances devient accessible pour les applications de chat et les terminaux de l'API sont prêts pour l'intégration.
 
 Chaque base de connaissances que vous publiez possède des points finaux uniques.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez publier.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 +
@@ -26,14 +27,14 @@ Cette page affiche l'état publié, l'état d'intégration des sources de donné
 
 . Sélectionnez le menu *actions* et sélectionnez *publier*.
 +
-Workload Factory publie la base de connaissances. Sur la page de détails de la base de connaissances, le statut passe de *non publié* à *publié.*
+L'usine de charge de travail publie la base de connaissances. Sur la page de détails de la base de connaissances, le statut passe de *non publié* à *publié.*
 
 +
 Vous pouvez maintenant obtenir des détails sur le point de terminaison unique de la base de connaissances.
 
 . En regard de l'état publié, sélectionnez *Afficher*.
 +
-Des détails sur l'accès à la base de connaissances à l'aide de l'API Workload Factory s'affichent.
+Des détails sur la façon d'accéder à la base de connaissances à l'aide de l'API d'usine des workloads sont affichés.
 
 . Dans la boîte de dialogue *Afficher infos publiées*, copiez les noeuds finaux API que vous pouvez utiliser pour intégrer la base de connaissances à une application.
 +

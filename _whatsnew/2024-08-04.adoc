@@ -12,4 +12,4 @@ Les workloads d'IA génératifs sont désormais intégrés aux journaux Amazon C
 
 === Exemple d'application chatbot
 
-L'exemple d'application NetApp Workload Factory GenAI vous permet de tester l'authentification et l'extraction à partir de votre base de connaissances NetApp Workload Factory publiée en interagissant directement avec elle dans une application web de chatbot.
+L'exemple d'application GenAI de l'usine de workloads NetApp vous permet de tester l'authentification et l'extraction à partir de votre base de connaissances d'usine de workloads NetApp publiée en interagissant directement avec celle-ci dans une application de chatbot web.

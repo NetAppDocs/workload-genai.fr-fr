@@ -14,6 +14,7 @@ summary: 'Activez l"authentification pour une base de connaissances afin que la 
 Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'utilisation des terminaux API pour intégrer une base de connaissances à une application chatbot. Lorsque vous activez l'authentification, vous configurez les paramètres d'un jeton Web JSON qui sera utilisé pour les demandes d'API à une base de connaissances à partir de clients chatbot.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances pour laquelle vous souhaitez activer l'authentification.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 . Sélectionnez le menu *actions* et sélectionnez *gérer les paramètres d'authentification*.

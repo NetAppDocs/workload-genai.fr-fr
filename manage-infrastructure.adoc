@@ -20,7 +20,8 @@ Vous pouvez afficher les détails sur votre infrastructure RAG GenAI déployée 
 Vous pouvez afficher des informations sur l'infrastructure du chatbot
 
 .Étapes
-. Dans le menu de navigation, sélectionnez *ai*.
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans le menu de navigation usine de la charge de travail, sélectionnez *ai*.
 . Sélectionnez l'onglet *Infrastructure*.
 . Afficher des informations sur l'infrastructure, qui incluent des détails sur les composants suivants :
 +
@@ -36,12 +37,12 @@ Vous pouvez afficher des informations sur l'infrastructure du chatbot
 
 == Déposer l'infrastructure
 
-Si vous n'avez plus besoin de l'infrastructure de chatbot que vous avez déployée pour un ou plusieurs chatbots, vous pouvez la supprimer de Workload Factory.
+Si vous n'avez plus besoin de l'infrastructure de chatbot que vous avez déployée pour un ou plusieurs chatbots, vous pouvez la supprimer de l'usine de workloads.
 
 
 NOTE: Tous les chatbots déployés sur cette infrastructure seront désactivés et tous les historiques de discussion seront supprimés.
 
-Cette opération supprime uniquement les liens vers l'infrastructure d'IA de Workload Factory--elle ne supprime pas tous les composants d'AWS. Vous devrez supprimer manuellement les composants d'infrastructure suivants d'AWS :
+Cette opération supprime uniquement les liens vers l'infrastructure d'IA de l'usine de workloads. Elle ne supprime pas tous les composants d'AWS. Vous devrez supprimer manuellement les composants d'infrastructure suivants d'AWS :
 
 * L'instance de VM
 * Terminaux privés
@@ -52,11 +53,12 @@ Cette opération supprime uniquement les liens vers l'infrastructure d'IA de Wor
 
 
 .Étapes
-. Dans le menu de navigation, sélectionnez *ai*.
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans le menu de navigation usine de la charge de travail, sélectionnez *ai*.
 . Sélectionnez l'onglet *Infrastructure*.
 . image:icon-action.png["le bouton d'option"]Sélectionnez et sélectionnez *Supprimer l'infrastructure chatbot*.
 . Confirmez que vous souhaitez supprimer l'infrastructure et sélectionnez *Supprimer*.
 
 
 .Résultat
-Les composants de l'infrastructure du chatbot sont supprimés de Workload Factory.
+Les composants de l'infrastructure du chatbot sont supprimés de l'usine de workloads.

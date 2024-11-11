@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: Découvrez les nouveautés de la fonctionnalité ai workloads de Workload Factory. 
+summary: 'Découvrez les nouveautés de la fonctionnalité IA workloads de l"usine.' 
 ---
 = Quoi de neuf
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Découvrez les nouveautés de la fonctionnalité ai workloads de Worklo
 
 
 [role="lead"]
-Découvrez les nouveautés de Generative ai workloads Capability of Workload Factory.
+Découvrez les nouveautés de la fonctionnalité Generative ai workloads d'usine.
 
 
 
@@ -87,7 +87,7 @@ Les workloads d'IA génératifs sont désormais intégrés aux journaux Amazon C
 
 === Exemple d'application chatbot
 
-L'exemple d'application NetApp Workload Factory GenAI vous permet de tester l'authentification et l'extraction à partir de votre base de connaissances NetApp Workload Factory publiée en interagissant directement avec elle dans une application web de chatbot.
+L'exemple d'application GenAI de l'usine de workloads NetApp vous permet de tester l'authentification et l'extraction à partir de votre base de connaissances d'usine de workloads NetApp publiée en interagissant directement avec celle-ci dans une application de chatbot web.
 
 
 
@@ -95,6 +95,6 @@ L'exemple d'application NetApp Workload Factory GenAI vous permet de tester l'au
 
 
 
-=== Version initiale de Workload Factory pour GenAI
+=== Version initiale de l'usine de charges de travail pour GenAI
 
 La version initiale permet de développer une base de connaissances personnalisée en intégrant les données de votre entreprise. La base de connaissances est accessible par une application de chatbot pour vos utilisateurs. Cette fonctionnalité garantit des réponses précises et pertinentes aux questions spécifiques à l'entreprise, améliorant ainsi la satisfaction et la productivité de tous vos utilisateurs.

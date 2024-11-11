@@ -20,7 +20,8 @@ Après avoir créé une base de connaissances, vous pouvez afficher les détails
 Vous pouvez afficher des informations sur les paramètres d'une base de connaissances et sur la source de données intégrée.
 
 .Étapes
-. Dans le menu de navigation, sélectionnez *ai*.
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans le menu de navigation usine de la charge de travail, sélectionnez *ai*.
 . Sélectionnez la base de connaissances que vous souhaitez afficher.
 +
 Si elle est définie, les amorces de conversation actuellement utilisées s'affichent dans le volet de droite.
@@ -43,6 +44,7 @@ Vous pouvez mettre à jour une base de connaissances en modifiant certains param
 Chaque fois que vous ajoutez, modifiez ou supprimez des sources de données de la base de connaissances, vous devez synchroniser la source de données afin qu'elle soit réindexée dans la base de connaissances. La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de votre volume FSX pour ONTAP qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez mettre à jour.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 +
@@ -80,6 +82,7 @@ Les copies Snapshot peuvent être plus rapides et plus efficaces en termes de st
 Vous pouvez enregistrer l'état d'une base de connaissances en prenant un instantané manuel du volume de la base de connaissances.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez protéger.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 +
@@ -101,6 +104,7 @@ Vous pouvez à tout moment restaurer un snapshot manuel ou planifié d'un volume
 NOTE: Vous ne pouvez pas restaurer un snapshot à l'aide de l'interface utilisateur des workloads Generative ai si la base de données stockée sur le volume est corrompue ou supprimée. Pour contourner ce problème, vous pouvez restaurer le snapshot à l'aide de https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["INTERFACE DE LIGNE DE COMMANDES DE ONTAP"^] sur le cluster ONTAP où le volume est hébergé.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez restaurer.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 +
@@ -125,6 +129,7 @@ Cette option est activée par défaut pour garantir qu'une analyse ne se produit
 Vous pouvez intégrer d'autres sources de données dans votre base de connaissances pour les remplir avec des données d'organisation supplémentaires.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances dans laquelle vous souhaitez ajouter la source de données.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *Ajouter une source de données*.
 . *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
@@ -164,6 +169,7 @@ Les sources de données sont automatiquement synchronisées avec la base de conn
 La synchronisation est incrémentielle. Amazon Bedrock ne traite donc que les objets de vos sources de données qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez synchroniser.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 . Sélectionnez le menu *actions* et sélectionnez *Rechercher maintenant*.
@@ -185,6 +191,7 @@ Vous pouvez évaluer les modèles de chat de base disponibles avant de créer un
 NOTE: Cette fonctionnalité n'est disponible que lorsqu'aucune base de connaissances n'a été créée -- lorsqu'aucune base de connaissances n'existe dans la page d'inventaire des bases de connaissances.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sur la page d'inventaire des bases de connaissances, vous verrez l'option de sélectionner le modèle de chat sur le côté droit de la page pour le Chatbot.
 . Sélectionnez le modèle de chat dans la liste et entrez un ensemble de questions dans la zone d'invite pour voir comment le chatbot répond.
 . Essayez plusieurs modèles pour identifier le modèle le mieux adapté à votre implémentation.
@@ -202,6 +209,7 @@ Après avoir publié votre base de connaissances afin qu'elle puisse être inté
 L'annulation de la publication de la base de connaissances empêche toute application de chat de fonctionner. Le point de terminaison unique de l'API auquel la base de connaissances était accessible est désactivé.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez annuler la publication.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 +
@@ -217,11 +225,12 @@ La base de connaissances est désactivée et n'est plus accessible par une appli
 
 == Supprimer une base de connaissances
 
-Si vous n'avez plus besoin d'une base de connaissances, vous pouvez la supprimer. Lorsque vous supprimez une base de connaissances, elle est supprimée de Workload Factory et le volume qui contient la base de connaissances est supprimé. Les applications ou chatbots qui utilisent la base de connaissances cesseront de fonctionner. La suppression d'une base de connaissances n'est pas réversible.
+Si vous n'avez plus besoin d'une base de connaissances, vous pouvez la supprimer. Lorsque vous supprimez une base de connaissances, elle est supprimée de l'usine de la charge de travail et le volume qui contient la base de connaissances est supprimé. Les applications ou chatbots qui utilisent la base de connaissances cesseront de fonctionner. La suppression d'une base de connaissances n'est pas réversible.
 
 Lorsque vous supprimez une base de connaissances, vous devez également dissocier la base de connaissances de tous les agents auxquels elle est associée afin de supprimer entièrement toutes les ressources associées à la base de connaissances.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez supprimer.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
 . Sélectionnez le menu *actions* et sélectionnez *Supprimer la base de connaissances*.
@@ -229,4 +238,4 @@ Lorsque vous supprimez une base de connaissances, vous devez également dissocie
 
 
 .Résultat
-La base de connaissances est supprimée de Workload Factory et son volume associé est supprimé.
+La base de connaissances est supprimée de l'usine de la charge de travail et son volume associé est supprimé.

@@ -20,7 +20,8 @@ Après avoir créé une base de connaissances à l'aide de sources de données s
 Vous pouvez afficher des informations sur le contenu d'une source de données et afficher son état d'incorporation dans la base de connaissances. Comme une source de données fait partie d'une base de connaissances, vous devez d'abord ouvrir la base de connaissances avant de pouvoir afficher les détails de la source de données.
 
 .Étapes
-. Dans le menu de navigation, sélectionnez *ai*.
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans le menu de navigation usine de la charge de travail, sélectionnez *ai*.
 . Sélectionnez la base de connaissances où réside la source de données, puis image:icon-action.png["le bouton d'option"] sélectionnez *gérer la base de connaissances*.
 +
 La partie inférieure de la page répertorie les sources de données qui font partie de cette base de connaissances.
@@ -38,6 +39,7 @@ Il répertorie également les informations d'intégration et indique si cette so
 Vous pouvez modifier les informations relatives à une source de données que vous avez intégrées dans une base de connaissances. La plupart des informations sont corrigées après l'ajout d'une source de données à une base de connaissances, mais vous pouvez modifier la définition et la configuration de la suppression et la prise en compte des autorisations (lorsque vous utilisez le protocole SMB sur le volume de la source de données).
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances où réside la source de données, puis image:icon-action.png["le bouton d'option"] sélectionnez et sélectionnez *gérer la base de connaissances*.
 +
 La partie inférieure de la page répertorie les sources de données qui font partie de cette base de connaissances.
@@ -65,6 +67,7 @@ Les sources de données sont synchronisées automatiquement une fois par jour av
 Si vous n'avez plus besoin d'une source de données pour faire partie de votre base de connaissances, vous pouvez la supprimer.
 
 .Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire de la base de connaissances, sélectionnez la base de connaissances où réside la source de données, puis image:icon-action.png["le bouton d'option"] sélectionnez et sélectionnez *gérer la base de connaissances*.
 +
 La partie inférieure de la page répertorie les sources de données qui font partie de cette base de connaissances.

@@ -11,7 +11,7 @@ summary: 'Vous pouvez installer et exécuter un exemple d"application chatbot po
 
 
 [role="lead"]
-Après avoir configuré, activé et publié une base de connaissances, les développeurs d'applications externes peuvent configurer et exécuter l'exemple d'application chatbot open source fourni par NetApp pour interagir avec votre base de connaissances et apprendre à utiliser l'API Workload Factory pour créer leurs propres applications d'IA générative.
+Une fois que vous avez configuré, activé et publié une base de connaissances, les développeurs d'applications externes peuvent configurer et exécuter l'exemple d'application chatbot open source fourni par NetApp pour interagir avec votre base de connaissances et apprendre à utiliser l'API Workload Factory pour créer leurs propres applications d'IA générative.
 
 .Étapes
 . link:create-knowledgebase.html["Créer une base de connaissances"].

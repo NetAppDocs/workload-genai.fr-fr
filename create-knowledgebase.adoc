@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-knowledgebase.html 
 keywords: ai, chatbot, creating, knowledge base 
-summary: 'Une fois que vous avez déployé l"infrastructure d"IA et identifié les sources de données à intégrer dans votre base de connaissances à partir de vos datastores FSX pour ONTAP, vous êtes prêt à créer la base de connaissances à l"aide de Workload Factory. Dans le cadre de cette étape, vous définissez également les caractéristiques de l"IA et créez des amorces de discussion.' 
+summary: 'Une fois que vous avez déployé l"infrastructure d"IA et identifié les sources de données à intégrer dans votre base de connaissances à partir de vos datastores FSX pour ONTAP, vous êtes prêt à créer la base de connaissances à l"aide d"une usine de workloads. Dans le cadre de cette étape, vous définissez également les caractéristiques de l"IA et créez des amorces de discussion.' 
 ---
 = Créer une base de connaissances
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Une fois que vous avez déployé l"infrastructure d"IA et identifié l
 
 
 [role="lead"]
-Une fois que vous avez déployé l'infrastructure d'IA et identifié les sources de données à intégrer dans votre base de connaissances à partir de vos datastores FSX pour ONTAP, vous êtes prêt à créer la base de connaissances à l'aide de Workload Factory. Dans le cadre de cette étape, vous définirez également les caractéristiques de l'IA et vous pourrez amorces de discussion.
+Une fois que vous avez déployé l'infrastructure d'IA et identifié les sources de données à intégrer dans votre base de connaissances à partir de vos datastores FSX pour ONTAP, vous êtes prêt à créer la base de connaissances à l'aide d'une usine de workloads. Dans le cadre de cette étape, vous définirez également les caractéristiques de l'IA et vous pourrez amorces de discussion.
 
 .Description de la tâche
 Les bases de connaissances ont deux modalités d'intégration de données : _mode public_ et _mode entreprise_.
@@ -37,14 +37,14 @@ NOTE: Les rails de protection des données peuvent être activés ou désactivé
 La base de connaissances définit des caractéristiques telles que les modèles d'IA de Bedrock et le format d'intégration que vous souhaitez utiliser pour créer votre base de connaissances.
 
 .Étapes
-. Connectez-vous à Workload Factory.
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque workloads d'IA, sélectionnez *déployer et gérer*.
 . Dans l'onglet bases de connaissances, sélectionnez *Ajouter une base de connaissances*.
 . Sur la page définir la base de connaissances, configurez les paramètres de la base de connaissances :
 +
 .. *Nom* : saisissez le nom que vous souhaitez utiliser pour la base de connaissances.
 .. *Description* : saisissez une description détaillée de la base de connaissances.
-.. *Modèle d'intégration*: Le modèle d'intégration définit la façon dont vos données seront converties en embeddings vectoriels pour la base de connaissances. Workload Factory prend en charge les modèles suivants :
+.. *Modèle d'intégration*: Le modèle d'intégration définit la façon dont vos données seront converties en embeddings vectoriels pour la base de connaissances. L'usine de charges de travail prend en charge les modèles suivants :
 +
 *** Codes Titan G1 - texte
 *** Texte d'intégration Titan v2
@@ -82,7 +82,7 @@ Les conditions préalables suivantes doivent être remplies pour activer les rai
 Si vous activez les amorces de conversation, le mode automatique est sélectionné par défaut. Le « mode manuel » ne peut être activé qu'après avoir ajouté des sources de données à votre base de connaissances. link:manage-knowledgebase.html["Apprenez à modifier les paramètres de la base de connaissances"].
 
 .. *FSX for ONTAP file system* : lorsque vous définissez une nouvelle base de connaissances, Workload Factory crée un nouveau volume Amazon FSX for NetApp ONTAP pour le stocker. Choisissez un nom de système de fichiers et un SVM existants (également appelés VM de stockage) dans lesquels le nouveau volume sera créé.
-.. *Snapshot policy* : choisissez une règle de snapshot dans la liste des stratégies existantes définies dans l'inventaire de stockage Workload Factory. Les instantanés récurrents de la base de connaissances seront automatiquement créés à une fréquence basée sur la stratégie de snapshots que vous sélectionnez.
+.. *Snapshot policy* : choisissez une snapshot policy dans la liste des stratégies existantes définies dans l'inventaire de stockage d'usine des charges de travail. Les instantanés récurrents de la base de connaissances seront automatiquement créés à une fréquence basée sur la stratégie de snapshots que vous sélectionnez.
 +
 Si la règle de snapshot dont vous avez besoin n'existe pas, vous pouvez https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["création d'une règle de snapshots"] la faire sur la machine virtuelle de stockage qui contient le volume.
 

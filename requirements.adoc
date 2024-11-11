@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: requirements.html 
 keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
-summary: 'Assurez-vous que Workload Factory et AWS sont correctement configurés avant de créer votre base de connaissances. Cela inclut notamment la mise à disposition de vos identifiants de connexion AWS, un système de fichiers FSX pour ONTAP déployé qui contient les sources de données que vous souhaitez intégrer dans votre base de connaissances, l"accès au service d"IA Amazon Bedrock, et bien plus encore.' 
+summary: 'Assurez-vous que l"usine de workloads et AWS sont correctement configurées avant de créer votre base de connaissances. Cela inclut notamment la mise à disposition de vos identifiants de connexion AWS, un système de fichiers FSX pour ONTAP déployé qui contient les sources de données que vous souhaitez intégrer dans votre base de connaissances, l"accès au service d"IA Amazon Bedrock, et bien plus encore.' 
 ---
 = Exigences GenAI
 :allow-uri-read: 
@@ -11,15 +11,10 @@ summary: 'Assurez-vous que Workload Factory et AWS sont correctement configurés
 
 
 [role="lead"]
-Assurez-vous que Workload Factory et AWS sont correctement configurés avant de créer votre base de connaissances. Cela inclut notamment la mise à disposition de vos identifiants de connexion AWS, un système de fichiers FSX pour ONTAP déployé qui contient les sources de données que vous souhaitez intégrer dans votre base de connaissances, l'accès au service d'IA Amazon Bedrock, et bien plus encore.
+Assurez-vous que l'usine de workloads et AWS sont correctement configurées avant de créer votre base de connaissances. Cela inclut notamment la mise à disposition de vos identifiants de connexion AWS, un système de fichiers FSX pour ONTAP déployé qui contient les sources de données que vous souhaitez intégrer dans votre base de connaissances, l'accès au service d'IA Amazon Bedrock, et bien plus encore.
 
-Connexion et compte Workload Factory:: Vous devez vous connecter à Workload Factory et créer un compte.
-+
---
-https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["En savoir plus sur la connexion et la création d'un compte"^]
-
---
-Identifiants et autorisations AWS:: Vous devez ajouter des informations d'identification AWS à Workload Factory avec des autorisations d'automatisation, ce qui signifie que vous utiliserez Workload Factory en _automate_ mode pour GenAI.
+Connexion et compte d'usine de la charge de travail:: Vous devez vous https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurez un compte avec une usine de charges de travail"^] connecter à l'aide de l'un des https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+Identifiants et autorisations AWS:: Vous devez ajouter des informations d'identification AWS à l'usine de workloads avec des autorisations automatisées, ce qui signifie que vous utiliserez l'usine de workloads en _automate_ mode pour GenAI.
 +
 --
 Les autorisations _Basic_ mode et _Read_ mode ne sont pas prises en charge pour le moment.
@@ -28,13 +23,13 @@ Lors de la configuration de vos identifiants, le fait de sélectionner les autor
 
 image:screenshot-ai-permissions.png["Copie d'écran montrant le paramètre d'autorisations pour la gestion complète des ressources d'IA."]
 
-https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment ajouter des informations d'identification AWS à Workload Factory"^]
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment ajouter des identifiants AWS à l'usine de workloads"^]
 
 --
 Sol d'Amazon:: Amazon Bedrock vous permet d'utiliser des modèles de base et offre les fonctionnalités nécessaires pour créer des applications d'IA générative.
 +
 --
-Avant de commencer à utiliser Workload Factory pour GenAI, vous devez configurer Amazon Bedrock. Votre déploiement GenAI doit se trouver dans une région AWS sur laquelle Amazon Bedrock est activé.
+Avant de vous lancer avec l'usine de workloads pour GenAI, vous devez configurer Amazon Bedrock. Votre déploiement GenAI doit se trouver dans une région AWS sur laquelle Amazon Bedrock est activé.
 
 * https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["Documentation AWS : configurez Amazon Bedrock"^]
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Documentation AWS : régions et modèles pris en charge pour les bases de connaissances pour Amazon Bedrock"^]

@@ -56,7 +56,7 @@ Vous devrez saisir vos informations d'identification AWS et sélectionner le sys
 Avant de commencer cette procédure, assurez-vous que votre environnement est conforme link:requirements.html["les conditions requises"] .
 
 .Étapes
-. Connectez-vous à Workload Factory.
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque workloads d'IA, sélectionnez *déployer et gérer*.
 . Examinez le diagramme d'infrastructure et sélectionnez *Suivant*.
 . Complétez les éléments de la section *paramètres AWS* :
@@ -78,7 +78,7 @@ Le déploiement GenAI doit se trouver dans une région AWS sur laquelle le syst�
 
 
 .Résultat
-Workload Factory commence à déployer l'infrastructure de chatbot Ce processus peut prendre jusqu'à 10 minutes.
+L'usine de workloads commence à déployer l'infrastructure de chatbot Ce processus peut prendre jusqu'à 10 minutes.
 
 Au cours du processus de déploiement, les éléments suivants sont configurés :
 

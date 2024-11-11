@@ -18,7 +18,7 @@ Vous testez votre base de connaissances pour vous assurer qu'elle fonctionne com
 
 Vous pouvez tester une base de connaissances en discutant avec vos sources de données intégrées dans le simulateur de chatbot. Notez qu'aucune interaction ou information n'est capturée dans la base de données vectorielle GenAI lors du test local de la base de connaissances.
 
-Vous effectuerez la plupart de vos tests dans Workload Factory avant de déployer la base de connaissances dans une application pour vos utilisateurs. Si vous avez besoin d'apporter des modifications à votre source de données ou à l'opération chatbot, vous devez le faire maintenant avant de publier votre base de connaissances.
+Vous effectuerez la plupart de vos tests en usine de charges de travail avant de déployer la base de connaissances dans une application pour vos utilisateurs. Si vous avez besoin d'apporter des modifications à votre source de données ou à l'opération chatbot, vous devez le faire maintenant avant de publier votre base de connaissances.
 
 Voici quelques-unes des tâches que vous voudrez effectuer pour tester votre chatbot :
 

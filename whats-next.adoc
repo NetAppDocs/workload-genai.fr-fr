@@ -22,4 +22,4 @@ Voici quelques-unes des tâches que vous pouvez effectuer pour gérer les compos
 * Sauvegardez et protégez les données importantes sur votre système de fichiers FSX pour ONTAP pour vous assurer que vos données de la base de connaissances et d'autres composants d'infrastructure sont toujours disponibles.
 
 
-Pour plus d'informations sur la gestion de votre système de fichiers FSX pour ONTAP, consultez le https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Documentation de Workload Factory pour Amazon FSX pour NetApp ONTAP"^] pour consulter les fonctionnalités de sauvegarde et de protection que vous pouvez utiliser.
+Pour plus d'informations sur la gestion de votre système de fichiers FSX pour ONTAP, consultez le https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Fabrique de workloads pour la documentation Amazon FSX pour NetApp ONTAP"^] pour consulter les fonctionnalités de sauvegarde et de protection que vous pouvez utiliser.

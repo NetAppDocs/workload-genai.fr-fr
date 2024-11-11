@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Documentation Workload Factory pour GenAI
+  title: Fabrique de charges de travail pour la documentation GenAI
   summary: Intégrez les données de vos systèmes de fichiers FSX pour ONTAP à vos plateformes
     MLOps et à vos modèles de base GenAI pour créer des chatbots fonctionnelles à
     l'aide des données d'entreprise.
@@ -11,7 +11,7 @@ indexpage:
   tiles:
   - title: Commencez
     links:
-    - title: Découvrez Workload Factory pour GenAI
+    - title: Découvrez l'usine de workloads pour GenAI
       url: ai-workloads-overview.html
     - title: Démarrage rapide
       url: quick-start.html
