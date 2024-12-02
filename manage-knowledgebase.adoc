@@ -124,6 +124,34 @@ Cette option est activée par défaut pour garantir qu'une analyse ne se produit
 
 
 
+=== Cloner une base de connaissances
+
+Vous pouvez créer une nouvelle base de connaissances à partir d'un instantané de la base de connaissances. Ceci est utile si la base de connaissances d'origine est corrompue ou perdue.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez restaurer.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
+
+. Sélectionnez le menu *actions* et sélectionnez *instantané > Cloner la base de connaissances*.
++
+La boîte de dialogue clone s'affiche.
+
+. Si vous le souhaitez, désélectionnez l'option *interrompre l'exécution et les analyses planifiées après le clonage de l'instantané* si vous souhaitez que les analyses de source de données planifiées et en cours d'exécution continuent après le clonage de l'instantané.
++
+Cette option est activée par défaut pour garantir qu'une analyse ne se produit pas lorsque la base de connaissances est en état partiellement restauré ou qu'une analyse ne met pas à jour une base de connaissances récemment restaurée avec des données plus anciennes.
+
+. Sélectionnez l'instantané à cloner dans la liste.
+. Sélectionnez *Continuer*.
+. Entrez un nom pour la nouvelle base de connaissances.
+. Choisir une SVM de système de fichiers et un nom de volume pour la nouvelle base de connaissances.
+. Sélectionnez *Clone*.
+
+
+
+
 == Ajouter des sources de données supplémentaires à une base de connaissances
 
 Vous pouvez intégrer d'autres sources de données dans votre base de connaissances pour les remplir avec des données d'organisation supplémentaires.

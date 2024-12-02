@@ -29,7 +29,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découv
 Sol d'Amazon:: Amazon Bedrock vous permet d'utiliser des modèles de base et offre les fonctionnalités nécessaires pour créer des applications d'IA générative.
 +
 --
-Avant de vous lancer avec l'usine de workloads pour GenAI, vous devez configurer Amazon Bedrock. Votre déploiement GenAI doit se trouver dans une région AWS sur laquelle Amazon Bedrock est activé.
+Avant de vous lancer avec l'usine de workloads BlueXP  pour GenAI, vous devez configurer Amazon Bedrock. Votre déploiement GenAI doit se trouver dans une région AWS sur laquelle Amazon Bedrock est activé.
 
 * https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["Documentation AWS : configurez Amazon Bedrock"^]
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Documentation AWS : régions et modèles pris en charge pour les bases de connaissances pour Amazon Bedrock"^]

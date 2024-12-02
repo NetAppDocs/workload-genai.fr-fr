@@ -24,15 +24,91 @@ Si vous rencontrez l'un de ces problèmes, vous pouvez suivre les étapes de la 
 | De service | Problème | Cause | Solution de contournement 
 
 
-| Déploiement | Le déploiement échoue, car le volume existe déjà. | L'usine de charges de travail pour GenAI doit créer un nouveau volume pendant le processus de déploiement, mais un volume existe déjà sous le nom que vous avez spécifié. | Spécifiez un nom unique à utiliser pour le nouveau volume et essayez à nouveau de déployer. 
+| Déploiement | Le déploiement échoue, car le volume existe déjà. | L'usine de workloads BlueXP  pour GenAI doit créer un nouveau volume pendant le processus de déploiement, mais un volume existe déjà sous le nom que vous avez spécifié. | Spécifiez un nom unique à utiliser pour le nouveau volume et essayez à nouveau de déployer. 
 
 
-| Déploiement | Le déploiement échoue, car l'usine de workloads de GenAI ne peut pas monter le volume. | Un ou plusieurs des ports entrants requis pour FSX pour NetApp ONTAP sont fermés ou filtrés.  a| 
-Ouvrez les ports répertoriés dans https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/reference-security-groups-fsx.html#inbound-rules["Règles de groupe de sécurité pour FSX pour ONTAP"^].
+| Déploiement | Le déploiement échoue, car l'usine de workloads BlueXP  pour GenAI ne peut pas monter le volume. | Un ou plusieurs des ports entrants requis pour FSX pour NetApp ONTAP sont fermés ou filtrés.  a| 
+Ouvrez les ports entrants suivants :
+
+[cols="10,10,80"]
+|===
+| Protocole | Port | Objectif 
 
 
+| Tous les protocoles ICMP | Tout | Envoi d'une requête ping à l'instance 
 
-| Maintenance | L'instance Docker back-end utilisée par l'usine de workloads pour GenAI n'a pas pu démarrer. | Le volume a été supprimé et l'instance EC2 a été redémarrée.  a| 
+
+| HTTPS | 443 | Accès depuis le connecteur à la LIF de gestion fsxadmin pour envoyer des appels API à FSX 
+
+
+| SSH | 22 | Accès SSH à l'adresse IP du LIF de gestion de cluster ou d'un LIF de gestion de nœud 
+
+
+| TCP | 111 | Appel de procédure à distance pour NFS 
+
+
+| TCP | 139 | Session de service NetBIOS pour CIFS 
+
+
+| TCP | 161-162 | Protocole de gestion de réseau simple 
+
+
+| TCP | 445 | Microsoft SMB/CIFS sur TCP avec encadrement NetBIOS 
+
+
+| TCP | 635 | Montage NFS 
+
+
+| TCP | 749 | Kerberos 
+
+
+| TCP | 2049 | Démon du serveur NFS 
+
+
+| TCP | 3260 | Accès iSCSI via le LIF de données iSCSI 
+
+
+| TCP | 4045 | Démon de verrouillage NFS 
+
+
+| TCP | 4046 | Surveillance de l'état du réseau pour NFS 
+
+
+| TCP | 10000 | Sauvegarde avec NDMP 
+
+
+| TCP | 11104 | Gestion des sessions de communication intercluster pour SnapMirror 
+
+
+| TCP | 11105 | Transfert de données SnapMirror à l'aide de LIF intercluster 
+
+
+| UDP | 111 | Appel de procédure à distance pour NFS 
+
+
+| UDP | 161-162 | Protocole de gestion de réseau simple 
+
+
+| UDP | 635 | Montage NFS 
+
+
+| UDP | 2049 | Démon du serveur NFS 
+
+
+| UDP | 4045 | Démon de verrouillage NFS 
+
+
+| UDP | 4046 | Surveillance de l'état du réseau pour NFS 
+
+
+| UDP | 4049 | Protocole NFS rquotad 
+|===
+
+
+| Maintenance | Le moteur ai ne démarre pas et vous voyez l'erreur "erreur d'instance de moteur ai" sur la page *bases de connaissances*. | L'instance du moteur ai a été corrompue ou n'existe pas. | Sélectionnez le bouton *reconstruire*. L'usine de workloads BlueXP  pour GenAI reconstruit l'infrastructure et affiche la progression de la reconstruction. Lorsque vous avez terminé, vos bases de connaissances sont reconnectées à l'infrastructure reconstruite et la liste des bases de connaissances s'affiche. 
+
+
+| Maintenance | L'instance Docker back-end utilisée par l'usine de workloads BlueXP  pour GenAI n'a pas pu démarrer. | Le volume a été supprimé et l'instance EC2 a été redémarrée.  a| 
 Procédez comme suit pour la restauration :
 
 .Étapes
@@ -68,5 +144,8 @@ volumes:
 
 
 
-| Maintenance | L'instance Docker back-end utilisée par l'usine de workloads pour GenAI n'a pas pu démarrer. | Le volume root a été supprimé. | Créez un volume avec un nom et un chemin, puis redémarrez l'instance Docker back-end à partir d'Amazon EC2. 
+| Maintenance | L'instance Docker back-end utilisée par l'usine de workloads BlueXP  pour GenAI n'a pas pu démarrer. | Le volume root a été supprimé. | Créez un volume avec un nom et un chemin, puis redémarrez l'instance Docker back-end à partir d'Amazon EC2. 
+
+
+| Maintenance | L'instance Docker back-end utilisée par l'usine de workloads BlueXP  pour GenAI n'a pas pu démarrer. | Le volume root a été supprimé. | Créez un volume avec un nom et un chemin, puis redémarrez l'instance Docker back-end à partir d'Amazon EC2. 
 |===

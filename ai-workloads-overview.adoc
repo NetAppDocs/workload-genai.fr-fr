@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ai-workloads-overview.html 
 keywords: overview, concepts, features, use case, workloads, AI, Bedrock, knowledge base, chatbot 
-summary: 'L"usine de workloads pour GenAI vous permet d"intégrer les systèmes de fichiers Amazon FSX pour NetApp ONTAP aux modèles de base GenAI. Cela vous fournit un stockage haute performance avec un ensemble complet de fonctionnalités de protection, de sécurité et d"optimisation des coûts pour vos datasets d"IA.' 
+summary: 'L"usine de workloads BlueXP  pour GenAI vous permet d"intégrer les systèmes de fichiers Amazon FSX pour NetApp ONTAP aux modèles de base GenAI. Cela vous fournit un stockage haute performance avec un ensemble complet de fonctionnalités de protection, de sécurité et d"optimisation des coûts pour vos datasets d"IA.' 
 ---
-= Découvrez l'usine de workloads pour GenAI
+= Découvrez l'usine de workloads BlueXP  pour GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -15,9 +15,9 @@ L'usine de workloads pour GenAI vous permet d'intégrer les systèmes de fichier
 
 
 
-== Qu'est-ce que l'usine de charges de travail pour GenAI ?
+== Qu'est-ce que l'usine de workloads BlueXP  pour GenAI ?
 
-Workload Factory pour GenAI vous permet d'utiliser les sources de données de votre entreprise sur Amazon FSX pour NetApp ONTAP avec les applications d'IA générative. Grâce au framework RAG (Retrieval augmentation Generation), vous pouvez rapidement connecter des sources de données aux modèles Foundation disponibles via Amazon Bedrock pour développer des applications génératives optimisées par l'IA telles que des assistants virtuels, des chatbots de questions-Réponses, le résumé des documents, la création de contenu, etc
+L'usine de workloads BlueXP  pour GenAI vous permet d'utiliser les sources de données de votre entreprise sur Amazon FSX pour NetApp ONTAP avec les applications d'IA générative. Grâce au framework RAG (Retrieval augmentation Generation), vous pouvez rapidement connecter des sources de données aux modèles Foundation disponibles via Amazon Bedrock pour développer des applications génératives optimisées par l'IA telles que des assistants virtuels, des chatbots de questions-Réponses, le résumé des documents, la création de contenu, etc
 
 L'utilisation de l'IA générative avec vos données d'entreprise vous permet de mettre à profit vos propres connaissances et votre expertise, au lieu de vous appuyer sur l'intelligence du modèle basée sur les données publiques sur lesquelles les modèles ont été entraînés. L'utilisation de RAG pour personnaliser les modèles garantit des réponses précises et pertinentes aux questions spécifiques à l'entreprise, améliorant ainsi la productivité et l'efficacité des utilisateurs de vos applications à l'aide de Generative ai.
 
@@ -29,7 +29,7 @@ Pour plus d'informations sur l'usine de charge de travail, reportez-vous au http
 
 == Avantages de l'utilisation de GenAI pour créer des applications d'IA générative
 
-Workload Factory pour GenAI simplifie le processus de déploiement de l'infrastructure nécessaire à la création d'applications Generative ai à l'aide de Retrieval Augmented Generation (RAG). Plus précisément, GenAI offre les avantages suivants :
+L'usine de workloads BlueXP  pour GenAI simplifie le processus de déploiement de l'infrastructure nécessaire à la création d'applications d'IA générative à l'aide de la génération augmentée de récupération (RAG). Plus précisément, GenAI offre les avantages suivants :
 
 * Sans avoir besoin d'une connaissance approfondie de l'infrastructure des données, des bases de données et des modèles linguistiques, les administrateurs et développeurs INFORMATIQUES peuvent accélérer le développement d'applications en utilisant l'automatisation fournie par GenAI. Les administrateurs et développeurs de données peuvent facilement et rapidement créer des bases de connaissances d'entreprise qui intègrent les données non structurées de votre entreprise à utiliser par les applications d'IA générative.
 * Améliorez la sécurité en préservant les autorisations utilisateur dans les fichiers intégrés aux bases de connaissances pour garantir le maintien de la sécurité et de la confidentialité des données. Une application, telle qu'un chatbot, peut être développée pour fournir uniquement aux utilisateurs authentifiés les réponses basées sur les données auxquels ils ont accès.
@@ -49,7 +49,7 @@ image:diagram-chatbot-processing.png["Un diagramme illustrant les principaux com
 
 
 
-== L'usine de workloads pour GenAI aide à créer des applications d'IA générative
+== L'usine de workloads BlueXP  pour GenAI aide à créer des applications d'IA générative
 
 GenAI permet de créer des applications d'IA générative à l'aide de RAG de l'une des manières suivantes :
 

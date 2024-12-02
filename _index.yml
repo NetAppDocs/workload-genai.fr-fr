@@ -11,7 +11,7 @@ indexpage:
   tiles:
   - title: Commencez
     links:
-    - title: Découvrez l'usine de workloads pour GenAI
+    - title: Découvrez l'usine de workloads BlueXP  pour GenAI
       url: ai-workloads-overview.html
     - title: Démarrage rapide
       url: quick-start.html

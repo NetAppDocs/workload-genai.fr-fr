@@ -50,7 +50,7 @@ image:diagram-chatbot-infrastructure.png["Diagramme des composants du chatbot"]
 
 == Déployez l'infrastructure GenAI
 
-Vous devrez saisir vos informations d'identification AWS et sélectionner le système de fichiers FSX pour ONTAP pour déployer l'infrastructure de génération d'augmentation de récupération (RAG).
+Vous devrez saisir vos identifiants AWS et sélectionner le système de fichiers FSX pour ONTAP pour déployer l'infrastructure de génération augmentée de récupération.
 
 .Avant de commencer
 Avant de commencer cette procédure, assurez-vous que votre environnement est conforme link:requirements.html["les conditions requises"] .
@@ -75,6 +75,10 @@ Le déploiement GenAI doit se trouver dans une région AWS sur laquelle le syst�
 
 
 . Sélectionnez *déployer* pour commencer le déploiement.
++
+
+NOTE: Si le déploiement échoue avec une erreur d'informations d'identification, vous pouvez obtenir plus de détails sur l'erreur en sélectionnant les liens hypertexte dans le message d'erreur. Vous pouvez voir une liste d'autorisations manquantes ou bloquées, ainsi qu'une liste d'autorisations dont la charge de travail GenAI a besoin pour pouvoir déployer l'infrastructure GenAI.
+
 
 
 .Résultat
