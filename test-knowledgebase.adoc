@@ -4,7 +4,7 @@ permalink: test-knowledgebase.html
 keywords: ai, chatbot, creating, knowledge base 
 summary: 'Une fois la base de connaissances créée, vous pourrez la tester localement à l"aide du simulateur de chatbot et apporter les modifications requises avant de mettre la base de connaissances à la disposition de vos utilisateurs via une application de chatbot.' 
 ---
-= Testez une base de connaissances
+= Testez une base de connaissances GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

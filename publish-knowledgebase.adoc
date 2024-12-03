@@ -4,7 +4,7 @@ permalink: publish-knowledgebase.html
 keywords: ai, chatbot, publishing, knowledge base 
 summary: 'Une fois votre base de connaissances créée et testée localement, vous pouvez publier la base de connaissances afin qu"elle puisse être intégrée à l"application chatbot qui permettra aux utilisateurs d"interroger la base de connaissances.' 
 ---
-= Publier une base de connaissances et afficher le point final unique
+= Publiez une base de connaissances GenAI et affichez le terminal unique
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

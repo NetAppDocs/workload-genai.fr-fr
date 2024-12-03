@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Mentions légales
+= Usine de charge de travail BlueXP  pour les mentions légales GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

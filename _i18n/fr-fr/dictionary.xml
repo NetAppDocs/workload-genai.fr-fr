@@ -10,7 +10,6 @@
   <block id="9969ec0e7476736a130c54f32700611e" category="list-text">*Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.</block>
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Sélectionnez *Ajouter* pour ajouter cette source de données à votre base de connaissances.</block>
   <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">Activez l'authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d'accès soient requises lors de l'intégration de la base de connaissances à une application chatbot.</block>
-  <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">Activer l'authentification externe pour une base de connaissances</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
   <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">Dans la page d'inventaire des bases de connaissances, sélectionnez la base de connaissances que vous souhaitez publier.</block>
   <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">le bouton d'option</block>
@@ -321,7 +320,6 @@
   <block id="0e0f1b27ca798d3b3b8154b411215d9a" category="list-text">Sélectionnez le menu *actions* et sélectionnez *Supprimer la base de connaissances*.</block>
   <block id="74091f3303c946e291c1c1702ba6d39a" category="list-text">Dans la boîte de dialogue Supprimer la base de connaissances, confirmez que vous souhaitez la supprimer et sélectionnez *Supprimer*.</block>
   <block id="8bbd4e338e42c1350d453ca5c82eb3b3" category="summary">Une fois votre base de connaissances créée et testée localement, vous pouvez publier la base de connaissances afin qu'elle puisse être intégrée à l'application chatbot qui permettra aux utilisateurs d'interroger la base de connaissances.</block>
-  <block id="70de8e73e84df845f91376c6c0d1188e" category="doc">Publier une base de connaissances et afficher le point final unique</block>
   <block id="12676fc9338d312de3a6cbb584fa3284" category="paragraph">Une fois votre base de connaissances créée et testée localement, vous pouvez publier la base de connaissances afin qu'elle puisse être intégrée à une application chatbot qui permettra aux utilisateurs d'interroger la base de connaissances.</block>
   <block id="079d0a527f117f9fde217668d7359a20" category="paragraph">Chaque base de connaissances que vous publiez possède des points finaux uniques.</block>
   <block id="850b9475ef66eeb78335c085f71bae31" category="list-text">Sélectionnez le menu *actions* et sélectionnez *publier*.</block>
@@ -427,7 +425,6 @@
   <block id="c61f79c1724a3bab0885dbbd3b2e87ea" category="inline-image-macro">le bouton run</block>
   <block id="ccd43d06a7b1187d2ac93471de4a9b64" category="list-text">Dans le champ de saisie chatbot, saisissez une invite ou une question, puis sélectionnez <block ref="4673f7ece64f88d1999f6ef93db80a3b" category="inline-image-macro-rx" type="image"></block> pour voir comment votre chatbot répond avec vos connaissances organisationnelles.</block>
   <block id="2625a68b73d2dae552cbcc7be08396fc" category="list-text">Si vous devez mettre à jour l'une de vos sources de données afin que votre base de connaissances fournisse des réponses plus ciblées, effectuez ces modifications maintenant, puis testez à nouveau la base de connaissances.</block>
-  <block id="490414e0366b091220802d406e52c076" category="doc">Quoi de neuf</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">7 juillet 2024</block>
   <block id="3d2b63396c87b28180a4d9d0ba951b0d" category="paragraph">La version initiale permet de développer une base de connaissances personnalisée en intégrant les données de votre entreprise. La base de connaissances est accessible par une application de chatbot pour vos utilisateurs. Cette fonctionnalité garantit des réponses précises et pertinentes aux questions spécifiques à l'entreprise, améliorant ainsi la satisfaction et la productivité de tous vos utilisateurs.</block>
   <block id="a9273ae35bbdb787574410a5cd552892" category="summary">Maintenant que vous avez créé une base de connaissances à l'aide des données de votre entreprise et que vous l'avez déployée pour vos utilisateurs, vous pouvez gérer la base de connaissances, les sources de données et l'infrastructure RAG, y compris les systèmes de fichiers FSX pour ONTAP.</block>
@@ -600,8 +597,6 @@
   <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">Sur la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, la description, le modèle d'intégration, le modèle de chat, l'activation des rails de données, choisir si les amorces de conversation sont créées automatiquement ou manuellement, ainsi que la stratégie d'instantané utilisée pour le volume contenant la base de connaissances.</block>
   <block id="fde00ba8f64d2c57d64a163698fd6f03" category="admonition">Chaque analyse de la base de connaissances, qui inclut l'intégration, coûts. Si des rails de protection des données sont activés après la création d'une base de connaissances, celle-ci est analysée à nouveau et entraîne des coûts.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 novembre 2024</block>
-  <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">Console BlueXP</block>
-  <block id="402ae08ce46f82670c0313312e504ad7" category="list-text">Le moteur ai doit avoir accès au <block ref="046fd603b18837f482287e5ec741e5ed" category="inline-link-macro-rx"></block></block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX pour NetApp ONTAP</block>
   <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
   <block id="1ee7c829860de53ba4857ad78b7aadef" category="doc">Version initiale de l'usine de charges de travail pour GenAI</block>
@@ -745,4 +740,20 @@
   <block id="849293736c770408f68a35f4fcdf9592" category="cell">Sélectionnez le bouton *reconstruire*. L'usine de workloads BlueXP  pour GenAI reconstruit l'infrastructure et affiche la progression de la reconstruction. Lorsque vous avez terminé, vos bases de connaissances sont reconnectées à l'infrastructure reconstruite et la liste des bases de connaissances s'affiche.</block>
   <block id="d1955ee5035af265f471c1debd693717" category="cell">L'instance Docker back-end utilisée par l'usine de workloads BlueXP  pour GenAI n'a pas pu démarrer.</block>
   <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">01 décembre 2024</block>
+  <block id="e8293cb4f1909d8329e31cefdfb4dba4" category="doc">Activez l'authentification externe pour une base de connaissances GenAI</block>
+  <block id="b05735c6e4c6d503ad9f93af6e740fa9" category="doc">Créez une application GenAI basée sur RAG</block>
+  <block id="16cb0b733a26e9afa11f388e6d83aec1" category="doc">Créer une base de connaissances GenAI</block>
+  <block id="79cee61f29eb5a0e2dd156871eb70a40" category="list-text">Le moteur d'IA doit avoir accès au noeud final de l'API BlueXP  : \https://api.BlueXP .NetApp.com.</block>
+  <block id="e63e0ed616c63ed724e592b04e608826" category="doc">Utilisez l'application de chatbot externe GenAI</block>
+  <block id="52f26f0fff3bae61240c4b3a43f3624d" category="doc">Obtenez de l'aide avec l'usine de workloads BlueXP  pour GenAI</block>
+  <block id="e1cdd82a2918ba1a2c0ff51770aad51e" category="doc">Identifiez les sources de données à intégrer dans votre base de connaissances GenAI</block>
+  <block id="fe1e8231ce0909884a561100cafd30a8" category="doc">Usine de charge de travail BlueXP  pour les mentions légales GenAI</block>
+  <block id="dd3ed9192bf4d0d55741ed48bf8a6695" category="doc">Gérez les sources de données GenAI</block>
+  <block id="10f8936c8a58bcff3825995f8d31ea40" category="doc">Gérer les bases de connaissances GenAI</block>
+  <block id="335c0c9583885e1f231604b7fa10819a" category="doc">Publiez une base de connaissances GenAI et affichez le terminal unique</block>
+  <block id="97641902b7a17c72d34451f4f1417531" category="doc">Inscrivez-vous pour bénéficier de la prise en charge de l'usine de workloads BlueXP  pour GenAI</block>
+  <block id="d9965afe654edc6d99fd1a5080f10f27" category="doc">Testez une base de connaissances GenAI</block>
+  <block id="69065fcb8a054a77edd3d2da74b89c6e" category="doc">Dépannage GenAI</block>
+  <block id="1e7bcc0dba826f450b3684e2a2c6f04e" category="doc">Nouveautés de l'usine de workloads BlueXP  pour l'IA Genai</block>
+  <block id="988a487756dcb4e1605a4e07dc7dbd42" category="doc">Ce que vous pouvez faire ensuite avec GenAI</block>
 </blocks>
