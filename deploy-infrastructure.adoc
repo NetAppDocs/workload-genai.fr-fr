@@ -70,8 +70,17 @@ Le déploiement GenAI doit se trouver dans une région AWS sur laquelle le syst�
 
 . Complétez les éléments de la section *Paramètres de l'infrastructure* :
 +
-.. *Tags* : saisissez toutes les paires clé/valeur de balise que vous souhaitez appliquer à toutes les ressources AWS qui font partie de ce déploiement.
+.. *Tags* : saisissez toutes les paires clé/valeur de balise que vous souhaitez appliquer à toutes les ressources AWS qui font partie de ce déploiement. Ces balises sont visibles dans la console de gestion AWS et dans la zone d'informations sur l'infrastructure en usine des workloads. Elles peuvent vous aider à suivre les ressources d'usine des workloads.
+
+
+. Complétez la section *connectivité* :
++
 .. *Paire de clés* : sélectionnez une paire de clés qui vous permet de vous connecter en toute sécurité à l'instance du moteur NetApp GenAI.
+
+
+. Compléter la section *ai Engine* :
++
+.. *Nom de l'instance* : si vous le souhaitez, sélectionnez *définir le nom de l'instance* et entrez un nom personnalisé pour l'instance du moteur ai. Le nom de l'instance apparaît dans la console de gestion AWS et dans la zone d'informations sur l'infrastructure en usine de la charge de travail. Il peut vous aider à suivre les ressources d'usine des charges de travail.
 
 
 . Sélectionnez *déployer* pour commencer le déploiement.

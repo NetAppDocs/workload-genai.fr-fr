@@ -25,7 +25,10 @@ Les sources de données de votre entreprise peuvent contenir des informations d'
 link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Découvrez la classification BlueXP"^].
 
 
-NOTE: Les rails de protection des données peuvent être activés ou désactivés à tout moment. Si vous changez de système d'activation des données, Workload Factory analyse l'ensemble de la base de connaissances à partir de zéro, ce qui entraîne un coût.
+NOTE: L'usine de workloads BlueXP  pour GenAI ne masque pas les informations personnelles sensibles (SPII). Pour plus d'informations sur ce type de données, reportez-vous à la sectionlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["types de données personnelles sensibles"^].
+
+
+NOTE: Les rails de protection des données peuvent être activés ou désactivés à tout moment. Si vous activez les rails de contrôle des données, l'usine de workloads analyse l'ensemble de la base de connaissances à partir de zéro, ce qui entraîne un coût.
 
 --
 

@@ -108,6 +108,25 @@ Ouvrez les ports entrants suivants :
 | Maintenance | Le moteur ai ne démarre pas et vous voyez l'erreur "erreur d'instance de moteur ai" sur la page *bases de connaissances*. | L'instance du moteur ai a été corrompue ou n'existe pas. | Sélectionnez le bouton *reconstruire*. L'usine de workloads BlueXP  pour GenAI reconstruit l'infrastructure et affiche la progression de la reconstruction. Lorsque vous avez terminé, vos bases de connaissances sont reconnectées à l'infrastructure reconstruite et la liste des bases de connaissances s'affiche. 
 
 
+| Maintenance | Le moteur ai ne démarre pas et vous voyez l'erreur "l'instance du moteur GenAI est arrêtée" sur la page *bases de connaissances*. | L'instance du moteur ai n'est pas en cours d'exécution. | Utilisez la console de gestion AWS ou l'interface de ligne de commande AWS pour démarrer l'instance du moteur ai. 
+
+
+| Maintenance | Le moteur ai ne démarre pas et vous voyez l'erreur "le serveur du moteur GenAI ne répond pas" sur la page *bases de connaissances*. | L'instance du moteur ai ne répond pas.  a| 
+Procédez comme suit pour la restauration :
+
+.Étapes
+. Modifiez le groupe de sécurité de l'instance du moteur GenAI pour activer l'accès SSH à l'instance du moteur GenAI.
+. Connectez-vous à l'instance à l'aide de SSH.
+. Exécutez la commande suivante :
++
+[source, console]
+----
+docker-compose up
+----
+
+
+
+
 | Maintenance | L'instance Docker back-end utilisée par l'usine de workloads BlueXP  pour GenAI n'a pas pu démarrer. | Le volume a été supprimé et l'instance EC2 a été redémarrée.  a| 
 Procédez comme suit pour la restauration :
 

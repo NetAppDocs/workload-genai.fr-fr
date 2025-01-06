@@ -89,6 +89,11 @@ Vous pouvez enregistrer l'état d'une base de connaissances en prenant un instan
 Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
 
 . Sélectionnez le menu *actions* et sélectionnez *instantané > Créer un nouvel instantané*.
+. Si vous le souhaitez, sélectionnez *définir le nom de l'instantané* et entrez un nom personnalisé pour l'instantané.
++
+La définition d'un nom personnalisé peut vous aider à mieux déterminer le contenu d'un instantané si vous devez le restaurer ultérieurement.
+
+. Sélectionnez *Créer*.
 +
 Un instantané de la base de connaissances est créé.
 

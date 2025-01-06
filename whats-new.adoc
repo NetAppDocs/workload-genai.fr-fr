@@ -15,6 +15,34 @@ Découvrez les nouveautés de la fonctionnalité Generative ai workloads d'usine
 
 
 
+== 05 janvier 2025
+
+
+
+=== Nom de snapshot personnalisé
+
+Vous pouvez maintenant fournir un nom d'instantané pour un instantané ad hoc.
+
+link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Protégez une base de connaissances avec des instantanés"]
+
+
+
+=== Nom d'instance de moteur d'IA personnalisé
+
+Vous pouvez maintenant attribuer un nom personnalisé à l'instance du moteur d'IA pendant le déploiement.
+
+link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Déployez l'infrastructure GenAI"]
+
+
+
+=== Reconstruction de l'infrastructure GenAI corrompue ou manquante
+
+Si votre instance de moteur d'IA est corrompue ou supprimée, vous pouvez laisser la charge de travail se reconstruire en usine. Workload Factory rattache automatiquement vos bases de connaissances à l'infrastructure une fois la reconstruction terminée, afin qu'elles soient prêtes à l'emploi.
+
+link:https://docs.netapp.com/us-en/workload-genai/troubleshooting.html["Dépannage"]
+
+
+
 == 01 décembre 2024
 
 
@@ -45,11 +73,7 @@ Le workload Generative ai introduit la fonctionnalité Data rambardes, optimisé
 
 link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#create-and-configure-the-knowledge-base["Créer une base de connaissances"]
 
-link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Découvrez la classification BlueXP"^]
-
-
-
-== 29 septembre 2024
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Découvrez la classification BlueXP"^] == 29 septembre 2024
 
 
 
