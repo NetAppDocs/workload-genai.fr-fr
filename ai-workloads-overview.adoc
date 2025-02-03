@@ -37,6 +37,7 @@ L'usine de workloads BlueXP  pour GenAI simplifie le processus de déploiement 
 * Accélérez le développement d'applications GenAI, comme un chatbot Q&A, à l'aide d'frameworks open source, comme LangChain, qui utilisent l'API GenAI pour provisionner et gérer les bases de connaissances, discuter avec une base de connaissances, et stocker et récupérer l'historique de chat.
 * Améliorez la protection et la disponibilité des données en déployant l'infrastructure de données d'IA générative sur les systèmes de fichiers FSX pour NetApp ONTAP et en exploitant les fonctionnalités ONTAP telles que la haute disponibilité, les snapshots pour la protection et la restauration des données locales, SnapMirror pour la reprise d'activité et SnapVault pour la sauvegarde de votre infrastructure de données.
 * Réduisez les coûts globaux de stockage de l'infrastructure de données d'IA générative en exploitant les fonctionnalités d'efficacité des données ONTAP, telles que la déduplication, la compression et la compaction des données, le Tiering des données et le provisionnement fin.
+* Obtenez des résultats de haute qualité à partir de vos données grâce aux fonctionnalités hybrides de recherche et de réorganisation fournies par GenAI. La recherche hybride combinée au nouveau classement améliore considérablement la pertinence des résultats de recherche. Ces fonctionnalités sont disponibles via Amazon AWS et dépendent de la région.
 
 
 
@@ -80,6 +81,8 @@ Vous pouvez utiliser l'usine de workloads BlueXP  avec les outils suivants :
 L'utilisation de la fonctionnalité GenAI de l'usine de workloads est gratuit.
 
 Toutefois, vous devrez payer les ressources AWS que vous déployez pour prendre en charge l'infrastructure d'IA générative. Par exemple, vous paierez à AWS pour le service d'IA Amazon Bedrock, le système de fichiers FSX pour ONTAP et la capacité de stockage, ainsi que l'instance EC2 du moteur GenAI.
+
+Certaines opérations multimodales, telles que la numérisation d'images pour des informations de texte, peuvent utiliser davantage de ressources et donc entraîner un coût plus élevé. Certaines opérations de configuration, telles que la modification des paramètres d'une base de connaissances, peuvent entraîner une nouvelle analyse des sources de données, et les analyses des sources de données peuvent également entraîner un coût plus élevé.
 
 
 

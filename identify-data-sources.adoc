@@ -65,4 +65,16 @@ Les formats de fichier de source de données suivants sont actuellement pris en 
 
 
 | Format de document portable | .pdf 
+
+
+| JPEG | .jpg or.jpeg 
+
+
+| Carte graphique réseau portable | .png 
+
+
+| Format d'échange graphique | .gif 
+
+
+| Image WebP | .webp 
 |===

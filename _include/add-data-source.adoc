@@ -8,17 +8,41 @@
 Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory, notamment le domaine, l'adresse IP, le nom d'utilisateur et le mot de passe.
 
 . *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
-. *Définir les paramètres ai* : dans la section *Stratégie de Chunking*, définissez la façon dont le moteur GenAI divise le contenu de la source de données en blocs lorsque la source de données est intégrée à une base de connaissances. Vous pouvez choisir l'une des stratégies suivantes :
+. *Configurations* : configurez la façon dont la source de données ingère les informations de vos fichiers et les fichiers qu'elle inclut dans les analyses :
 +
-** *Chunking à plusieurs phrases* : organise les informations de votre source de données en blocs définis par des phrases. Vous pouvez choisir combien de phrases composent chaque morceau (jusqu'à 100).
-** *Chunking basé sur le chevauchement* : organise les informations de votre source de données en blocs définis par des caractères qui peuvent chevaucher des blocs voisins. Vous pouvez choisir la taille de chaque bloc en caractères et la quantité de chaque bloc qui chevauche les blocs adjacents. Vous pouvez configurer une taille de bloc comprise entre 50 et 3000 caractères et un pourcentage de chevauchement compris entre 1 et 99 %.
+** *Définir la source de données* : dans la section *Stratégie de partage*, définissez la façon dont le moteur GenAI divise le contenu de la source de données en blocs lorsque la source de données est intégrée à une base de connaissances. Vous pouvez choisir l'une des stratégies suivantes :
++
+*** *Chunking à plusieurs phrases* : organise les informations de votre source de données en blocs définis par des phrases. Vous pouvez choisir combien de phrases composent chaque morceau (jusqu'à 100).
+*** *Chunking basé sur le chevauchement* : organise les informations de votre source de données en blocs définis par des caractères qui peuvent chevaucher des blocs voisins. Vous pouvez choisir la taille de chaque bloc en caractères et la quantité de chaque bloc qui chevauche les blocs adjacents. Vous pouvez configurer une taille de bloc comprise entre 50 et 3000 caractères et un pourcentage de chevauchement compris entre 1 et 99 %.
 +
 
 NOTE: Le choix d'un pourcentage de chevauchement élevé peut considérablement augmenter les besoins de stockage avec seulement de légères améliorations de la précision de récupération.
 
 
 
-. Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver la sélection :
+** *Filtrage de fichiers* : configurez les fichiers inclus dans les analyses :
++
+*** Dans la section *prise en charge des types de fichiers*, choisissez soit d'inclure tous les types de fichiers, soit de sélectionner des types de fichiers individuels à inclure dans les analyses de sources de données.
++
+Si vous incluez des images ou des fichiers PDF, l'usine de workloads BlueXP  pour GenAI analyse le texte dans les images (y compris les images dans les documents PDF) et le coût est plus élevé.
+
++
+Lors de l'inclusion de données texte à partir d'images, GenAI ne peut pas masquer les informations à caractère personnel (PII) de l'image car les données texte numérisées sont envoyées de votre environnement vers AWS. Cependant, une fois les données stockées, toutes les PII sont masquées dans la base de données GenAI.
+
++
+
+NOTE: Votre choix d'inclure des fichiers image dans les analyses est lié au modèle de chat de la base de connaissances. Si vous incluez des fichiers image dans les numérisations, le modèle de chat doit prendre en charge les images. Si des types de fichiers d'image sont sélectionnés ici, vous ne pouvez pas passer de la base de connaissances à un modèle de chat qui ne prend pas en charge les fichiers d'image.
+
+*** Dans la section *filtre de temps de modification de fichier*, choisissez d'activer ou de désactiver l'inclusion de fichiers en fonction de leur heure de modification. Si vous activez le filtrage de l'heure de modification, sélectionnez une plage de dates dans la liste.
++
+
+NOTE: Si vous incluez des fichiers basés sur une plage de dates de modification, dès que la plage de dates n'est pas satisfaite (les fichiers n'ont pas été modifiés dans la plage de dates spécifiée), les fichiers seront exclus de l'analyse périodique et la source de données n'inclura pas ces fichiers.
+
+
+
+
+
+. Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver les réponses sensibles aux autorisations :
 +
 ** *Activé* : les utilisateurs du chatbot qui accèdent à cette base de connaissances n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
 ** *Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.
