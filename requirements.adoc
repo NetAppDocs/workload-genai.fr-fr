@@ -50,21 +50,34 @@ https://aws.amazon.com/bedrock/titan/["En savoir plus sur Amazon Titan"^]
 
 
 --
-Modèle de chat:: Vous devez activer le modèle de chat de base que vous prévoyez d'utiliser avant de créer votre base de connaissances. Les modèles de discussion Claude suivants sont pris en charge :
+Modèle de chat:: Vous devez activer le modèle de chat de base que vous prévoyez d'utiliser avant de créer votre base de connaissances. Étant donné que la prise en charge des modèles varie selon les régions AWS, reportez-vous à la section https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["La documentation AWS"^] pour vérifier les modèles que vous pouvez utiliser dans les régions où vous prévoyez de déployer votre base de connaissances.
 +
 --
-* Claude 3.5 Sonnet
-* Claude 3 Opus
-* Claude 3 Haiku
-* Claude 3 Sonnet
-* Claude 2.1
-* Claude 2.0
-+
-Étant donné que la prise en charge des modèles varie selon les régions AWS, reportez-vous à la section https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Cette page de documentation AWS"^] pour vérifier les modèles que vous pouvez utiliser dans les régions où vous prévoyez de déployer votre base de connaissances.
+GenAI prend en charge les modèles Anthropique Claude et Amazon Nova suivants :
 
+* Anthropique Claude :
 +
-Découvrez les modèles disponibles pour vous aider à faire votre choix : https://aws.amazon.com/bedrock/claude/["Claude d'anthropic dans le sol d'Amazon"^]
+** Claude 3.5 Sonnet
+** Claude 3 Opus
+** Claude 3 Haiku
+** Claude 3 Sonnet
+** Claude 2.1
+** Claude 2.0
 
+
+* Amazon Nova :
++
+** Nova micro
+** Nova Lite (prend en charge les images et le texte)
+** Nova Pro (prend en charge les images et le texte)
+
+
+
+
+En savoir plus sur l'utilisation de ces modèles avec Amazon Bedrock :
+
+* https://aws.amazon.com/bedrock/claude/["Claude d'anthropic dans le sol d'Amazon"^]
+* https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Prise en main d'Amazon Nova dans la console Amazon Bedrock"^]
 
 
 --

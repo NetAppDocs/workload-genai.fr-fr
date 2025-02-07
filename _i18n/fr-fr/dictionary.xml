@@ -342,14 +342,12 @@
   <block id="e9d7e3888c0ecac6d332909618bf2a62" category="list-text">Modèle d'intégration</block>
   <block id="52e64b029bc109efaa2d9ddf8bf95697" category="list-text">Vous devez activer le modèle d'intégration que vous prévoyez d'utiliser avant de créer votre base de connaissances. Les modèles d'intégration suivants sont pris en charge :</block>
   <block id="cffe100a2fafd4ed6df5c517d3a0c436" category="list-text">Modèle de chat</block>
-  <block id="f4b120821069537b900189401cff6123" category="list-text">Vous devez activer le modèle de chat de base que vous prévoyez d'utiliser avant de créer votre base de connaissances. Les modèles de discussion Claude suivants sont pris en charge :</block>
   <block id="91862a732427fcc9b0f3f7c7e8fd3ef1" category="list-text">Claude 3.5 Sonnet</block>
   <block id="1ae4bf76ece2339f94382079fec8ea1b" category="list-text">Claude 3 Opus</block>
   <block id="5cb902fc92ae2100fc949c459b29f2e0" category="list-text">Claude 3 Haiku</block>
   <block id="dfd281025f82519d079a3bf3bfbabad2" category="list-text">Claude 3 Sonnet</block>
   <block id="48a6d42b28f10b9387da7c0c33136030" category="list-text">Claude 2.1</block>
   <block id="5e1e83b3913f32ce101decea051b2e89" category="list-text">Claude 2.0</block>
-  <block id="a9c39caddabc1e9e831e8874624eeb0b" category="paragraph">Étant donné que la prise en charge des modèles varie selon les régions AWS, reportez-vous à la section<block ref="eddadb17a88dd68548e655a82b495d2f" category="inline-link-rx"></block> pour vérifier les modèles que vous pouvez utiliser dans les régions où vous prévoyez de déployer votre base de connaissances.</block>
   <block id="c16810aa96ec44a060863610996db3f6" category="list-text">Vous avez besoin d'au moins un système de fichiers FSX pour ONTAP :</block>
   <block id="ae0e1b2daa525e1e1109bf5c13627d7d" category="list-text">Un système de fichiers sera utilisé par le moteur NetApp GenAI pour stocker la base de données vectorielle utilisée par la base de connaissances.</block>
   <block id="c076421513a5b28b674cdd0d818b4476" category="paragraph">Ce système de fichiers FSX pour ONTAP doit utiliser des volumes FlexVol. Les volumes FlexGroup ne sont pas pris en charge.</block>
@@ -819,4 +817,19 @@
   <block id="f7fb3b5dc06e03848b8f5ff23bbcd37d" category="paragraph">GenAI classe par défaut les résultats de recherche pour en améliorer la pertinence. Pour obtenir les meilleurs résultats, assurez-vous que votre configuration de modèle de base Amazon Bedrock inclut l'accès à un modèle de classement, tel que Cohere Rerank ou Amazon Rerank, si disponible dans votre région.</block>
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">02 février 2025</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 septembre 2024</block>
+  <block id="9a7d43c72f0d1a35c2a2cdfb58c6cc0d" category="doc">Prise en charge des modèles de base Amazon Nova</block>
+  <block id="ba0908c46e81d6dfcc41f1af42be123c" category="paragraph">GenAI prend désormais en charge les modèles de base Amazon Nova. Amazon Nova micro, Amazon Nova Lite et Amazon Nova Pro sont pris en charge.</block>
+  <block id="5ddfb412189af7bcce0a056c9fcef326" category="paragraph"><block ref="5ddfb412189af7bcce0a056c9fcef326" category="inline-link-macro-rx"></block></block>
+  <block id="1b72fbdbed811fb02ab7310c71e79ab2" category="inline-link">La documentation AWS</block>
+  <block id="c3321626512a416bb22de0f62b8458bc" category="list-text">Vous devez activer le modèle de chat de base que vous prévoyez d'utiliser avant de créer votre base de connaissances. Étant donné que la prise en charge des modèles varie selon les régions AWS, reportez-vous à la section<block ref="0bd10fd36efa0fd68b9fc8a53401f764" category="inline-link-rx"></block> pour vérifier les modèles que vous pouvez utiliser dans les régions où vous prévoyez de déployer votre base de connaissances.</block>
+  <block id="1c61d246c37b3dd7fcf1e2812799ee53" category="paragraph">GenAI prend en charge les modèles Anthropique Claude et Amazon Nova suivants :</block>
+  <block id="e37cca905470582668e8cf006efd3557" category="list-text">Anthropique Claude :</block>
+  <block id="22e20ffc2045bc3420e2cb94c47a29ce" category="list-text">Amazon Nova :</block>
+  <block id="39106736b72a09cf072c2dc73e847b86" category="list-text">Nova micro</block>
+  <block id="5966dc23b01f7dbdf996a7a860ee9459" category="list-text">Nova Lite (prend en charge les images et le texte)</block>
+  <block id="d5c9ae773ceec77e2ca3ed0d6347bf9b" category="list-text">Nova Pro (prend en charge les images et le texte)</block>
+  <block id="ddbb727fa06553b8b9d4aab207332c7e" category="paragraph">En savoir plus sur l'utilisation de ces modèles avec Amazon Bedrock :</block>
+  <block id="0dd1c2bf85c6e3f8ac28b8d5d343a230" category="list-text"><block ref="0dd1c2bf85c6e3f8ac28b8d5d343a230" category="inline-link-rx"></block></block>
+  <block id="b6c678dfe5e31c8f081fa11ac56bff46" category="inline-link">Prise en main d'Amazon Nova dans la console Amazon Bedrock</block>
+  <block id="cafb3db15a71932288c768a7beb404b4" category="list-text"><block ref="cafb3db15a71932288c768a7beb404b4" category="inline-link-rx"></block></block>
 </blocks>
