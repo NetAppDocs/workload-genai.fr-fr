@@ -20,6 +20,9 @@ Vous pouvez tester une base de connaissances en discutant avec vos sources de do
 
 Vous effectuerez la plupart de vos tests en usine de charges de travail avant de déployer la base de connaissances dans une application pour vos utilisateurs. Si vous avez besoin d'apporter des modifications à votre source de données ou à l'opération chatbot, vous devez le faire maintenant avant de publier votre base de connaissances.
 
+
+TIP: Vous pouvez redimensionner et retitle la fenêtre du simulateur de chatbot, et copier des questions et des réponses dans le presse-papiers.
+
 Voici quelques-unes des tâches que vous voudrez effectuer pour tester votre chatbot :
 
 * Saisissez un grand nombre de questions pertinentes pour votre entreprise afin de vous assurer que les réponses sont conformes aux attentes.
@@ -33,5 +36,13 @@ Voici quelques-unes des tâches que vous voudrez effectuer pour tester votre cha
 Le simulateur de chatbot s'affiche dans le volet droit. Si elles sont définies, les amorces de conversation existantes s'affichent également.
 
 . Dans le champ de saisie chatbot, saisissez une invite ou une question, puis sélectionnez image:button-run.png["le bouton run"] pour voir comment votre chatbot répond avec vos connaissances organisationnelles.
++
+[TIP]
+====
+** Vous pouvez voir les sources utilisées pour produire la réponse en développant la liste *sources* sous la réponse. Cette option fournit une liste des fichiers utilisés pour générer la réponse. Vous pouvez afficher et copier les blocs de données utilisés à partir de chaque chemin de fichier et de volume vers chaque fichier en passant le curseur sur le nom du fichier.
+** Si des tables sont incluses dans la réponse, vous pouvez trier les données de chaque colonne et copier chaque table dans le presse-papiers.
+
+
+====
 . Si vous devez mettre à jour l'une de vos sources de données afin que votre base de connaissances fournisse des réponses plus ciblées, effectuez ces modifications maintenant, puis testez à nouveau la base de connaissances.
 

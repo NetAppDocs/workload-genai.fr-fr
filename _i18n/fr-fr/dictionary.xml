@@ -832,4 +832,21 @@
   <block id="0dd1c2bf85c6e3f8ac28b8d5d343a230" category="list-text"><block ref="0dd1c2bf85c6e3f8ac28b8d5d343a230" category="inline-link-rx"></block></block>
   <block id="b6c678dfe5e31c8f081fa11ac56bff46" category="inline-link">Prise en main d'Amazon Nova dans la console Amazon Bedrock</block>
   <block id="cafb3db15a71932288c768a7beb404b4" category="list-text"><block ref="cafb3db15a71932288c768a7beb404b4" category="inline-link-rx"></block></block>
+  <block id="ca5a05186a2f243eb84efcf08152a8f2" category="doc">Améliorations du chatbot intégrées</block>
+  <block id="362c473fe2757bda1e0d68b3c2cdfbc8" category="paragraph">Vous pouvez désormais copier des questions et des réponses directement dans le presse-papiers, ajuster la taille de la fenêtre de discussion et modifier son titre. De plus, les réponses de discussion peuvent maintenant inclure des tableaux, qui sont également copyables.</block>
+  <block id="b7def3234606fc50e35ddaf4c351fbe6" category="paragraph"><block ref="b7def3234606fc50e35ddaf4c351fbe6" category="inline-link-macro-rx"></block></block>
+  <block id="4842fdf5dae1e7a3fb7ea049a091be73" category="section-title">Aide à la citation de réponse par chat</block>
+  <block id="c010ca64710d07e36327c27318c0303f" category="paragraph">Les réponses à la discussion incluent maintenant des citations qui répertorient les fichiers et les segments de données utilisés pour générer la réponse.</block>
+  <block id="312fbafda6b72e176a3eb6272e48d799" category="section-title">Prise en charge améliorée des types de fichiers</block>
+  <block id="cb1c6d98111a4dc0f10d1914aabf97ff" category="paragraph">Cette version de GenAI fournit une prise en charge améliorée des fichiers :</block>
+  <block id="20fae993429f53ad24302c4bea3332d1" category="list-text">Les modèles de chat offrent une prise en charge CSV améliorée. Cela permet d'obtenir des réponses plus utiles lors de l'interrogation de données à partir de fichiers CSV.</block>
+  <block id="820ddf0d1fd0a9cf5aaea49d2b400838" category="list-text">GenAI peut désormais ingérer des fichiers Apache parquet à partir de sources de données.</block>
+  <block id="ce2ed264c43f0733c7c1ccbd1b06fdab" category="list-text">GenAI prend désormais en charge l'ingestion de fichiers Microsoft Word DOCX contenant des images.</block>
+  <block id="9e64c0f3360c80d2707e71b213c5fc58" category="paragraph"><block ref="9e64c0f3360c80d2707e71b213c5fc58" category="inline-link-macro-rx"></block></block>
+  <block id="bf971e4f3cc5d92890a57f57611a0107" category="cell">Parquet Apache</block>
+  <block id="2041784b912a2b2e72827a5e9c656f5f" category="cell">.parquet</block>
+  <block id="f1776184cd873aef06fc869138b3b776" category="admonition">Vous pouvez redimensionner et retitle la fenêtre du simulateur de chatbot, et copier des questions et des réponses dans le presse-papiers.</block>
+  <block id="e27f142520976de0e091895abd1a2b45" category="list-text">Vous pouvez voir les sources utilisées pour produire la réponse en développant la liste *sources* sous la réponse. Cette option fournit une liste des fichiers utilisés pour générer la réponse. Vous pouvez afficher et copier les blocs de données utilisés à partir de chaque chemin de fichier et de volume vers chaque fichier en passant le curseur sur le nom du fichier.</block>
+  <block id="8e08c9e7067a8bc5d8828ba0b5a8a5b2" category="list-text">Si des tables sont incluses dans la réponse, vous pouvez trier les données de chaque colonne et copier chaque table dans le presse-papiers.</block>
+  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">02 mars 2025</block>
 </blocks>

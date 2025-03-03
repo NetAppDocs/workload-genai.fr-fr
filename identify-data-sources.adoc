@@ -52,7 +52,16 @@ Les formats de fichier de source de données suivants sont actuellement pris en 
 | Format de fichier | Extension 
 
 
+| Parquet Apache | .parquet 
+
+
 | Fichier de valeurs séparées par des virgules | .csv 
+
+
+| Format d'échange graphique | .gif 
+
+
+| JPEG | .jpg or.jpeg 
 
 
 | Démarque | .md 
@@ -67,13 +76,7 @@ Les formats de fichier de source de données suivants sont actuellement pris en 
 | Format de document portable | .pdf 
 
 
-| JPEG | .jpg or.jpeg 
-
-
 | Carte graphique réseau portable | .png 
-
-
-| Format d'échange graphique | .gif 
 
 
 | Image WebP | .webp 
