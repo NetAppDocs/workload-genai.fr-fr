@@ -31,3 +31,13 @@ indexpage:
     links:
     - title: Gérer l'infrastructure de la base de connaissances
       url: manage-infrastructure.html
+  - title: Blogs et communauté
+    links:
+    - title: Communauté NetApp
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: Blogs BlueXP
+      url: https://bluexp.netapp.com/blog
+    - title: Webinaires sur le cloud
+      url: https://bluexp.netapp.com/events
+    - title: Déverrouillage de GenAI avec vos données
+      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/Unlocking-GenAI-with-your-data-using-Amazon-FSx-for-NetApp-ONTAP-and-BlueXP/ba-p/456394
