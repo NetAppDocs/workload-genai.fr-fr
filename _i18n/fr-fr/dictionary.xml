@@ -873,4 +873,6 @@
   <block id="6c654e9590c6b2b6a77fcf4553b9fc79" category="list-text">Accessible sur le même réseau</block>
   <block id="277e6e0f8a7c91992d2766d798ab5915" category="list-text">Les VPC doivent être peering et utiliser la même région et le même compte AWS que le moteur d'IA</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">30 mars 2025</block>
+  <block id="0fcf305133bffed241e3ea17efbba5fc" category="inline-link-macro">Utilisez l'API d'usine des workloads</block>
+  <block id="a6efc6ca3aa5af2c7a8cad1239df17c0" category="paragraph"><block ref="a6efc6ca3aa5af2c7a8cad1239df17c0" category="inline-link-macro-rx"></block></block>
 </blocks>
