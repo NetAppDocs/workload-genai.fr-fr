@@ -60,9 +60,14 @@ https://aws.amazon.com/bedrock/titan/["En savoir plus sur Amazon Titan"^]
 
 
 
-.. *Modèle Chat*: Choisissez parmi les modèles Claude Chat qui sont intégrés dans Amazon Bedrock. Notez que vous devez avoir déjà activé le modèle de chat à partir d'Amazon Bedrock.
+.. *Modèle Chat*: Choisissez parmi les modèles Anthropique Claude ou Amazon Nova Chat qui sont intégrés dans Amazon Bedrock. Notez que vous devez avoir déjà activé le modèle de chat à partir d'Amazon Bedrock.
 +
-Découvrez les modèles disponibles pour vous aider à faire votre choix : https://aws.amazon.com/bedrock/claude/["Claude d'anthropic dans le sol d'Amazon"^]
+En savoir plus sur l'utilisation de ces modèles avec Amazon Bedrock :
+
++
+*** https://aws.amazon.com/bedrock/claude/["Claude d'anthropic dans le sol d'Amazon"^]
+*** https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Prise en main d'Amazon Nova dans la console Amazon Bedrock"^]
+
 
 .. *Data guardrails*: Choisissez si vous voulez activer ou désactiver les Data guardrails. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Découvrez les Data rambardes optimisées par la classification BlueXP "^].
 +
@@ -70,7 +75,7 @@ Les conditions préalables suivantes doivent être remplies pour activer les rai
 
 +
 *** Un compte de service est requis pour communiquer avec la classification BlueXP . Vous devez avoir le rôle _Organization admin_ sur votre compte de location BlueXP  pour la création du compte de service. Un membre ayant le rôle d'administrateur d'organisation peut effectuer toutes les actions dans BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Découvrez comment ajouter un rôle à un membre dans BlueXP "^]
-*** Le moteur d'IA doit avoir accès au noeud final de l'API BlueXP  : \https://api.BlueXP .NetApp.com.
+*** Le moteur ai doit avoir accès au link:https://api.bluexp.netapp.com["Terminal de l'API BlueXP "^].
 *** Vous devez effectuer les opérations suivantes comme décrit dans link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentation sur les classifications BlueXP"^]:
 +
 .... Créer un connecteur BlueXP
@@ -80,6 +85,13 @@ Les conditions préalables suivantes doivent être remplies pour activer les rai
 
 
 
+
+
++
+
+NOTE: La fonction Data guardrails n'est pas prise en charge lors de l'acquisition de fichiers de données structurés tels que CSV, JSON, JSONP ou parquet.
+
++
 .. *Amorces de conversation* : indiquez si vous souhaitez fournir jusqu'à quatre invites de démarrage de conversation qui s'affichent aux utilisateurs qui interagissent avec un chatbot utilisant cette base de connaissances. Nous vous recommandons d'activer ce paramètre.
 +
 Si vous activez les amorces de conversation, le mode automatique est sélectionné par défaut. Le « mode manuel » ne peut être activé qu'après avoir ajouté des sources de données à votre base de connaissances. link:manage-knowledgebase.html["Apprenez à modifier les paramètres de la base de connaissances"].

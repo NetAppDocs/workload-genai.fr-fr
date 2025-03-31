@@ -52,16 +52,19 @@ Les formats de fichier de source de données suivants sont actuellement pris en 
 | Format de fichier | Extension 
 
 
-| Parquet Apache | .parquet 
+| Apache Parquetfootnote:Disclaimer[la fonctionnalité Data guardrails n'est pas prise en charge lors de l'acquisition de fichiers de données structurés.] | .parquet 
 
 
-| Fichier de valeurs séparées par des virgules | .csv 
+| Valeurs séparées par des virgules filefootnote:clause de non-responsabilité[] | .csv 
 
 
 | Format d'échange graphique | .gif 
 
 
 | JPEG | .jpg or.jpeg 
+
+
+| JSON et JSONPFootnote:Disclaimer[] | .json 
 
 
 | Démarque | .md 
