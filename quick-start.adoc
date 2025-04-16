@@ -26,11 +26,7 @@ link:requirements.html["En savoir plus sur les exigences GenAI"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Identifiez le système de fichiers FSX pour ONTAP qui contient les sources de données
 [role="quick-margin-para"]
-Les sources de données que vous intégrerez dans votre base de connaissances peuvent se trouver dans un seul système de fichiers FSX pour ONTAP ou dans plusieurs systèmes de fichiers FSX pour ONTAP. Si ces systèmes sont dans des VPC différents, ils doivent utiliser l'une des deux configurations suivantes :
-
-* Accessible sur le même réseau
-* Les VPC doivent être peering et utiliser la même région et le même compte AWS que le moteur d'IA
-
+Les sources de données que vous intégrerez dans votre base de connaissances peuvent se trouver dans un seul système de fichiers FSX pour ONTAP ou dans plusieurs systèmes de fichiers FSX pour ONTAP. Si ces systèmes se trouvent dans des VPC différents, ils doivent être accessibles au sein du même réseau, ou les VPC doivent être associés et utiliser le même compte région et AWS que le moteur d'IA.
 
 [role="quick-margin-para"]
 link:identify-data-sources.html["Découvrez comment identifier les sources de données"^].
