@@ -45,7 +45,7 @@ Par exemple, si vous avez intégré 10 fichiers (sources de données) dans votre
 NOTE: Lorsque vous ajoutez des sources de données à Amazon Q Business Connector, seules les autorisations utilisateur s'appliquent aux fichiers de source de données. Les autorisations de groupe ne sont pas appliquées.
 
 
-NOTE: S'il y a des fichiers dans votre source de données qui ne contiennent pas de texte, Amazon Q Business n'indexe pas ces fichiers et consigne une entrée dans les journaux Amazon CloudWatch en notant que les fichiers ne contiennent pas de texte à indexer.
+NOTE: Si un fichier de votre source de données manque de texte (par exemple, une image sans texte), Amazon Q Business ne l'indexe pas mais consigne une entrée dans les journaux Amazon CloudWatch en notant l'absence de texte.
 
 
 

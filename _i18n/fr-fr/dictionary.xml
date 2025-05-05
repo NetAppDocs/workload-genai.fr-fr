@@ -877,7 +877,6 @@
   <block id="7072813121d82ae0d2bc05aaab425d4c" category="paragraph">Les connecteurs prennent en charge les données des volumes qui utilisent les protocoles NFS ou SMB/CIFS. Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory pour que le connecteur puisse accéder aux fichiers de ces volumes. Ceci inclut le domaine Active Directory, l'adresse IP, le nom d'utilisateur et le mot de passe.</block>
   <block id="40ad80bd520fcb9c58d8bdf69bfeafe8" category="paragraph">Par exemple, si vous avez intégré 10 fichiers (sources de données) dans votre connecteur et que 2 fichiers sont des fichiers de ressources humaines qui contiennent des informations restreintes, seuls les utilisateurs de chatbot qui sont authentifiés pour accéder à ces 2 fichiers recevront des réponses du chatbot qui incluent des données de ces fichiers.</block>
   <block id="7be29227377788a5b12c7a7e7a66cd65" category="admonition">Lorsque vous ajoutez des sources de données à Amazon Q Business Connector, seules les autorisations utilisateur s'appliquent aux fichiers de source de données. Les autorisations de groupe ne sont pas appliquées.</block>
-  <block id="93e9aea370504a46b95b2ec1db56c76c" category="admonition">S'il y a des fichiers dans votre source de données qui ne contiennent pas de texte, Amazon Q Business n'indexe pas ces fichiers et consigne une entrée dans les journaux Amazon CloudWatch en notant que les fichiers ne contiennent pas de texte à indexer.</block>
   <block id="5004434ec8c79db151dd6e0c18edd6b3" category="paragraph">Les formats de fichier de source de données suivants sont actuellement pris en charge par NetApp ONTAP Connector pour Amazon Q.</block>
   <block id="68dfdbe39ab30356a21fe4db773d9589" category="cell">Fichier de valeurs séparées par des virgules</block>
   <block id="67cddf56c0ff55c79aee7dfa01b3d310" category="cell">JSON et JSONP</block>
@@ -1025,4 +1024,5 @@
   <block id="5945e11d0d43ff54edbf52c73445991e" category="sidebar">Utilisez GenAI pour construire des bases de connaissances pour Amazon Bedrock</block>
   <block id="04e72ad1a1f8c5d1bc6e9d9cd655d231" category="sidebar">Identifier les sources de données à ajouter à une base de connaissances</block>
   <block id="6d0922d38f508966c79ec8917c90f839" category="sidebar">Utilisez GenAI pour créer des connecteurs pour Amazon Q Business</block>
+  <block id="12195af943d3077522e0ef3c26f4b4fd" category="admonition">Si un fichier de votre source de données manque de texte (par exemple, une image sans texte), Amazon Q Business ne l'indexe pas mais consigne une entrée dans les journaux Amazon CloudWatch en notant l'absence de texte.</block>
 </blocks>
