@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: connector/manage-connector.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: 'Après avoir créé une base de connaissances, vous pouvez afficher les détails de la base de connaissances, modifier la base de connaissances, intégrer d"autres sources de données ou supprimer la base de connaissances.' 
+---
+= Gérer les connecteurs Amazon Q Business
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir créé un connecteur pour Amazon Q Business, vous pouvez afficher les détails du connecteur, modifier le connecteur, intégrer d'autres sources de données ou supprimer le connecteur.
+
+
+
+== Afficher des informations sur un connecteur
+
+Vous pouvez afficher des informations sur les paramètres d'un connecteur et les sources de données intégrées.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans le menu de navigation usine de la charge de travail, sélectionnez *ai*.
+. Sélectionnez le connecteur à afficher.
+. Pour afficher les détails du connecteur, sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer le connecteur*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
+
++
+Le menu *actions* vous permet de gérer le connecteur si vous souhaitez apporter des modifications.
+
+
+
+
+
+== Editer un connecteur
+
+Vous pouvez mettre à jour un connecteur en modifiant certains paramètres ou ajouter ou supprimer des sources de données.
+
+Chaque fois que vous ajoutez, modifiez ou supprimez des sources de données du connecteur, GenAI doit envoyer les informations de la source de données à Amazon Q Business afin qu'elles soient réindexées. La synchronisation est incrémentielle. Amazon Q Business ne traite donc que les objets de votre volume FSX pour ONTAP qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la page d'inventaire bases de connaissances et connecteurs, sélectionnez le connecteur à mettre à jour.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer le connecteur*.
++
+Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
+
+. Sélectionnez le menu *actions* et sélectionnez *Modifier le connecteur*.
+. Dans la page Modifier le connecteur, vous pouvez modifier le nom du connecteur, la description, le modèle d'intégration, l'activation des rails de données et la stratégie de snapshot utilisée pour le volume qui contient le connecteur.
++
+
+NOTE: Chaque analyse de source de données, qui inclut l'intégration, implique un coût. Si vous activez les rails de données après la création d'un connecteur, la source de données est à nouveau analysée et génère des coûts supplémentaires.
+
+. Sélectionnez *Enregistrer* après avoir effectué des modifications.
+
+
+
+
+== Ajoutez des sources de données supplémentaires à un connecteur
+
+Vous pouvez intégrer d'autres sources de données dans votre connecteur pour les remplir avec des données d'organisation supplémentaires.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la page d'inventaire bases de connaissances et connecteurs, sélectionnez le connecteur dans lequel vous souhaitez ajouter la source de données.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *Ajouter une source de données*.
+. *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
+. *Sélectionnez un volume* : sélectionnez le volume sur lequel vos fichiers de source de données résident et sélectionnez *Suivant*.
++
+Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory, notamment le domaine, l'adresse IP, le nom d'utilisateur et le mot de passe.
+
+. *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
+. *Configurations* : configurez la façon dont la source de données ingère les informations de vos fichiers et les fichiers qu'elle inclut dans les analyses :
++
+** *Définir la source de données* : dans la section *Stratégie de partage*, définissez la façon dont le moteur GenAI divise le contenu de la source de données en blocs lorsque la source de données est intégrée à une base de connaissances. Vous pouvez choisir l'une des stratégies suivantes :
++
+*** *Chunking à plusieurs phrases* : organise les informations de votre source de données en blocs définis par des phrases. Vous pouvez choisir combien de phrases composent chaque morceau (jusqu'à 100).
+*** *Chunking basé sur le chevauchement* : organise les informations de votre source de données en blocs définis par des caractères qui peuvent chevaucher des blocs voisins. Vous pouvez choisir la taille de chaque bloc en caractères et la quantité de chaque bloc qui chevauche les blocs adjacents. Vous pouvez configurer une taille de bloc comprise entre 50 et 3000 caractères et un pourcentage de chevauchement compris entre 1 et 99 %.
++
+
+NOTE: Le choix d'un pourcentage de chevauchement élevé peut considérablement augmenter les besoins de stockage avec seulement de légères améliorations de la précision de récupération.
+
+
+
+** *Filtrage de fichiers* : configurez les fichiers inclus dans les analyses :
++
+*** Dans la section *prise en charge des types de fichiers*, choisissez soit d'inclure tous les types de fichiers, soit de sélectionner des types de fichiers individuels à inclure dans les analyses de sources de données.
++
+Si vous incluez des images ou des fichiers PDF, l'usine de workloads BlueXP  pour GenAI analyse le texte dans les images (y compris les images dans les documents PDF) et le coût est plus élevé.
+
++
+Lors de l'inclusion de données texte à partir d'images, GenAI ne peut pas masquer les informations à caractère personnel (PII) de l'image car les données texte numérisées sont envoyées de votre environnement vers AWS. Cependant, une fois les données stockées, toutes les PII sont masquées dans la base de données GenAI.
+
++
+
+NOTE: Votre choix d'inclure des fichiers image dans les analyses est lié au modèle de chat de la base de connaissances. Si vous incluez des fichiers image dans les numérisations, le modèle de chat doit prendre en charge les images. Si des types de fichiers d'image sont sélectionnés ici, vous ne pouvez pas passer de la base de connaissances à un modèle de chat qui ne prend pas en charge les fichiers d'image.
+
+*** Dans la section *filtre de temps de modification de fichier*, choisissez d'activer ou de désactiver l'inclusion de fichiers en fonction de leur heure de modification. Si vous activez le filtrage de l'heure de modification, sélectionnez une plage de dates dans la liste.
++
+
+NOTE: Si vous incluez des fichiers basés sur une plage de dates de modification, dès que la plage de dates n'est pas satisfaite (les fichiers n'ont pas été modifiés dans la plage de dates spécifiée), les fichiers seront exclus de l'analyse périodique et la source de données n'inclura pas ces fichiers.
+
+
+
+
+
+. Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver les réponses sensibles aux autorisations :
++
+** *Activé* : les utilisateurs du chatbot qui accèdent à cette base de connaissances n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
+** *Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.
+
+
+. Sélectionnez *Ajouter* pour ajouter cette source de données à votre base de connaissances.
+
+
+.Résultat
+La source de données est intégrée à votre connecteur.
+
+
+
+== Synchronisez vos sources de données avec un connecteur
+
+Les sources de données sont automatiquement synchronisées avec le connecteur associé une fois par jour, de sorte que les modifications apportées à la source de données soient répercutées dans Amazon Q Business. Si vous apportez des modifications à l'une de vos sources de données et que vous souhaitez synchroniser (analyser) les données immédiatement, vous pouvez effectuer une synchronisation à la demande.
+
+La synchronisation est incrémentielle. Amazon Q Business ne traite donc que les objets de vos sources de données qui ont été ajoutés, modifiés ou supprimés depuis la dernière synchronisation.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans l'onglet bases de connaissances et connecteurs, sélectionnez le connecteur à synchroniser.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer le connecteur*.
+. Sélectionnez le menu *actions* et sélectionnez *Rechercher maintenant*.
++
+Vous verrez un message indiquant que vos sources de données sont en cours d'analyse et un message final lorsque l'analyse est terminée.
+
+
+
+.Résultat
+Le connecteur est synchronisé avec les sources de données jointes et Amazon Q Business commencera à utiliser les informations les plus récentes de vos sources de données.
+
+
+
+=== Mettre en pause ou reprendre une synchronisation planifiée
+
+Si vous souhaitez interrompre ou reprendre la prochaine synchronisation (analyse) des sources de données, vous pouvez le faire à tout moment. Vous devrez peut-être interrompre la prochaine synchronisation programmée si vous allez apporter des modifications à une source de données et que vous ne souhaitez pas que la synchronisation se produise pendant la fenêtre de modification.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sur la page d'inventaire des connecteurs, sélectionnez le connecteur pour lequel vous souhaitez interrompre ou reprendre les numérisations.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer le connecteur*.
+. Sélectionnez le menu *actions* et sélectionnez *Scan > Pause scan planifié* ou *Scan > reprendre scan planifié*.
++
+Un message vous indique que la prochaine analyse programmée a été interrompue ou reprise.
+
+
+
+
+
+== Supprimer un connecteur
+
+Si vous n'avez plus besoin d'un connecteur, vous pouvez le supprimer. Lorsque vous supprimez un connecteur, il est supprimé de l'usine de la charge de travail et le volume qui contient le connecteur est supprimé. La suppression d'un connecteur n'est pas réversible.
+
+Lorsque vous supprimez un connecteur, vous devez également dissocier le connecteur de tous les agents auxquels il est associé pour supprimer entièrement toutes les ressources associées au connecteur.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la page d'inventaire bases de connaissances et connecteurs, sélectionnez le connecteur à supprimer.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer le connecteur*.
+. Sélectionnez le menu *actions* et sélectionnez *Supprimer le connecteur*.
+. Dans la boîte de dialogue Supprimer le connecteur, confirmez que vous souhaitez le supprimer et sélectionnez *Supprimer*.
+
+
+.Résultat
+Le connecteur est supprimé de l'usine de la charge de travail et son volume associé est supprimé.

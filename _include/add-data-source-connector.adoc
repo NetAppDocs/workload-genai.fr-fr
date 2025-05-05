@@ -1,0 +1,36 @@
+= 
+:allow-uri-read: 
+
+
+. *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
+. *Sélectionnez un volume* : sélectionnez le volume sur lequel vos fichiers de source de données résident et sélectionnez *Suivant*.
++
+Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory, notamment le domaine, l'adresse IP, le nom d'utilisateur et le mot de passe.
+
+. *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
+. *Configurations* : configurez la façon dont la source de données ingère les informations de vos fichiers et les fichiers qu'elle inclut dans les analyses :
++
+** *Filtrage de fichiers* : configurez les fichiers inclus dans les analyses :
++
+*** Dans la section *prise en charge des types de fichiers*, choisissez soit d'inclure tous les types de fichiers, soit de sélectionner des types de fichiers individuels à inclure dans les analyses de sources de données.
+*** Dans la section *filtre de temps de modification de fichier*, choisissez d'activer ou de désactiver l'inclusion de fichiers en fonction de leur heure de modification. Si vous activez le filtrage de l'heure de modification, sélectionnez une plage de dates dans la liste.
++
+
+NOTE: Si vous incluez des fichiers basés sur une plage de dates de modification, dès que la plage de dates n'est pas satisfaite (les fichiers n'ont pas été modifiés dans la plage de dates spécifiée), les fichiers seront exclus de l'analyse périodique et la source de données n'inclura pas ces fichiers.
+
+
+
+
+
+. Dans la section *permission Aware*, disponible uniquement lorsque la source de données que vous avez sélectionnée se trouve sur un volume qui utilise le protocole SMB, vous pouvez activer ou désactiver les réponses sensibles aux autorisations :
++
+** *Activé*: Les utilisateurs du chatbot qui accèdent à ce connecteur n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
+** *Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.
++
+
+NOTE: Les autorisations de groupe Active Directory ne sont pas prises en charge pour les sources de données Amazon Q Business Connector.
+
+
+
+. Sélectionnez *Ajouter* pour ajouter cette source de données à Amazon Q Business Connector.
+

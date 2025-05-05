@@ -1,27 +1,29 @@
 ---
 sidebar: sidebar 
-permalink: ai-workloads-overview.html 
+permalink: general/ai-workloads-overview.html 
 keywords: overview, concepts, features, use case, workloads, AI, Bedrock, knowledge base, chatbot 
 summary: 'L"usine de workloads BlueXP  pour GenAI vous permet d"intégrer les systèmes de fichiers Amazon FSX pour NetApp ONTAP aux modèles de base GenAI. Cela vous fournit un stockage haute performance avec un ensemble complet de fonctionnalités de protection, de sécurité et d"optimisation des coûts pour vos datasets d"IA.' 
 ---
 = Découvrez l'usine de workloads BlueXP  pour GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-L'usine de workloads pour GenAI vous permet d'intégrer les systèmes de fichiers Amazon FSX pour NetApp ONTAP aux modèles de base GenAI. Cela vous fournit un stockage haute performance avec un ensemble complet de fonctionnalités de protection, de sécurité et d'optimisation des coûts pour vos datasets d'IA.
+L'usine de workloads BlueXP  pour GenAI vous permet d'intégrer les systèmes de fichiers Amazon FSX pour NetApp ONTAP aux modèles de base GenAI. Cela vous fournit un stockage haute performance avec un ensemble complet de fonctionnalités de protection, de sécurité et d'optimisation des coûts pour vos datasets d'IA.
 
 
 
 == Qu'est-ce que l'usine de workloads BlueXP  pour GenAI ?
 
-L'usine de workloads BlueXP  pour GenAI vous permet d'utiliser les sources de données de votre entreprise sur Amazon FSX pour NetApp ONTAP avec les applications d'IA générative. Grâce au framework RAG (Retrieval augmentation Generation), vous pouvez rapidement connecter des sources de données aux modèles Foundation disponibles via Amazon Bedrock pour développer des applications génératives optimisées par l'IA telles que des assistants virtuels, des chatbots de questions-Réponses, le résumé des documents, la création de contenu, etc
+L'usine de workloads BlueXP  pour GenAI vous permet d'utiliser les sources de données de votre entreprise sur Amazon FSX pour NetApp ONTAP avec les applications d'IA générative. À l'aide de la génération augmentée de récupération (RAG), vous pouvez rapidement connecter des sources de données aux modèles de base disponibles via Amazon Bedrock ou Amazon Q Business pour développer des applications génératives optimisées par l'IA telles que des assistants virtuels, des chatbots de questions-Réponses, le résumé de documents, la création de contenu, etc
 
 L'utilisation de l'IA générative avec vos données d'entreprise vous permet de mettre à profit vos propres connaissances et votre expertise, au lieu de vous appuyer sur l'intelligence du modèle basée sur les données publiques sur lesquelles les modèles ont été entraînés. L'utilisation de RAG pour personnaliser les modèles garantit des réponses précises et pertinentes aux questions spécifiques à l'entreprise, améliorant ainsi la productivité et l'efficacité des utilisateurs de vos applications à l'aide de Generative ai.
 
 Le développement d'une application GenAI adaptée aux données de votre entreprise vous permet de tirer parti de vos propres connaissances et de votre expertise. Cette fonctionnalité de personnalisation garantit des réponses précises et pertinentes aux questions spécifiques à l'entreprise, améliorant ainsi la satisfaction et la productivité de tous vos utilisateurs.
+
+Si vous link:../knowledge-base/create-knowledgebase.html["créer une base de connaissances"^], GenAI ingère des données à partir de vos sources de données, stocke les résultats vectorisés dans une base de données et vous donne un contrôle total sur l'utilisation des données ingérées pour répondre aux requêtes. Cette approche nécessite une configuration initiale plus importante, mais vous permet de choisir différents modèles de conversation pour différents résultats. Si vous link:../connector/define-connector.html["Définissez un connecteur NetApp ONTAP pour Amazon Q"], les données de vos sources de données sont ingérées par Amazon Q Business et stockées dans un index. Cette approche réduit les besoins en configuration initiale, tout en limitant le contrôle sur les résultats.
 
 Pour plus d'informations sur l'usine de charge de travail, reportez-vous au https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["présentation de l'usine des charges de travail"^].
 
@@ -29,12 +31,12 @@ Pour plus d'informations sur l'usine de charge de travail, reportez-vous au http
 
 == Avantages de l'utilisation de GenAI pour créer des applications d'IA générative
 
-L'usine de workloads BlueXP  pour GenAI simplifie le processus de déploiement de l'infrastructure nécessaire à la création d'applications d'IA générative à l'aide de la génération augmentée de récupération (RAG). Plus précisément, GenAI offre les avantages suivants :
+L'usine de workloads BlueXP  pour GenAI simplifie le processus de déploiement de l'infrastructure requise pour créer des applications Generative ai à l'aide de la génération de récupération augmentée (RAG). Plus précisément, GenAI offre les avantages suivants :
 
 * Sans avoir besoin d'une connaissance approfondie de l'infrastructure des données, des bases de données et des modèles linguistiques, les administrateurs et développeurs INFORMATIQUES peuvent accélérer le développement d'applications en utilisant l'automatisation fournie par GenAI. Les administrateurs et développeurs de données peuvent facilement et rapidement créer des bases de connaissances d'entreprise qui intègrent les données non structurées de votre entreprise à utiliser par les applications d'IA générative.
 * Améliorez la sécurité en préservant les autorisations utilisateur dans les fichiers intégrés aux bases de connaissances pour garantir le maintien de la sécurité et de la confidentialité des données. Une application, telle qu'un chatbot, peut être développée pour fournir uniquement aux utilisateurs authentifiés les réponses basées sur les données auxquels ils ont accès.
 * Préservez la confidentialité et la sécurité de vos données d'entreprise sur votre compte client AWS, là où vos données d'entreprise ne sont jamais exposées en externe.
-* Accélérez le développement d'applications GenAI, comme un chatbot Q&A, à l'aide d'frameworks open source, comme LangChain, qui utilisent l'API GenAI pour provisionner et gérer les bases de connaissances, discuter avec une base de connaissances, et stocker et récupérer l'historique de chat.
+* Accélérez le développement d'applications GenAI, comme un chatbot Q&A, à l'aide d'frameworks open source, comme LangChain, en utilisant l'API GenAI, pour provisionner et gérer des bases de connaissances et des connecteurs, discuter avec une base de connaissances, et stocker et récupérer l'historique de chat.
 * Améliorez la protection et la disponibilité des données en déployant l'infrastructure de données d'IA générative sur les systèmes de fichiers FSX pour NetApp ONTAP et en exploitant les fonctionnalités ONTAP telles que la haute disponibilité, les snapshots pour la protection et la restauration des données locales, SnapMirror pour la reprise d'activité et SnapVault pour la sauvegarde de votre infrastructure de données.
 * Réduisez les coûts globaux de stockage de l'infrastructure de données d'IA générative en exploitant les fonctionnalités d'efficacité des données ONTAP, telles que la déduplication, la compression et la compaction des données, le Tiering des données et le provisionnement fin.
 * Obtenez des résultats de haute qualité à partir de vos données grâce aux fonctionnalités hybrides de recherche et de réorganisation fournies par GenAI. La recherche hybride combinée au nouveau classement améliore considérablement la pertinence des résultats de recherche. Ces fonctionnalités sont disponibles via Amazon AWS et dépendent de la région.
@@ -44,9 +46,9 @@ L'usine de workloads BlueXP  pour GenAI simplifie le processus de déploiement 
 
 == Fonctionnement de GenAI
 
-GenAI utilise les données privées de votre entreprise pour compléter l'intelligence du modèle (en fonction des données sur lesquelles il a été entraîné) afin de fournir des réponses personnalisées aux questions posées par les utilisateurs de votre entreprise. Vous devez d'abord déployer l'infrastructure requise pour une structure RAG, puis créer une base de connaissances à l'aide des sources de données et des modèles de base de votre entreprise disponibles via Amazon Bedrock, puis connecter une application (comme un chatbot Q&A) à la base de connaissances.
+GenAI utilise les données privées de votre entreprise pour compléter l'intelligence du modèle (en fonction des données sur lesquelles il a été entraîné) afin de fournir des réponses personnalisées aux questions posées par les utilisateurs de votre entreprise. Vous devez d'abord déployer l'infrastructure nécessaire à une structure RAG, puis créer une base de connaissances ou définir un connecteur à l'aide des sources de données et des modèles de base de votre entreprise disponibles via Amazon Bedrock ou Amazon Q Business, puis connecter une application (comme un chatbot Q&A) à la base de connaissances ou au connecteur.
 
-image:diagram-chatbot-processing.png["Un diagramme illustrant les principaux composants de GenAI, leur fonction et leur fonctionnement."]
+image:genai-infrastructure-diagram.png["Un diagramme illustrant les principaux composants de GenAI, leur fonction et leur fonctionnement."]
 
 
 
@@ -54,25 +56,15 @@ image:diagram-chatbot-processing.png["Un diagramme illustrant les principaux com
 
 GenAI permet de créer des applications d'IA générative à l'aide de RAG de l'une des manières suivantes :
 
-* Déploie l'infrastructure requise pour le framework RAG (Retrieval Augmented Generation) afin de fonctionner avec les sources de données sur les systèmes de fichiers FSX for ONTAP et Amazon Bedrock. L'infrastructure inclut l'instance du moteur NetApp GenAI pour la gestion des données, une base de données vectorielle intégrée (LanceDB) et le stockage sur votre système de fichiers FSX pour ONTAP pour la base de données vectorielle.
-* Permet de connecter les sources de données aux codages et aux modèles de langue disponibles via Amazon Bedrock pour intégrer les sources de données et récupérer les réponses pour les requêtes utilisateur. Les sources de données, ainsi que les modèles et leur configuration, sont présentés sous la forme de bases de connaissances FSX pour ONTAP.
-* Ingère les données source dans la base de connaissances pour intégrer les fichiers source dans les partages SMB et les exportations NFS sur les systèmes de fichiers FSX pour ONTAP, ainsi que pour stocker les autorisations de fichiers dans les partages SMB.
+* Déploie l'infrastructure requise pour le framework de génération accélérée des données de récupération (RAG) afin de travailler avec les sources de données sur les systèmes de fichiers FSX pour ONTAP et Amazon Bedrock ou Amazon Q Business. L'infrastructure inclut l'instance du moteur NetApp GenAI pour la gestion des données, une base de données vectorielle intégrée (LanceDB) et le stockage sur votre système de fichiers FSX pour ONTAP pour la base de données vectorielle.
+* Permet de connecter les sources de données aux codages et aux modèles de langue disponibles via Amazon Bedrock ou Amazon Q Business pour intégrer les sources de données et récupérer les réponses pour les requêtes utilisateur. Les sources de données, ainsi que les modèles et leur configuration, sont présentés sous la forme de bases de connaissances FSX pour ONTAP.
+* Ingère les données source dans la base de connaissances ou le connecteur pour intégrer les fichiers source dans les partages SMB et les exportations NFS sur les systèmes de fichiers FSX pour ONTAP, ainsi que pour stocker les autorisations de fichiers dans les partages SMB.
 * Crée automatiquement des questions de base de conversation en fonction du contenu des bases de connaissances.
 * Fournit un simulateur de discussion permettant aux administrateurs de données de tester la discussion avec les bases de connaissances.
+* Fournit une interface de connecteur simple pour vous permettre de connecter GenAI à Amazon Q Business, rapidement et facilement en utilisant les fonctionnalités de cet assistant d'IA.
 
 
-
-
-== Outils pour utiliser l'usine de charge de travail
-
-Vous pouvez utiliser l'usine de workloads BlueXP  avec les outils suivants :
-
-* *Workload Factory console*: La console Workload Factory fournit une interface visuelle qui vous donne une vue globale de vos applications et projets.
-* *Console BlueXP * : la console BlueXP  offre une interface hybride pour que vous puissiez utiliser la fabrique de workloads BlueXP  avec d'autres services BlueXP .
-* *API REST* : les API REST d'usine de workloads vous permettent de déployer et de gérer vos systèmes de fichiers FSX pour ONTAP et d'autres ressources AWS.
-* *CloudFormation* : le code AWS CloudFormation vous permet d'effectuer les actions que vous avez définies dans la console d'usine de la charge de travail pour modéliser, provisionner et gérer les ressources AWS et tierces à partir de la pile CloudFormation de votre compte AWS.
-* *Terraform BlueXP  Workload Factory Provider*: Terraform vous permet de créer et de gérer des flux de travail d'infrastructure générés dans la console d'usine de la charge de travail.
-
+https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
 
 
@@ -80,7 +72,7 @@ Vous pouvez utiliser l'usine de workloads BlueXP  avec les outils suivants :
 
 L'utilisation de la fonctionnalité GenAI de l'usine de workloads est gratuit.
 
-Toutefois, vous devrez payer les ressources AWS que vous déployez pour prendre en charge l'infrastructure d'IA générative. Par exemple, vous paierez à AWS pour le service d'IA Amazon Bedrock, le système de fichiers FSX pour ONTAP et la capacité de stockage, ainsi que l'instance EC2 du moteur GenAI.
+Toutefois, vous devrez payer les ressources AWS que vous déployez pour prendre en charge l'infrastructure d'IA générative. Par exemple, vous paierez à AWS pour Amazon Bedrock ou Amazon Q Business, le système de fichiers FSX pour ONTAP et la capacité de stockage, ainsi que l'instance EC2 du moteur GenAI.
 
 Certaines opérations multimodales, telles que la numérisation d'images pour des informations de texte, peuvent utiliser davantage de ressources et donc entraîner un coût plus élevé. Certaines opérations de configuration, telles que la modification des paramètres d'une base de connaissances, peuvent entraîner une nouvelle analyse des sources de données, et les analyses des sources de données peuvent également entraîner un coût plus élevé.
 

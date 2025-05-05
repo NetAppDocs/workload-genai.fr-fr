@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: manage-knowledgebase.html 
+permalink: knowledge-base/manage-knowledgebase.html 
 keywords: ai, chatbot, managing, knowledge base 
 summary: 'Après avoir créé une base de connaissances, vous pouvez afficher les détails de la base de connaissances, modifier la base de connaissances, intégrer d"autres sources de données ou supprimer la base de connaissances.' 
 ---
 = Gérer les bases de connaissances GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -237,6 +237,22 @@ Vous verrez un message indiquant que vos sources de données sont en cours d'ana
 
 .Résultat
 La base de connaissances est synchronisée avec les sources de données jointes et tout chatbot actif commencera à utiliser les informations les plus récentes provenant de vos sources de données.
+
+
+
+=== Mettre en pause ou reprendre une synchronisation planifiée
+
+Si vous souhaitez interrompre ou reprendre la prochaine synchronisation (analyse) des sources de données, vous pouvez le faire à tout moment. Vous devrez peut-être interrompre la prochaine synchronisation programmée si vous allez apporter des modifications à une source de données et que vous ne souhaitez pas que la synchronisation se produise pendant la fenêtre de modification.
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans l'onglet bases de connaissances et connecteurs, sélectionnez la base de connaissances pour laquelle vous souhaitez interrompre ou reprendre les analyses.
+. Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *gérer la base de connaissances*.
+. Sélectionnez le menu *actions* et sélectionnez *Scan > Pause scan planifié* ou *Scan > reprendre scan planifié*.
++
+Un message vous indique que la prochaine analyse programmée a été interrompue ou reprise.
+
+
 
 
 

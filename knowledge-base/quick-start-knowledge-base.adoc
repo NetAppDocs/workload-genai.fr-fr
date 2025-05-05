@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
-permalink: quick-start.html 
+permalink: knowledge-base/quick-start-knowledge-base.html 
 keywords: quick start, knowledge base, chatbot 
 summary: 'Commencez à créer une base de connaissances à l"aide des données de votre entreprise présentes sur les systèmes de fichiers Amazon FSX pour NetApp ONTAP. Une application telle qu"un chatbot accède à cette base de connaissances pour fournir des réponses organisationnelles aux utilisateurs finaux.' 
 ---
-= Démarrage rapide pour GenAI
+= Démarrage rapide des bases de connaissances GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Commencez à créer une base de connaissances à l'aide des données de votre entreprise présentes sur les systèmes de fichiers Amazon FSX pour NetApp ONTAP. Une application telle qu'un chatbot accède à cette base de connaissances pour fournir des réponses organisationnelles aux utilisateurs finaux.
+Commencez à créer une base de connaissances ou Amazon Q Business Connector à l'aide des données de votre entreprise présentes sur les systèmes de fichiers Amazon FSX pour NetApp ONTAP. Une application telle qu'un chatbot accède à cette base de connaissances ou à ce connecteur pour fournir des réponses organisationnelles aux utilisateurs finaux.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Connectez-vous à l'usine de la charge de travail
 [role="quick-margin-para"]
@@ -19,21 +19,21 @@ Vous devez vous https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Configurez votre environnement pour répondre aux exigences GenAI
 [role="quick-margin-para"]
-Vous aurez besoin d'identifiants AWS pour déployer l'infrastructure AWS, d'un système de fichiers FSX for ONTAP déployé et découvert, de la liste des sources de données que vous souhaitez intégrer dans votre base de connaissances, de l'accès au service d'IA Amazon Bedrock et bien plus encore.
+Vous aurez besoin d'identifiants AWS pour déployer l'infrastructure AWS, d'un système de fichiers FSX for ONTAP déployé et découvert, de la liste des sources de données que vous souhaitez intégrer dans votre base de connaissances ou votre connecteur, de l'accès au service d'IA Amazon Bedrock ou à l'application d'entreprise Amazon Q, et bien plus encore.
 
 [role="quick-margin-para"]
-link:requirements.html["En savoir plus sur les exigences GenAI"^].
+link:requirements-knowledge-base.html["En savoir plus sur les exigences GenAI"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Identifiez le système de fichiers FSX pour ONTAP qui contient les sources de données
 [role="quick-margin-para"]
 Les sources de données que vous intégrerez dans votre base de connaissances peuvent se trouver dans un seul système de fichiers FSX pour ONTAP ou dans plusieurs systèmes de fichiers FSX pour ONTAP. Si ces systèmes se trouvent dans des VPC différents, ils doivent être accessibles au sein du même réseau, ou les VPC doivent être associés et utiliser le même compte région et AWS que le moteur d'IA.
 
 [role="quick-margin-para"]
-link:identify-data-sources.html["Découvrez comment identifier les sources de données"^].
+link:identify-data-sources-knowledge-base.html["Découvrez comment identifier les sources de données"^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"] Déployez l'infrastructure de la base de connaissances
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"] Déployez l'infrastructure GenAI
 [role="quick-margin-para"]
-Lancez l'assistant de déploiement d'infrastructure pour déployer l'infrastructure de la base de connaissances dans votre environnement AWS. Ce processus déploie une instance EC2 pour le moteur NetApp GenAI et un volume sur un système de fichiers FSX pour ONTAP afin de contenir les bases de données du moteur NetApp ai. Le volume est utilisé pour stocker la base de données vectorielle utilisée par la base de connaissances.
+Lancez l'assistant de déploiement d'infrastructure pour déployer l'infrastructure GenAI dans votre environnement AWS. Ce processus déploie une instance EC2 pour le moteur NetApp GenAI et un volume sur un système de fichiers FSX pour ONTAP afin de contenir les bases de données du moteur NetApp ai. Le volume est utilisé pour stocker la base de données vectorielle utilisée par la base de connaissances.
 
 [role="quick-margin-para"]
 link:deploy-infrastructure.html["Découvrez comment déployer l'infrastructure de la base de connaissances"^].

@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: identify-data-sources.html 
-keywords: data sources, chatbot, documents, knowledge base 
+permalink: knowledge-base/identify-data-sources-knowledge-base.html 
+keywords: data sources, chatbot, documents, knowledge base, connector 
 summary: 'Identifiez ou créez les documents (sources de données) qui résident dans votre système de fichiers FSX pour ONTAP que vous intégrerez dans votre base de connaissances. Ces sources de données permettent à la base de connaissances de fournir des réponses précises et personnalisées aux questions des utilisateurs en fonction des données pertinentes pour votre entreprise.' 
 ---
-= Identifiez les sources de données à intégrer dans votre base de connaissances GenAI
+= Identifier les sources de données à ajouter à une base de connaissances ou à un connecteur
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ La taille de fichier maximale pour chaque source de données est de 50 Mo.
 
 == Protocoles pris en charge
 
-La base de connaissances prend en charge les données de volumes qui utilisent des protocoles NFS ou SMB/CIFS. Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory afin que la base de connaissances puisse accéder aux fichiers de ces volumes. Ceci inclut le domaine Active Directory, l'adresse IP, le nom d'utilisateur et le mot de passe.
+Les bases de connaissances prennent en charge les données de volumes qui utilisent des protocoles NFS ou SMB/CIFS. Lorsque vous sélectionnez des fichiers stockés à l'aide du protocole SMB, vous devez entrer les informations Active Directory afin que la base de connaissances puisse accéder aux fichiers de ces volumes. Ceci inclut le domaine Active Directory, l'adresse IP, le nom d'utilisateur et le mot de passe.
 
 Lorsque vous stockez votre source de données sur un partage (fichier ou répertoire) accessible via SMB, les données sont uniquement accessibles aux utilisateurs ou groupes de chatbot qui disposent des autorisations d'accès à ce partage. Lorsque cette « fonctionnalité de reconnaissance des autorisations » est activée, le système d'IA compare le courrier électronique de l'utilisateur dans auth0 aux utilisateurs autorisés à afficher ou utiliser les fichiers sur le partage SMB. Le chatbot fournira des réponses en fonction des autorisations utilisateur pour les fichiers intégrés.
 
@@ -45,14 +45,14 @@ Par exemple, si vous avez intégré 10 fichiers (sources de données) dans votre
 
 == Formats de fichiers de source de données pris en charge
 
-Les formats de fichier de source de données suivants sont actuellement pris en charge.
+Les formats de fichiers de source de données suivants sont actuellement pris en charge par les bases de connaissances GenAI de l'usine de workloads.
 
 [cols="2*"]
 |===
 | Format de fichier | Extension 
 
 
-| Apache Parquetfootnote:Disclaimer[la fonctionnalité Data guardrails n'est pas prise en charge lors de l'acquisition de fichiers de données structurés.] | .parquet 
+| Apache Parquetfootnote:Disclaimer[la fonctionnalité Data guardrails n'est pas prise en charge lors de l'acquisition de fichiers de données structurés dans des bases de connaissances.] | .parquet 
 
 
 | Valeurs séparées par des virgules filefootnote:clause de non-responsabilité[] | .csv 

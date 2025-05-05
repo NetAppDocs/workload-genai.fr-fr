@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: connector/requirements-connector.html 
+keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
+summary: 'Assurez-vous que l"usine de workloads et AWS sont correctement configurées avant de créer votre base de connaissances. Cela inclut notamment la mise à disposition de vos identifiants de connexion AWS, un système de fichiers FSX pour ONTAP déployé qui contient les sources de données que vous souhaitez intégrer dans votre base de connaissances, l"accès au service d"IA Amazon Bedrock, et bien plus encore.' 
+---
+= Exigences relatives au connecteur GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de créer un connecteur NetApp ONTAP pour Amazon Q., assurez-vous que l'usine des workloads et AWS sont correctement configurées
+
+
+
+== Exigences GenAI de base
+
+GenAI présente des exigences générales que votre environnement doit satisfaire avant de commencer.
+
+Connexion et compte d'usine de la charge de travail:: Vous devez vous https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurez un compte avec une usine de charges de travail"^] connecter à l'aide de l'un des https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+Identifiants et autorisations AWS:: Vous devez ajouter des informations d'identification AWS à l'usine de la charge de travail avec des autorisations en lecture/écriture, ce qui signifie que vous utiliserez l'usine de la charge de travail en mode _Read/Write_ pour GenAI.
++
+--
+Les autorisations _Basic_ mode et _Read-Only_ mode ne sont pas prises en charge pour le moment.
+
+Lors de la configuration de vos identifiants, le fait de sélectionner les autorisations comme indiqué ci-dessous vous permet de bénéficier d'un accès complet pour gérer les systèmes de fichiers FSX pour ONTAP, ainsi que pour déployer et gérer l'instance EC2 GenAI et d'autres ressources AWS nécessaires à votre base de connaissances et à votre chatbot.
+
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment ajouter des identifiants AWS à l'usine de workloads"^]
+
+--
+
+
+
+
+== Configuration requise pour NetApp ONTAP Connector pour Amazon Q
+
+Assurez-vous que votre environnement répond aux exigences spécifiques suivantes pour les connecteurs Amazon Q Business.
+
+Application Amazon Q Business:: Vous devez créer une application Amazon Q Business ou utiliser une application existante.
++
+--
+* Assurez-vous que l'application existe dans l'une de vos régions AWS.
+* Assurez-vous que vous avez https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/select-retriever.html["créé un index"^] pour l'application.
+* Assurez-vous que l'application n'est pas en état d'échec.
+
+
+--
+FSX pour le système de fichiers ONTAP:: Vous avez besoin d'au moins un système de fichiers FSX pour ONTAP :
++
+--
+* Un système de fichiers sera utilisé (ou créé, s'il n'existe pas) par le moteur NetApp GenAI pour stocker des informations sur le connecteur.
++
+Ce système de fichiers FSX pour ONTAP doit utiliser des volumes FlexVol. Les volumes FlexGroup ne sont pas pris en charge.
+
+* Un ou plusieurs systèmes de fichiers contiennent les sources de données que vous allez ajouter à votre connecteur.
++
+Un système de fichiers FSX pour ONTAP peut être utilisé pour ces deux raisons ou vous pouvez utiliser plusieurs systèmes de fichiers FSX pour ONTAP.
+
+* Vous devez connaître la région AWS, le VPC et le sous-réseau où réside le système de fichiers AWS FSX pour ONTAP.
+* Vous devrez tenir compte des paires clé/valeur que vous souhaitez appliquer aux ressources AWS faisant partie de ce déploiement (facultatif).
+* Vous devrez connaître les informations relatives aux paires de clés qui vous permettront de vous connecter en toute sécurité à l'instance du moteur NetApp ai.
+
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Découvrez comment déployer et gérer les systèmes de fichiers FSX pour ONTAP"^]
+
+--
+

@@ -8,7 +8,7 @@
 
 L'usine de workloads BlueXP  pour GenAI prend désormais en charge le clonage d'une base de connaissances à partir d'un snapshot. Cela permet une récupération rapide des bases de connaissances et la création de nouvelles bases de connaissances avec les sources de données existantes, et aide à la récupération et au développement des données.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#clone-a-knowledge-base["Cloner une base de connaissances"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Cloner une base de connaissances"]
 
 
 

@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: connector/deploy-infrastructure.html 
+keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
+summary: 'Vous devez déployer l"infrastructure pour la structure RAG dans votre environnement avant de pouvoir créer des bases de connaissances et des applications FSX pour ONTAP pour votre organisation. Les principaux composants de l"infrastructure sont le service d"IA Amazon Bedrock, une instance de machine virtuelle pour le moteur NetApp GenAI et un système de fichiers FSX pour ONTAP.' 
+---
+= Déployez l'infrastructure GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez déployer l'infrastructure GenAI pour la structure RAG dans votre environnement avant de pouvoir créer des bases de connaissances, des connecteurs et des applications FSX pour ONTAP pour votre entreprise. Les principaux composants de l'infrastructure sont le service Amazon Bedrock, une instance de machine virtuelle pour le moteur NetApp GenAI et un système de fichiers FSX pour ONTAP.
+
+L'infrastructure déployée peut prendre en charge plusieurs bases de connaissances, chatbots et connecteurs. Vous n'aurez donc généralement besoin d'effectuer cette tâche qu'une seule fois.
+
+
+
+== Détails de l'infrastructure
+
+Votre déploiement GenAI doit se trouver dans une région AWS sur laquelle Amazon Bedrock est activé. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Afficher la liste des régions prises en charge"^]
+
+L'infrastructure comprend les composants suivants.
+
+Service Amazon Bedrock:: Amazon Bedrock est un service entièrement géré qui vous permet d'utiliser les modèles de base (FMS) des plus grandes entreprises d'IA via une seule API. Il fournit également les fonctionnalités nécessaires pour créer des applications d'IA générative sécurisées.
++
+--
+https://aws.amazon.com/bedrock/["En savoir plus sur Amazon Bedrock"^]
+
+--
+Amazon Q Business:: Amazon Q s'appuie sur Amazon Bedrock pour fournir un assistant d'IA générative entièrement géré que vous pouvez utiliser pour répondre à des questions et générer du contenu à partir d'informations issues de vos sources de données.
++
+--
+https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html["En savoir plus sur Amazon Q Business"^]
+
+--
+Machine virtuelle pour le moteur NetApp GenAI:: Le moteur NetApp GenAI est déployé au cours de ce processus. Il fournit la puissance de traitement permettant d'acquérir les données de vos sources de données, puis d'écrire ces données dans la base de données vectorielle.
+FSX pour le système de fichiers ONTAP:: Le système de fichiers FSX pour ONTAP fournit le stockage de votre système GenAI.
++
+--
+Un seul volume est déployé qui contiendra la base de données vectorielle qui stocke les données générées par le modèle de base basé sur vos sources de données.
+
+Les sources de données que vous intégrerez dans votre base de connaissances peuvent résider sur le même système de fichiers FSX pour ONTAP ou sur un autre système.
+
+Le moteur NetApp GenAI surveille ces volumes et interagit avec eux.
+
+--
+
+
+L'image suivante montre l'infrastructure GenAI. Les composants numérotés 1, 2 et 3 sont déployés au cours de cette procédure. Les autres éléments doivent être en place avant de commencer le déploiement.
+
+image:genai-infrastructure-diagram-numbered.png["Diagramme des composants de l'infrastructure GenAI."]
+
+
+
+== Déployez l'infrastructure GenAI
+
+Vous devrez saisir vos identifiants AWS et sélectionner le système de fichiers FSX pour ONTAP pour déployer l'infrastructure de génération augmentée de récupération.
+
+.Avant de commencer
+Avant de commencer cette procédure, assurez-vous que votre environnement répond aux conditions requises pour les bases de connaissances ou les connecteurs, selon ce que vous choisissez.
+
+* link:../knowledge-base/requirements-knowledge-base.html["Exigences de la base de connaissances"]
+* link:../connector/requirements-connector.html["Exigences relatives au connecteur"]
+
+
+.Étapes
+. Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque workloads d'IA, sélectionnez *déployer et gérer*.
+. Examinez le diagramme d'infrastructure et sélectionnez *Suivant*.
+. Complétez les éléments de la section *paramètres AWS* :
++
+.. *Informations d'identification AWS* : sélectionnez ou ajoutez les informations d'identification AWS qui fournissent des autorisations pour déployer les ressources AWS.
+.. *Emplacement* : sélectionnez une région AWS, un VPC et un sous-réseau.
++
+Le déploiement GenAI doit se trouver dans une région AWS sur laquelle le système Amazon Bedrock est activé. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Afficher la liste des régions prises en charge"^]
+
+
+
+. Complétez les éléments de la section *Paramètres de l'infrastructure* :
++
+.. *Tags* : saisissez toutes les paires clé/valeur de balise que vous souhaitez appliquer à toutes les ressources AWS qui font partie de ce déploiement. Ces balises sont visibles dans la console de gestion AWS et dans la zone d'informations sur l'infrastructure en usine des workloads. Elles peuvent vous aider à suivre les ressources d'usine des workloads.
+
+
+. Complétez la section *connectivité* :
++
+.. *Paire de clés* : sélectionnez une paire de clés qui vous permet de vous connecter en toute sécurité à l'instance du moteur NetApp GenAI.
+
+
+. Compléter la section *ai Engine* :
++
+.. *Nom de l'instance* : si vous le souhaitez, sélectionnez *définir le nom de l'instance* et entrez un nom personnalisé pour l'instance du moteur ai. Le nom de l'instance apparaît dans la console de gestion AWS et dans la zone d'informations sur l'infrastructure en usine de la charge de travail. Il peut vous aider à suivre les ressources d'usine des charges de travail.
+
+
+. Sélectionnez *déployer* pour commencer le déploiement.
++
+
+NOTE: Si le déploiement échoue avec une erreur d'informations d'identification, vous pouvez obtenir plus de détails sur l'erreur en sélectionnant les liens hypertexte dans le message d'erreur. Vous pouvez voir une liste d'autorisations manquantes ou bloquées, ainsi qu'une liste d'autorisations dont la charge de travail GenAI a besoin pour pouvoir déployer l'infrastructure GenAI.
+
+
+
+.Résultat
+L'usine de workloads commence à déployer l'infrastructure de chatbot Ce processus peut prendre jusqu'à 10 minutes.
+
+Au cours du processus de déploiement, les éléments suivants sont configurés :
+
+* Le réseau est configuré avec les terminaux privés.
+* Le rôle IAM, le profil d'instance et le groupe de sécurité sont créés.
+* L'instance de machine virtuelle du moteur GenAI est déployée.
+* Amazon Bedrock est configuré pour envoyer des journaux à Amazon CloudWatch, en utilisant un groupe de journaux avec le préfixe `/aws/bedrock/`.
+* Le moteur GenAI est configuré pour envoyer des journaux aux journaux Amazon CloudWatch, en utilisant un groupe de journaux portant le nom `/netapp/wlmai/<tenancyAccountId>/randomId`, où `<tenancyAccountID>` est le https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["ID de compte BlueXP"^] pour l'utilisateur actuel.
+

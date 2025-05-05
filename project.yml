@@ -19,50 +19,68 @@ sidebar:
     entries:
     - title: Quoi de neuf
       url: "/whats-new.html"
-  - title: Commencez
+  - title: Découvrez l'usine de workloads BlueXP  pour GenAI
     entries:
     - title: Découvrez l'usine de workloads BlueXP  pour GenAI
-      url: "/ai-workloads-overview.html"
-    - title: Démarrage rapide
-      url: "/quick-start.html"
-    - title: Exigences GenAI
-      url: "/requirements.html"
-    - title: Identifiez les sources de données de votre base de connaissances
-      url: "/identify-data-sources.html"
-    - title: Déployez l'infrastructure de la base de connaissances
-      url: "/deploy-infrastructure.html"
-    - title: Utilisez l'exemple externe d'application chatbot
-      url: "/example-chatbot-application.html"
+      url: "/general/ai-workloads-overview.html"
     - title: Composants du moteur NetApp GenAI
-      url: "/genai-engine-instance.html"
-  - title: Utiliser GenAI pour construire des bases de connaissances
+      url: "/general/genai-engine-instance.html"
+  - title: Utilisez GenAI pour construire des bases de connaissances pour Amazon Bedrock
     entries:
+    - title: Commencez
+      entries:
+      - title: Démarrage rapide
+        url: "/knowledge-base/quick-start-knowledge-base.html"
+      - title: Exigences de la base de connaissances
+        url: "/knowledge-base/requirements-knowledge-base.html"
+      - title: Identifier les sources de données à ajouter à une base de connaissances
+        url: "/knowledge-base/identify-data-sources-knowledge-base.html"
+      - title: Déployez l'infrastructure GenAI
+        url: "/knowledge-base/deploy-infrastructure.html"
     - title: Créer une base de connaissances
-      url: "/create-knowledgebase.html"
+      url: "/knowledge-base/create-knowledgebase.html"
     - title: Testez une base de connaissances
-      url: "/test-knowledgebase.html"
+      url: "/knowledge-base/test-knowledgebase.html"
     - title: Activez l'authentification
-      url: "/activate-authentication.html"
+      url: "/knowledge-base/activate-authentication.html"
     - title: Publier une base de connaissances
-      url: "/publish-knowledgebase.html"
+      url: "/knowledge-base/publish-knowledgebase.html"
+    - title: Utilisez l'exemple externe d'application chatbot
+      url: "/knowledge-base/example-chatbot-application.html"
     - title: Créez une application d'IA RAG
-      url: "/create-application.html"
+      url: "/knowledge-base/create-application.html"
     - title: Que pouvez-vous faire ensuite
-      url: "/whats-next.html"
+      url: "/knowledge-base/whats-next.html"
+  - title: Utilisez GenAI pour créer des connecteurs pour Amazon Q Business
+    entries:
+    - title: Commencez
+      entries:
+      - title: Démarrage rapide
+        url: "/connector/quick-start-connector.html"
+      - title: Exigences de la base de connaissances
+        url: "/connector/requirements-connector.html"
+      - title: Identifier les sources de données à ajouter à une base de connaissances
+        url: "/connector/identify-data-sources-connector.html"
+      - title: Déployez l'infrastructure GenAI
+        url: "/connector/deploy-infrastructure.html"
+    - title: Créez un connecteur NetApp ONTAP pour Amazon Q
+      url: "/connector/define-connector.html"
   - title: Administrer GenAI
     entries:
     - title: Gérer l'infrastructure GenAI
-      url: "/manage-infrastructure.html"
+      url: "/general/manage-infrastructure.html"
     - title: Gérer les bases de connaissances
-      url: "/manage-knowledgebase.html"
+      url: "/knowledge-base/manage-knowledgebase.html"
+    - title: Gérer les connecteurs
+      url: "/connector/manage-connector.html"
     - title: Gérer les sources de données
-      url: "/manage-data-source.html"
+      url: "/general/manage-data-source.html"
   - title: Connaissances et support
     entries:
     - title: S'inscrire pour obtenir de l'aide
       url: "/support-registration.html"
     - title: Dépannage
-      url: "/troubleshooting.html"
+      url: "/general/troubleshooting.html"
     - title: Obtenez de l'aide
       url: "/get-help.html"
   - title: Mentions légales

@@ -1,19 +1,11 @@
----
-sidebar: sidebar 
-permalink: deploy-infrastructure.html 
-keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
-summary: 'Vous devez déployer l"infrastructure pour la structure RAG dans votre environnement avant de pouvoir créer des bases de connaissances et des applications FSX pour ONTAP pour votre organisation. Les principaux composants de l"infrastructure sont le service d"IA Amazon Bedrock, une instance de machine virtuelle pour le moteur NetApp GenAI et un système de fichiers FSX pour ONTAP.' 
----
-= Déployez l'infrastructure GenAI
+= Détails de l'infrastructure
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
 
 [role="lead"]
-Vous devez déployer l'infrastructure GenAI pour le framework RAG dans votre environnement avant de pouvoir créer des bases de connaissances et des applications FSX pour ONTAP pour votre entreprise. Les principaux composants de l'infrastructure sont le service Amazon Bedrock, une instance de machine virtuelle pour le moteur NetApp GenAI et un système de fichiers FSX pour ONTAP.
+Vous devez déployer l'infrastructure GenAI pour la structure RAG dans votre environnement avant de pouvoir créer des bases de connaissances, des connecteurs et des applications FSX pour ONTAP pour votre entreprise. Les principaux composants de l'infrastructure sont le service Amazon Bedrock, une instance de machine virtuelle pour le moteur NetApp GenAI et un système de fichiers FSX pour ONTAP.
 
-L'infrastructure déployée peut prendre en charge plusieurs bases de connaissances et chatbots. Vous n'aurez généralement besoin d'effectuer cette tâche qu'une seule fois.
+L'infrastructure déployée peut prendre en charge plusieurs bases de connaissances, chatbots et connecteurs. Vous n'aurez donc généralement besoin d'effectuer cette tâche qu'une seule fois.
 
 
 
@@ -21,12 +13,18 @@ L'infrastructure déployée peut prendre en charge plusieurs bases de connaissan
 
 Votre déploiement GenAI doit se trouver dans une région AWS sur laquelle Amazon Bedrock est activé. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Afficher la liste des régions prises en charge"^]
 
-Le déploiement comprend les composants suivants.
+L'infrastructure comprend les composants suivants.
 
 Service Amazon Bedrock:: Amazon Bedrock est un service entièrement géré qui vous permet d'utiliser les modèles de base (FMS) des plus grandes entreprises d'IA via une seule API. Il fournit également les fonctionnalités nécessaires pour créer des applications d'IA générative sécurisées.
 +
 --
 https://aws.amazon.com/bedrock/["En savoir plus sur Amazon Bedrock"^]
+
+--
+Amazon Q Business:: Amazon Q s'appuie sur Amazon Bedrock pour fournir un assistant d'IA générative entièrement géré que vous pouvez utiliser pour répondre à des questions et générer du contenu à partir d'informations issues de vos sources de données.
++
+--
+https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html["En savoir plus sur Amazon Q Business"^]
 
 --
 Machine virtuelle pour le moteur NetApp GenAI:: Le moteur NetApp GenAI est déployé au cours de ce processus. Il fournit la puissance de traitement permettant d'acquérir les données de vos sources de données, puis d'écrire ces données dans la base de données vectorielle.
@@ -44,7 +42,7 @@ Le moteur NetApp GenAI surveille ces volumes et interagit avec eux.
 
 L'image suivante montre l'infrastructure GenAI. Les composants numérotés 1, 2 et 3 sont déployés au cours de cette procédure. Les autres éléments doivent être en place avant de commencer le déploiement.
 
-image:diagram-chatbot-infrastructure.png["Diagramme des composants du chatbot"]
+image:genai-infrastructure-diagram-numbered.png["Diagramme des composants de l'infrastructure GenAI."]
 
 
 
@@ -53,7 +51,11 @@ image:diagram-chatbot-infrastructure.png["Diagramme des composants du chatbot"]
 Vous devrez saisir vos identifiants AWS et sélectionner le système de fichiers FSX pour ONTAP pour déployer l'infrastructure de génération augmentée de récupération.
 
 .Avant de commencer
-Avant de commencer cette procédure, assurez-vous que votre environnement est conforme link:requirements.html["les conditions requises"] .
+Avant de commencer cette procédure, assurez-vous que votre environnement répond aux conditions requises pour les bases de connaissances ou les connecteurs, selon ce que vous choisissez.
+
+* link:../knowledge-base/requirements-knowledge-base.html["Exigences de la base de connaissances"]
+* link:../connector/requirements-connector.html["Exigences relatives au connecteur"]
+
 
 .Étapes
 . Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].

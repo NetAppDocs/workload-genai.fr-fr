@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: activate-authentication.html 
+permalink: knowledge-base/activate-authentication.html 
 keywords: ai, chatbot, publishing, knowledge base 
 summary: 'Activez l"authentification pour une base de connaissances afin que la validation des tokens et les listes de contrôle d"accès soient requises lors de l"intégration de la base de connaissances à une application chatbot.' 
 ---
 = Activez l'authentification externe pour une base de connaissances GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
