@@ -51,7 +51,7 @@ Chaque fois que vous ajoutez, modifiez ou supprimez des sources de données de l
 Cette page affiche l'état publié, l'état d'intégration des sources de données, le mode d'intégration, la liste de toutes les sources de données intégrées, etc.
 
 . Sélectionnez le menu *actions* et sélectionnez *Modifier la base de connaissances*.
-. Sur la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, la description, le modèle d'intégration, le modèle de chat, l'activation des rails de données, choisir si les amorces de conversation sont créées automatiquement ou manuellement, ainsi que la stratégie d'instantané utilisée pour le volume contenant la base de connaissances.
+. Dans la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, la description, le modèle d'intégration, le modèle de discussion, l'activation des fonctionnalités, choisir si les démarreurs de conversation sont créés automatiquement ou manuellement et la stratégie de capture instantanée utilisée pour le volume qui contient la base de connaissances.
 +
 Si vous utilisez le mode Manuel pour les amorces de conversation, vous pouvez également modifier les amorces de conversation ici.
 

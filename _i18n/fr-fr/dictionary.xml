@@ -523,7 +523,6 @@
   <block id="a5085066220b6bc77291e8a3ba481c5a" category="list-text">Créer un connecteur BlueXP</block>
   <block id="3e3c8a56035df76e06772f4505dc58c7" category="list-text">Assurez-vous que votre environnement peut répondre aux conditions préalables</block>
   <block id="0ce4d42838344488f607ff306088fae9" category="list-text">Déployez la classification BlueXP</block>
-  <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">Sur la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, la description, le modèle d'intégration, le modèle de chat, l'activation des rails de données, choisir si les amorces de conversation sont créées automatiquement ou manuellement, ainsi que la stratégie d'instantané utilisée pour le volume contenant la base de connaissances.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 novembre 2024</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX pour NetApp ONTAP</block>
   <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
@@ -1032,5 +1031,52 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CLI CloudShell* : la fabrique de workloads inclut une interface de ligne de commande CloudShell pour gérer et exploiter les environnements AWS et NetApp entre les comptes à partir d'une seule interface de ligne de commande basée sur navigateur. Accédez à CloudShell à partir de la barre supérieure de la console d'usine de la charge de travail.</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST* : utilisez les API REST d'usine pour déployer et gérer vos systèmes de fichiers FSX pour ONTAP et d'autres ressources AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation* : utilisez le code AWS CloudFormation pour effectuer les actions que vous avez définies dans la console d'usine de la charge de travail afin de modéliser, de provisionner et de gérer les ressources AWS et tierces à partir de la pile CloudFormation de votre compte AWS.</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  Workload Factory Provider* : utilisez Terraform pour créer et gérer les flux de travail d'infrastructure générés dans la console d'usine de la charge de travail.</block>
+  <block id="ea3d4df6f8aff21b2dfe549c5ecf9775" category="doc">Tracker disponible pour les opérations de surveillance et de suivi</block>
+  <block id="8daed4c7913162875cceb19ef5e0bf4c" category="paragraph">La fonctionnalité de surveillance Tracker est désormais disponible dans GenAI. Vous pouvez utiliser Tracker pour surveiller et suivre la progression et l'état des opérations en attente, en cours et terminées, consulter les détails des tâches et sous-tâches opérationnelles, diagnostiquer les problèmes ou les échecs, modifier les paramètres des opérations ayant échoué et relancer les opérations ayant échoué.</block>
+  <block id="27e9b8493c313885af8902ac1ae67e24" category="inline-link-macro">Surveillez les opérations de charge de travail avec Tracker dans l'usine de charge de travail BlueXP</block>
+  <block id="6cfb11211ef97bba3b2359a766b22994" category="paragraph"><block ref="6cfb11211ef97bba3b2359a766b22994" category="inline-link-macro-rx"></block></block>
+  <block id="a3a574ae48c14d14b1a16908815471f6" category="section-title">Choisir un modèle de reranker pour une base de connaissances</block>
+  <block id="9e0cf47f3974a0b121f9381245ed8931" category="paragraph">Vous pouvez désormais améliorer la pertinence des résultats de requêtes reclassés en sélectionnant un modèle de reranking spécifique à utiliser avec une base de connaissances. GenAI prend en charge les modèles Cohere Rerank et Amazon Rerank.</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  Workload Factory Provider* : utilisez Terraform pour créer et gérer les flux de travail d'infrastructure générés dans la console d'usine de la charge de travail.</block>
+  <block id="5906134abb5c841402381fefad833fcc" category="summary">Suivez les opérations de charge de travail et surveillez la progression des tâches avec Tracker dans l'usine de charge de travail BlueXP pour GenAI.</block>
+  <block id="3c83889f8bf9dcafe14392fafd21fe54" category="paragraph">Surveillez et suivez l'exécution des opérations de la charge de travail et surveillez la progression des tâches avec le système de suivi en usine de la charge de travail BlueXP .</block>
+  <block id="2fc2f4d1cfd067d7b3d8b8baa3ccee57" category="paragraph">Workload Factory fournit le Tracker, une fonction de surveillance, qui vous permet de surveiller et de suivre la progression et l'état des opérations de charge de travail, d'examiner les détails des tâches et des sous-tâches opérationnelles, et de diagnostiquer les problèmes ou défaillances.</block>
+  <block id="4a60367cb1382179b571e891381eaf8d" category="paragraph">Plusieurs actions sont disponibles dans Tracker. Vous pouvez filtrer les travaux par période (24 heures, 7 jours, 14 jours ou 30 jours), charge de travail, état et utilisateur, rechercher des travaux à l'aide de la fonction de recherche et télécharger la table des travaux sous forme de fichier CSV. Vous pouvez actualiser le Tracker à tout moment et réessayer rapidement une opération ayant échoué ou modifier les paramètres d'une opération ayant échoué et réessayer l'opération.</block>
+  <block id="9233b1148f18eb744b69d4d3620c296c" category="paragraph">Tracker prend en charge deux niveaux de surveillance en fonction de l'opération. Chaque tâche, telle que le déploiement du système de fichiers, affiche la description de la tâche, l'état, l'heure de début, la durée de la tâche, l'utilisateur, la région, la ressource proxy, l'ID de la tâche et toutes les sous-tâches associées. Vous pouvez afficher les réponses de l'API pour comprendre ce qui s'est passé pendant l'opération.</block>
+  <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">Niveaux de tâche de suivi avec des exemples</block>
+  <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">Niveau 1 (tâche) : assure le suivi du déploiement du système de fichiers.</block>
+  <block id="5517abda6821fee1e969e9d59498b33e" category="list-text">Niveau 2 (sous-tâche) : effectue le suivi des sous-tâches liées au déploiement du système de fichiers.</block>
+  <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">État de l'opération</block>
+  <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">L'état d'opération dans le Tracker est le suivant : _in Progress_, _Success_ et _failed_.</block>
+  <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">Fréquence de fonctionnement</block>
+  <block id="a9853b6069302c4152781f48222c3541" category="list-text">La fréquence des opérations est basée sur le type de travail et le planning de travail.</block>
+  <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">Conservation des événements</block>
+  <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">Les événements sont conservés dans l'interface utilisateur pendant 30 jours.</block>
+  <block id="cfd98e00a6e308c04ab9f76a854b6989" category="section-title">Suivez et surveillez les opérations</block>
+  <block id="c82c26735f08b789c8bf574ab4962fcc" category="paragraph">Suivi et surveillance des opérations dans BlueXP  avec Tracker.</block>
+  <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">Connectez-vous à l'aide de l'un des <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>.</block>
+  <block id="f6064bd4c17e4a2a2dcbd96f7ec83891" category="list-text">Dans la charge de travail, sélectionnez le menu des paramètres du compte, puis sélectionnez *Tracker*.</block>
+  <block id="1c575ed3e5dce0a1d77706830609b278" category="inline-image-macro">Capture d'écran du menu des paramètres du compte avec l'option Tracker mise en surbrillance.</block>
+  <block id="7478b5abe2869b21138fe88cbd4d66da" category="paragraph"><block ref="7478b5abe2869b21138fe88cbd4d66da" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e443a93c9da9763cd15656814a7e0c2e" category="list-text">Dans l'onglet Tracker, utilisez les filtres ou la recherche pour affiner les résultats du travail. Vous pouvez également télécharger un rapport de travaux.</block>
+  <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">Afficher une demande d'API</block>
+  <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">Affichez la demande API dans la zone de code pour une tâche dans Tracker.</block>
+  <block id="968877018213bf42962084001c210472" category="list-text">Dans Tracker, sélectionnez une tâche.</block>
+  <block id="2e6179b36329b65c38a5ca113ba0c81c" category="list-text">Sélectionnez le menu à trois points, puis sélectionnez *Afficher demande API*.</block>
+  <block id="1448fba076a066622a9f93a25ab170a2" category="section-title">Réessayez une opération ayant échoué</block>
+  <block id="89f1070b2ef1ba678a8cb4823fa74cb2" category="paragraph">Réessayez une opération ayant échoué dans le Tracker. Vous pouvez également copier le message d'erreur d'une opération ayant échoué.</block>
+  <block id="25f39cb1a1fb7c5e04993249b6cabc32" category="admonition">Vous pouvez réessayer une opération ayant échoué jusqu'à 10 fois.</block>
+  <block id="b866b632b7f32ded2a0a0907100641bf" category="list-text">Dans Tracker, sélectionnez une opération ayant échoué.</block>
+  <block id="5d0eaa0ad00baabb57cbc22969070918" category="list-text">Sélectionnez le menu à trois points, puis sélectionnez *Réessayer*.</block>
+  <block id="121145d60db2324903b129ae74d6c0a9" category="paragraph">L'opération est lancée à nouveau.</block>
+  <block id="bde5076ae2a993de9042a7e1dd4dc445" category="section-title">Modifiez et réessayez une opération ayant échoué</block>
+  <block id="2ae5a8ae85adca2aebf16aa81130c9c5" category="paragraph">Modifiez les paramètres de l'opération ayant échoué et relancez l'opération en dehors du Tracker.</block>
+  <block id="524ab960a72817bd7f9f107dc357d1bd" category="list-text">Sélectionnez le menu à trois points, puis sélectionnez *Modifier et réessayer*.</block>
+  <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">Vous êtes redirigé vers la page d'opération où vous pouvez modifier les paramètres et réessayer l'opération.</block>
+  <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">L'opération est lancée à nouveau. Accédez à Tracker pour afficher l'état de l'opération.</block>
+  <block id="214e3d2c555829629cd286071bc00b1f" category="list-text">*Reclassement* : activez ou désactivez le reclassement, ce qui peut améliorer la pertinence et la qualité des résultats de recherche. Choisissez un modèle de chat standard ou un modèle de reclassement spécialisé pour le reclassement. Les options de reclassement ne s'affichent que si elles sont disponibles dans votre région.</block>
+  <block id="d86905965032add94b3c2374f18bf8a0" category="list-text">Dans la page Modifier la base de connaissances, vous pouvez modifier le nom de la base de connaissances, la description, le modèle d'intégration, le modèle de discussion, l'activation des fonctionnalités, choisir si les démarreurs de conversation sont créés automatiquement ou manuellement et la stratégie de capture instantanée utilisée pour le volume qui contient la base de connaissances.</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 juin 2025</block>
+  <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">Administration et contrôle</block>
+  <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">Surveiller les opérations avec Tracker</block>
 </blocks>

@@ -65,6 +65,7 @@ https://aws.amazon.com/bedrock/titan/["En savoir plus sur Amazon Titan"^]
 
 
 .. *Modèle Chat*: Choisissez parmi divers modèles de chat qui sont intégrés dans Amazon Bedrock. Notez que vous devez avoir déjà activé le modèle de chat à partir d'Amazon Bedrock.
+.. *Reclassement* : activez ou désactivez le reclassement, ce qui peut améliorer la pertinence et la qualité des résultats de recherche. Choisissez un modèle de chat standard ou un modèle de reclassement spécialisé pour le reclassement. Les options de reclassement ne s'affichent que si elles sont disponibles dans votre région.
 .. *Data guardrails*: Choisissez si vous voulez activer ou désactiver les Data guardrails. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Découvrez les Data rambardes optimisées par la classification BlueXP "^].
 +
 Les conditions préalables suivantes doivent être remplies pour activer les rails de données.

@@ -65,7 +65,7 @@ sidebar:
         url: "/connector/deploy-infrastructure.html"
     - title: Créez un connecteur NetApp ONTAP pour Amazon Q
       url: "/connector/define-connector.html"
-  - title: Administrer GenAI
+  - title: Administration et contrôle
     entries:
     - title: Gérer l'infrastructure GenAI
       url: "/general/manage-infrastructure.html"
@@ -75,6 +75,8 @@ sidebar:
       url: "/connector/manage-connector.html"
     - title: Gérer les sources de données
       url: "/general/manage-data-source.html"
+    - title: Surveiller les opérations avec Tracker
+      url: "/general/monitor-operations.html"
   - title: Connaissances et support
     entries:
     - title: S'inscrire pour obtenir de l'aide
