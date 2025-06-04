@@ -51,7 +51,7 @@ NOTE: Si un fichier de votre source de données manque de texte (par exemple, un
 
 == Formats de fichiers de source de données pris en charge
 
-Les formats de fichier de source de données suivants sont actuellement pris en charge par NetApp ONTAP Connector pour Amazon Q.
+Les formats de fichiers de source de données suivants sont actuellement pris en charge avec NetApp Connector pour Amazon Q Business.
 
 [cols="2*"]
 |===

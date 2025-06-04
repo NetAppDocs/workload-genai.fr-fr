@@ -11,7 +11,7 @@ summary: 'Assurez-vous que l"usine de workloads et AWS sont correctement configu
 
 
 [role="lead"]
-Avant de créer un connecteur NetApp ONTAP pour Amazon Q., assurez-vous que l'usine des workloads et AWS sont correctement configurées
+Assurez-vous que Workload Factory et AWS sont correctement configurés avant de créer un connecteur NetApp pour Amazon Q Business.
 
 
 
@@ -34,7 +34,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découv
 
 
 
-== Configuration requise pour NetApp ONTAP Connector pour Amazon Q
+== Configuration requise pour NetApp Connector pour Amazon Q Business
 
 Assurez-vous que votre environnement répond aux exigences spécifiques suivantes pour les connecteurs Amazon Q Business.
 
