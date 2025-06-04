@@ -20,7 +20,7 @@ Assurez-vous que l'usine de workloads et AWS sont correctement configurées avan
 GenAI présente des exigences générales que votre environnement doit satisfaire avant de commencer.
 
 Connexion et compte d'usine de la charge de travail:: Vous devez vous https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurez un compte avec une usine de charges de travail"^] connecter à l'aide de l'un des https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-Identifiants et autorisations AWS:: Vous devez ajouter des informations d'identification AWS à l'usine de la charge de travail avec des autorisations en lecture/écriture, ce qui signifie que vous utiliserez l'usine de la charge de travail en mode _Read/Write_ pour GenAI.
+Identifiants et autorisations AWS:: Vous devez ajouter les informations d'identification AWS à la fabrique de charges de travail avec des autorisations de lecture/écriture, ce qui signifie que vous utiliserez la fabrique de charges de travail en mode _lecture/écriture_ pour GenAI.
 +
 --
 Les autorisations _Basic_ mode et _Read-Only_ mode ne sont pas prises en charge pour le moment.
