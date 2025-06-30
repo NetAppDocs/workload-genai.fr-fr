@@ -92,7 +92,7 @@ Vous pouvez ajouter une ou plusieurs sources de données pour remplir l'index Am
 
 
 .Étapes
-. Après avoir sélectionné *Ajouter une source de données*, la page *Sélectionner un système de fichiers* s'affiche.
+. Après avoir sélectionné *Ajouter une source de données*, la page *Sélectionner un système de fichiers* apparaît.
 . *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
 . *Sélectionnez un volume* : sélectionnez le volume sur lequel vos fichiers de source de données résident et sélectionnez *Suivant*.
 +

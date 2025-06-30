@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, genai' 
 summary: 'Découvrez les nouveautés de la fonctionnalité IA workloads de l"usine.' 
 ---
 = Nouveautés de l'usine de workloads BlueXP  pour l'IA Genai
@@ -12,6 +12,20 @@ summary: 'Découvrez les nouveautés de la fonctionnalité IA workloads de l"usi
 
 [role="lead"]
 Découvrez les nouveautés de la fonctionnalité Generative ai workloads d'usine.
+
+
+
+== 29 juin 2025
+
+
+
+=== Prise en charge des sources de données hébergées sur des systèmes de fichiers NFS/SMB génériques
+
+Vous pouvez désormais ajouter une source de données à partir d'un partage SMB ou NFS générique. Cela vous permet d'inclure des fichiers stockés sur des volumes hébergés par des systèmes de fichiers autres qu'Amazon FSx pour NetApp ONTAP.
+
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Ajouter des sources de données à une base de connaissances"]
+
+https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html#add-data-sources-to-the-connector["Ajouter des sources de données à un connecteur"]
 
 
 
@@ -67,11 +81,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Mise à jour de la terminologie des autorisations
 
-L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.
-
-
-
-== 02 mars 2025
+L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation. == 02 mars 2025
 
 
 

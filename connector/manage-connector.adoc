@@ -66,6 +66,18 @@ Vous pouvez intégrer d'autres sources de données dans votre connecteur pour le
 . Connectez-vous à l'usine de la charge de travail à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la page d'inventaire bases de connaissances et connecteurs, sélectionnez le connecteur dans lequel vous souhaitez ajouter la source de données.
 . Sélectionnez image:icon-action.png["le bouton d'option"] et sélectionnez *Ajouter une source de données*.
+. Sélectionnez le type de source de données que vous souhaitez ajouter :
++
+** Ajouter un système de fichiers FSx pour ONTAP (utiliser les fichiers d'un volume FSx pour ONTAP existant)
+** Ajouter un système de fichiers (utiliser des fichiers provenant d'un partage SMB ou NFS générique)
+
+
+
+
+[role="tabbed-block"]
+====
+.Ajouter un système de fichiers FSx pour ONTAP
+--
 . *Sélectionnez un système de fichiers* : sélectionnez le système de fichiers FSX pour ONTAP dans lequel résident vos fichiers source de données et sélectionnez *Suivant*.
 . *Sélectionnez un volume* : sélectionnez le volume sur lequel vos fichiers de source de données résident et sélectionnez *Suivant*.
 +
@@ -115,6 +127,113 @@ NOTE: Si vous incluez des fichiers basés sur une plage de dates de modification
 . Sélectionnez *Ajouter* pour ajouter cette source de données à votre base de connaissances.
 
 
+--
+.Ajouter un système de fichiers NFS générique
+--
+. *Sélectionnez un système de fichiers* : saisissez l'adresse IP ou le nom de domaine complet de l'hôte du système de fichiers où résident vos fichiers source de données, choisissez le protocole NFS pour le partage réseau et sélectionnez *Suivant*.
+. *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
++
+
+NOTE: Dans certains cas, vous devrez peut-être saisir manuellement le nom de l'exportation NFS et sélectionner « Récupérer les répertoires » pour afficher les répertoires disponibles. Vous pouvez sélectionner l'exportation dans son intégralité ou seulement certains dossiers.
+
+. *Configurations* : configurez la façon dont la source de données ingère les informations de vos fichiers et les fichiers qu'elle inclut dans les analyses :
++
+** *Définir la source de données* : dans la section *Stratégie de partage*, définissez la façon dont le moteur GenAI divise le contenu de la source de données en blocs lorsque la source de données est intégrée à une base de connaissances. Vous pouvez choisir l'une des stratégies suivantes :
++
+*** *Chunking à plusieurs phrases* : organise les informations de votre source de données en blocs définis par des phrases. Vous pouvez choisir combien de phrases composent chaque morceau (jusqu'à 100).
+*** *Chunking basé sur le chevauchement* : organise les informations de votre source de données en blocs définis par des caractères qui peuvent chevaucher des blocs voisins. Vous pouvez choisir la taille de chaque bloc en caractères et la quantité de chaque bloc qui chevauche les blocs adjacents. Vous pouvez configurer une taille de bloc comprise entre 50 et 3000 caractères et un pourcentage de chevauchement compris entre 1 et 99 %.
++
+
+NOTE: Le choix d'un pourcentage de chevauchement élevé peut considérablement augmenter les besoins de stockage avec seulement de légères améliorations de la précision de récupération.
+
+
+
+** *Filtrage de fichiers* : configurez les fichiers inclus dans les analyses :
++
+*** Dans la section *prise en charge des types de fichiers*, choisissez soit d'inclure tous les types de fichiers, soit de sélectionner des types de fichiers individuels à inclure dans les analyses de sources de données.
++
+Si vous incluez des images ou des fichiers PDF, l'usine de workloads BlueXP  pour GenAI analyse le texte dans les images (y compris les images dans les documents PDF) et le coût est plus élevé.
+
++
+Lors de l'inclusion de données texte à partir d'images, GenAI ne peut pas masquer les informations à caractère personnel (PII) de l'image car les données texte numérisées sont envoyées de votre environnement vers AWS. Cependant, une fois les données stockées, toutes les PII sont masquées dans la base de données GenAI.
+
++
+
+NOTE: Votre choix d'inclure des fichiers image dans les analyses est lié au modèle de chat de la base de connaissances. Si vous incluez des fichiers image dans les numérisations, le modèle de chat doit prendre en charge les images. Si des types de fichiers d'image sont sélectionnés ici, vous ne pouvez pas passer de la base de connaissances à un modèle de chat qui ne prend pas en charge les fichiers d'image.
+
+*** Dans la section *filtre de temps de modification de fichier*, choisissez d'activer ou de désactiver l'inclusion de fichiers en fonction de leur heure de modification. Si vous activez le filtrage de l'heure de modification, sélectionnez une plage de dates dans la liste.
++
+
+NOTE: Si vous incluez des fichiers basés sur une plage de dates de modification, dès que la plage de dates n'est pas satisfaite (les fichiers n'ont pas été modifiés dans la plage de dates spécifiée), les fichiers seront exclus de l'analyse périodique et la source de données n'inclura pas ces fichiers.
+
+
+
+
+
+. Sélectionnez *Ajouter une source de données* pour ajouter cette source de données à votre base de connaissances.
+
+
+--
+.Ajouter un système de fichiers SMB générique
+--
+. *Sélectionnez le système de fichiers*:
++
+.. Saisissez l'adresse IP ou le nom de domaine complet de l'hôte du système de fichiers où résident vos fichiers source de données.
+.. Choisissez le protocole SMB pour le partage réseau.
+.. Saisissez les informations Active Directory, qui incluent le domaine, l’adresse IP, le nom d’utilisateur et le mot de passe.
+.. Sélectionnez *Suivant*.
+
+
+. *Sélectionnez une source de données* : sélectionnez l'emplacement de la source de données en fonction de l'emplacement d'enregistrement des fichiers. Il peut s'agir d'un volume entier, ou simplement d'un dossier ou d'un sous-dossier spécifique dans le volume, et sélectionnez *Suivant*.
++
+
+NOTE: Dans certains cas, vous devrez peut-être saisir manuellement le nom du partage SMB et sélectionner « Récupérer les répertoires » pour afficher les répertoires disponibles. Vous pouvez sélectionner le partage entier ou seulement certains dossiers.
+
+. *Configurations* : configurez la façon dont la source de données ingère les informations de vos fichiers et les fichiers qu'elle inclut dans les analyses :
++
+** *Définir la source de données* : dans la section *Stratégie de partage*, définissez la façon dont le moteur GenAI divise le contenu de la source de données en blocs lorsque la source de données est intégrée à une base de connaissances. Vous pouvez choisir l'une des stratégies suivantes :
++
+*** *Chunking à plusieurs phrases* : organise les informations de votre source de données en blocs définis par des phrases. Vous pouvez choisir combien de phrases composent chaque morceau (jusqu'à 100).
+*** *Chunking basé sur le chevauchement* : organise les informations de votre source de données en blocs définis par des caractères qui peuvent chevaucher des blocs voisins. Vous pouvez choisir la taille de chaque bloc en caractères et la quantité de chaque bloc qui chevauche les blocs adjacents. Vous pouvez configurer une taille de bloc comprise entre 50 et 3000 caractères et un pourcentage de chevauchement compris entre 1 et 99 %.
++
+
+NOTE: Le choix d'un pourcentage de chevauchement élevé peut considérablement augmenter les besoins de stockage avec seulement de légères améliorations de la précision de récupération.
+
+
+
+** *Conscient des autorisations* : Activer ou désactiver les réponses conscientes des autorisations :
++
+*** *Activé* : les utilisateurs du chatbot qui accèdent à cette base de connaissances n'obtiennent que les réponses aux requêtes des sources de données auxquelles ils ont accès.
+*** *Désactivé* : les utilisateurs du chatbot recevront des réponses en utilisant le contenu de toutes les sources de données intégrées.
+
+
+** *Filtrage de fichiers* : configurez les fichiers inclus dans les analyses :
++
+*** Dans la section *prise en charge des types de fichiers*, choisissez soit d'inclure tous les types de fichiers, soit de sélectionner des types de fichiers individuels à inclure dans les analyses de sources de données.
++
+Si vous incluez des images ou des fichiers PDF, l'usine de workloads BlueXP  pour GenAI analyse le texte dans les images (y compris les images dans les documents PDF) et le coût est plus élevé.
+
++
+Lors de l'inclusion de données texte à partir d'images, GenAI ne peut pas masquer les informations à caractère personnel (PII) de l'image car les données texte numérisées sont envoyées de votre environnement vers AWS. Cependant, une fois les données stockées, toutes les PII sont masquées dans la base de données GenAI.
+
++
+
+NOTE: Votre choix d'inclure des fichiers image dans les analyses est lié au modèle de chat de la base de connaissances. Si vous incluez des fichiers image dans les numérisations, le modèle de chat doit prendre en charge les images. Si des types de fichiers d'image sont sélectionnés ici, vous ne pouvez pas passer de la base de connaissances à un modèle de chat qui ne prend pas en charge les fichiers d'image.
+
+*** Dans la section *filtre de temps de modification de fichier*, choisissez d'activer ou de désactiver l'inclusion de fichiers en fonction de leur heure de modification. Si vous activez le filtrage de l'heure de modification, sélectionnez une plage de dates dans la liste.
++
+
+NOTE: Si vous incluez des fichiers basés sur une plage de dates de modification, dès que la plage de dates n'est pas satisfaite (les fichiers n'ont pas été modifiés dans la plage de dates spécifiée), les fichiers seront exclus de l'analyse périodique et la source de données n'inclura pas ces fichiers.
+
+
+
+
+
+. Sélectionnez *Ajouter une source de données* pour ajouter cette source de données à votre base de connaissances.
+
+
+--
+====
 .Résultat
 La source de données est intégrée à votre connecteur.
 

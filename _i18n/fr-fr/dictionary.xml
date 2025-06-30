@@ -53,7 +53,6 @@
   <block id="831e8ddab4c3e70bcfe67a3e58aaf8cc" category="paragraph">Vous pouvez ajouter une ou plusieurs sources de données pour remplir la base de connaissances avec les données de votre organisation.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Description de la tâche</block>
   <block id="443fa995d0ec899357a7e519e2055b98" category="paragraph">Le nombre maximum de sources de données prises en charge est de 10.</block>
-  <block id="10031d73287aadb6c5f8b3dae7b23860" category="list-text">Après avoir sélectionné *Ajouter une source de données*, la page *Sélectionner un système de fichiers* s'affiche.</block>
   <block id="8817d70d4163473468fa1b2b6e498321" category="paragraph">La source de données commence à être intégrée à votre base de connaissances. L'état passe de « intégration » à « intégrée » lorsque la source de données est complètement intégrée.</block>
   <block id="b9605cf748e4b8e1c97d786258a0be40" category="summary">Vous devez déployer l'infrastructure pour la structure RAG dans votre environnement avant de pouvoir créer des bases de connaissances et des applications FSX pour ONTAP pour votre organisation. Les principaux composants de l'infrastructure sont le service d'IA Amazon Bedrock, une instance de machine virtuelle pour le moteur NetApp GenAI et un système de fichiers FSX pour ONTAP.</block>
   <block id="e379b913896cf9bdd4e2d6717212215a" category="doc">Déployez l'infrastructure GenAI</block>
@@ -757,7 +756,6 @@
   <block id="f1776184cd873aef06fc869138b3b776" category="admonition">Vous pouvez redimensionner et retitle la fenêtre du simulateur de chatbot, et copier des questions et des réponses dans le presse-papiers.</block>
   <block id="e27f142520976de0e091895abd1a2b45" category="list-text">Vous pouvez voir les sources utilisées pour produire la réponse en développant la liste *sources* sous la réponse. Cette option fournit une liste des fichiers utilisés pour générer la réponse. Vous pouvez afficher et copier les blocs de données utilisés à partir de chaque chemin de fichier et de volume vers chaque fichier en passant le curseur sur le nom du fichier.</block>
   <block id="8e08c9e7067a8bc5d8828ba0b5a8a5b2" category="list-text">Si des tables sont incluses dans la réponse, vous pouvez trier les données de chaque colonne et copier chaque table dans le presse-papiers.</block>
-  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">02 mars 2025</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs et communauté</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Communauté NetApp</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">Blogs BlueXP</block>
@@ -1077,4 +1075,30 @@
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.</block>
   <block id="2285d955a18bdde3d5780d04f48d58cd" category="list-text">Vous devez ajouter les informations d'identification AWS à la fabrique de charges de travail avec des autorisations de lecture/écriture, ce qui signifie que vous utiliserez la fabrique de charges de travail en mode _lecture/écriture_ pour GenAI.</block>
   <block id="c45d86a4185cef0bc3cadb7e6e9b46f4" category="paragraph">Les autorisations en mode _de base_ et en mode _lecture seule_ ne sont pas prises en charge pour le moment.</block>
+  <block id="7d906e58a1354072160e6ed36352865a" category="open-title">Ajouter un système de fichiers FSx pour ONTAP</block>
+  <block id="6d74c0f67ca2ffc7e802992699848ce7" category="open-title">Ajouter un système de fichiers NFS générique</block>
+  <block id="47f6d5704c1ced6391a6f696c9715d6f" category="list-text">*Sélectionnez un système de fichiers* : saisissez l'adresse IP ou le nom de domaine complet de l'hôte du système de fichiers où résident vos fichiers source de données, choisissez le protocole NFS pour le partage réseau et sélectionnez *Suivant*.</block>
+  <block id="f877eadc66897f3228392ce8c7190a3b" category="admonition">Dans certains cas, vous devrez peut-être saisir manuellement le nom de l'exportation NFS et sélectionner « Récupérer les répertoires » pour afficher les répertoires disponibles. Vous pouvez sélectionner l'exportation dans son intégralité ou seulement certains dossiers.</block>
+  <block id="d6cc21a7239c70140c4fe9e5d219835f" category="list-text">Sélectionnez *Ajouter une source de données* pour ajouter cette source de données à votre base de connaissances.</block>
+  <block id="72d08830496d7cb22679d7006ceb540d" category="open-title">Ajouter un système de fichiers SMB générique</block>
+  <block id="8dc6eb4b595b0f73bfb84bc0ff3bbe68" category="list-text">*Sélectionnez le système de fichiers*:</block>
+  <block id="cff886b73f836ffbb81637a1582026d6" category="list-text">Saisissez l'adresse IP ou le nom de domaine complet de l'hôte du système de fichiers où résident vos fichiers source de données.</block>
+  <block id="097fffee0ff7b9dc84809630d58d9921" category="list-text">Choisissez le protocole SMB pour le partage réseau.</block>
+  <block id="3a38971888a2c2f134ec4c4fe6164859" category="list-text">Saisissez les informations Active Directory, qui incluent le domaine, l’adresse IP, le nom d’utilisateur et le mot de passe.</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Sélectionnez *Suivant*.</block>
+  <block id="50e87b511edc21ffba5ebba81a768f04" category="admonition">Dans certains cas, vous devrez peut-être saisir manuellement le nom du partage SMB et sélectionner « Récupérer les répertoires » pour afficher les répertoires disponibles. Vous pouvez sélectionner le partage entier ou seulement certains dossiers.</block>
+  <block id="0065452defb4a4481c8fe8db6f74a038" category="list-text">*Conscient des autorisations* : Activer ou désactiver les réponses conscientes des autorisations :</block>
+  <block id="944ee388209d33a3bf1b309c6acdf693" category="doc">Prise en charge des sources de données hébergées sur des systèmes de fichiers NFS/SMB génériques</block>
+  <block id="9a7d241f00b55d0e00761313cced5dd8" category="paragraph">Vous pouvez désormais ajouter une source de données à partir d'un partage SMB ou NFS générique. Cela vous permet d'inclure des fichiers stockés sur des volumes hébergés par des systèmes de fichiers autres qu'Amazon FSx pour NetApp ONTAP.</block>
+  <block id="5cba57d460e5683815517b44a7811760" category="inline-link">Ajouter des sources de données à une base de connaissances</block>
+  <block id="b37629096d44c6fda917848365c84ebe" category="paragraph"><block ref="b37629096d44c6fda917848365c84ebe" category="inline-link-rx"></block></block>
+  <block id="6320af7d92cd5d357460c5cbc5f642a9" category="inline-link">Ajouter des sources de données à un connecteur</block>
+  <block id="5cd676bef1867c904c092c33ad4a8f2d" category="paragraph"><block ref="5cd676bef1867c904c092c33ad4a8f2d" category="inline-link-rx"></block></block>
+  <block id="68548c26cece20bcf93105ea4fe89e88" category="list-text">Après avoir sélectionné *Ajouter une source de données*, la page *Sélectionner un système de fichiers* apparaît.</block>
+  <block id="cf398eb273d2634893193d0e955a4fa2" category="list-text">Sélectionnez le type de source de données que vous souhaitez ajouter :</block>
+  <block id="c0f70038820005956aaf78b931d681c4" category="list-text">Ajouter un système de fichiers FSx pour ONTAP (utiliser les fichiers d'un volume FSx pour ONTAP existant)</block>
+  <block id="63e19fdc4a09680278ff2270264b3005" category="list-text">Ajouter un système de fichiers (utiliser des fichiers provenant d'un partage SMB ou NFS générique)</block>
+  <block id="438852e39ff5e2c7366e67dde7cfdab4" category="list-text">Après avoir sélectionné *Ajouter une source de données*, sélectionnez le type de source de données que vous souhaitez ajouter :</block>
+  <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">29 juin 2025</block>
+  <block id="84cd46ec8d4d2d63881ed3e5d98fe218" category="paragraph">L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation. == 02 mars 2025</block>
 </blocks>
