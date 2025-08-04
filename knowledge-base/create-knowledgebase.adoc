@@ -88,13 +88,15 @@ Les conditions préalables suivantes doivent être remplies pour activer les rai
 
 NOTE: La fonction Data guardrails n'est pas prise en charge lors de l'acquisition de fichiers de données structurés tels que CSV, JSON, JSONP ou parquet.
 
-+
-.. *Amorces de conversation* : indiquez si vous souhaitez fournir jusqu'à quatre invites de démarrage de conversation qui s'affichent aux utilisateurs qui interagissent avec un chatbot utilisant cette base de connaissances. Nous vous recommandons d'activer ce paramètre.
+
+
+. *Amorces de conversation* : indiquez si vous souhaitez fournir jusqu'à quatre invites de démarrage de conversation qui s'affichent aux utilisateurs qui interagissent avec un chatbot utilisant cette base de connaissances. Nous vous recommandons d'activer ce paramètre.
 +
 Si vous activez les amorces de conversation, le mode automatique est sélectionné par défaut. Le « mode manuel » ne peut être activé qu'après avoir ajouté des sources de données à votre base de connaissances. link:manage-knowledgebase.html["Apprenez à modifier les paramètres de la base de connaissances"].
 
-.. *FSX for ONTAP file system* : lorsque vous définissez une nouvelle base de connaissances, Workload Factory crée un nouveau volume Amazon FSX for NetApp ONTAP pour le stocker. Choisissez un nom de système de fichiers et un SVM existants (également appelés VM de stockage) dans lesquels le nouveau volume sera créé.
-.. *Snapshot policy* : choisissez une snapshot policy dans la liste des stratégies existantes définies dans l'inventaire de stockage d'usine des charges de travail. Les instantanés récurrents de la base de connaissances seront automatiquement créés à une fréquence basée sur la stratégie de snapshots que vous sélectionnez.
+. *FSX for ONTAP file system* : lorsque vous définissez une nouvelle base de connaissances, Workload Factory crée un nouveau volume Amazon FSX for NetApp ONTAP pour le stocker. Choisissez un nom de système de fichiers et un SVM existants (également appelés VM de stockage) dans lesquels le nouveau volume sera créé.
+. *Snapshot policy* : choisissez une snapshot policy dans la liste des stratégies existantes définies dans l'inventaire de stockage d'usine des charges de travail. Les instantanés récurrents de la base de connaissances seront automatiquement créés à une fréquence basée sur la stratégie de snapshots que vous sélectionnez.
+. *Seau S3* : si les résultats de la requête du chatbot contiennent des données structurées, GenAI peut stocker les résultats dans un compartiment S3.  Pour utiliser cette fonctionnalité, activez le paramètre *Activer le compartiment S3* et choisissez un compartiment S3 associé à votre compte dans la liste.  Lorsque ces résultats sont stockés dans un bucket S3, vous pouvez les télécharger à l’aide du lien de téléchargement dans la session de chat.
 +
 Si la règle de snapshot dont vous avez besoin n'existe pas, vous pouvez https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["création d'une règle de snapshots"] la faire sur la machine virtuelle de stockage qui contient le volume.
 
